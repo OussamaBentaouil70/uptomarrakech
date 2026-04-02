@@ -1,0 +1,11 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // This project currently uses Cloudinary for free image hosting.
+    // Keep Storage disabled or locked by default.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
+

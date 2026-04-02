@@ -1,0 +1,1870 @@
+{
+  "source": "https://uptomarrakech.com",
+  "importedAt": "2026-04-02T13:39:58.267Z",
+  "categories": [
+    {
+      "slug": "spa",
+      "name": "Spa",
+      "type": "spa",
+      "sortOrder": 0,
+      "published": true
+    },
+    {
+      "slug": "beach-clubs",
+      "name": "Beach clubs",
+      "type": "beach_club",
+      "sortOrder": 1,
+      "published": true
+    },
+    {
+      "slug": "activities",
+      "name": "Activities",
+      "type": "activity",
+      "sortOrder": 2,
+      "published": true
+    },
+    {
+      "slug": "transport/car-rental",
+      "name": "Car rental",
+      "type": "car_rental",
+      "sortOrder": 3,
+      "published": true
+    },
+    {
+      "slug": "accommodation",
+      "name": "Accommodation",
+      "type": "accommodation",
+      "sortOrder": 4,
+      "published": true
+    },
+    {
+      "slug": "night-clubs",
+      "name": "Night clubs",
+      "type": "night_club",
+      "sortOrder": 5,
+      "published": true
+    }
+  ],
+  "items": [
+    {
+      "categoryType": "spa",
+      "slug": "marajah-spa",
+      "title": "Marajah Spa",
+      "excerpt": "Discover the art of relaxation at Marajah Spa, where traditional Moroccan rituals meet modern well-being in a soothing sanctuary.",
+      "description": "Discover the art of relaxation at Marajah Spa, where traditional Moroccan rituals meet modern well-being. Located in the heart of Marrakech, this soothing sanctuary offers exquisite hammam treatments, invigorating massages and high-end treatments designed to restore balance and vitality.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/06/maarrakech-spa-marajah.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/06/maarrakech-spa-marajah.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "marajah-spa-marrakech",
+      "title": "Marajah Spa",
+      "excerpt": "Rituels traditionnels et bien-être moderne. Au Marajah Spa, profitez de soins hammam et de massages revitalisants pour retrouver équilibre et vitalité.",
+      "description": "Découvrez l’art de la relaxation au Marajah Spa, où les rituels marocains traditionnels rencontrent le bien-être moderne. Situé au cœur de Marrakech, ce sanctuaire apaisant propose des soins hammam exquis, des massages revigorants et des soins haut de gamme conçus pour rétablir équilibre et vitalité.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/06/maarrakech-spa-marajah.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/06/maarrakech-spa-marajah.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "nikki-beach-marrakech",
+      "title": "Nikki Beach Marrakech",
+      "excerpt": "Accès exclusif et lits VIP à Nikki Beach Marrakech. Laissez notre équipe de conciergerie vous offrir une journée de luxe et de détente au bord de la piscine.",
+      "description": "Plongez dans l’univers exclusif de Nikki Beach Marrakech, où chaque instant est une célébration de luxe et de détente. Profitez d’un accès privilégié, de lits VIP et des meilleurs emplacements au bord de la piscine, soigneusement organisés par notre équipe de conciergerie experte. Laissez-nous gérer chaque détail pour une expérience sans faille. Places limitées – réservation recommandée au moins 5 jours à l’avance.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/06/IMG-20250602-WA0034.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/06/IMG-20250602-WA0034.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "balade-en-caleche-marrakech",
+      "title": "Balade En Calèche Marrakech",
+      "excerpt": "Découvrez Marrakech en calèche. Une balade paisible à travers la médina et ses jardins pour une expérience authentique et pleine de charme.",
+      "description": "Découvrez Marrakech autrement avec une balade en calèche. Ce mode de transport traditionnel vous offre une immersion authentique dans l’histoire et l’ambiance unique de la ville rouge. Profitez d’un parcours paisible à travers la médina, les remparts et les jardins emblématiques, bercé par le rythme des chevaux. Une expérience incontournable pour admirer la beauté de Marrakech avec charme et élégance.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/05/Caleche-Marrakech-scaled-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/05/Caleche-Marrakech-scaled-1.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "pottery-classes",
+      "title": "Pottery classes",
+      "excerpt": "Dive into the captivating world of pottery with an immersive workshop. Learn to shape clay on a potter&rsquo;s wheel and create your own unique piece.",
+      "description": "Discover the captivating world of pottery in an immersive workshop that plunges you into the heart of an age-old craft. This workshop is a unique experience where you&rsquo;ll learn how to shape clay and bring your own creation to life. Guided by passionate ceramists, you&rsquo;ll handle the potter&rsquo;s wheel, a fascinating technique that demands patience and precision. A truly relaxing and creative experience, ideal for families and friends. This workshop is open to all, adults and children aged 3 and over. Whether you&rsquo;re a beginner or curious to learn more, you&rsquo;ll be accompanied every step of the way as you shape your piece. Contact with clay, working with shapes and the magic of seeing an object come to life under your hands make this an unforgettable experience.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/02/atelier-de-poterie-marrakech.webp",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/02/atelier-de-poterie-marrakech.webp"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "cours-de-poterie-a-marrakech",
+      "title": "Cours de poterie",
+      "excerpt": "Atelier de poterie immersif. Apprenez le tour de potier et créez votre propre pièce artisanale. Idéal en famille.",
+      "description": "Découvrez l’univers captivant de la poterie lors d’un atelier immersif qui vous plongera au cœur d’un savoir-faire artisanal ancestral. Cet atelier est une expérience unique où vous apprendrez à modeler l’argile et à donner vie à votre propre création. Guidé par des céramistes passionnés, vous manipulerez le tour de potier, une technique fascinante qui demande patience et précision. Un véritable moment de détente et de créativité, idéal à vivre en famille ou entre amis. Cet atelier est ouvert à tous, adultes comme enfants dès 3 ans. Que vous soyez débutant ou curieux d’en apprendre davantage, vous serez accompagné à chaque étape pour façonner votre pièce. Le contact avec l’argile, le travail des formes et la magie de voir naître un objet sous vos mains rendent cette expérience inoubliable.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/02/atelier-de-poterie-marrakech.webp",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/02/atelier-de-poterie-marrakech.webp"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "day-trip-to-the-ourika-valley",
+      "title": "Day trip to the Ourika Valley",
+      "excerpt": "Escape to the Ourika Valley, just 1.5 hours from Marrakech. Enjoy a guided walk to the waterfalls and a typical lunch by the river.",
+      "description": "Looking for freshness and nature? Take a day trip from Marrakech to the magnificent Ourika Valley, just 1h30 away. This haven of peace at the foot of the Atlas mountains is ideal for an escape from the hustle and bustle of the city. Your day begins with an exploration of the region&rsquo;s Berber villages and verdant landscapes. Enjoy a guided walk to explore the famous Ourika waterfalls, a breathtaking natural spectacle. Enjoy lunch at a riverside restaurant, where you can savor local cuisine while admiring the view. An ideal relaxing break before heading back to Marrakech. Why choose this excursion? Hike to the Ourika waterfalls, a must-see site. Discover Berber culture and Atlas landscapes. Typical lunch by the river. Comfortable transport from your accommodation in Marrakech. Rates and options: 350 Dh (35€) per person 200 Dh (20€) for children aged 3 to 12 What&rsquo;s included Private round-trip transportation from Marrakech. Guid Transport insurance What&rsquo;s not included: Catering supplement 120 Dh (12€)",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/02/vallee-ourika.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/02/vallee-ourika.jpg"
+      ],
+      "price": 35,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "vallee-de-l-ourika",
+      "title": "Excursion au vallée de l&rsquo;ourika​",
+      "excerpt": "Excursion à la Vallée de l&rsquo;Ourika. Découverte de villages berbères, randonnée vers les cascades et déjeuner.",
+      "description": "Envie de fraîcheur et de nature ? Partez pour une excursion à Marrakech vers la magnifique vallée de l&rsquo;ourika​, située à seulement 1h30 de route. Ce havre de paix au pied de l’Atlas est idéal pour une évasion loin de l’agitation de la ville. Votre journée commencera par la découverte des villages berbères et des paysages verdoyants qui caractérisent la région. Profitez d’une balade guidée pour explorer les célèbres cascades d’Ourika, un spectacle naturel époustouflant. Vous aurez l’occasion de déjeuner dans un restaurant au bord de la rivière, où vous pourrez savourer une cuisine locale tout en admirant la vue. Une pause détente idéale avant de reprendre la route vers Marrakech. Pourquoi choisir cette excursion ? Randonnée vers les cascades d’Ourika, un site incontournable. Découverte de la culture berbère et des paysages de l’Atlas. Déjeuner typique au bord de la rivière. Transport confortable depuis votre hébergement à Marrakech. Tarifs et Options: (35€) par personne (20€) pour les enfants de 3 à 12 ans Ce Qui Est Inclus Transport privée aller-retour depuis Marrakech au vallée de l&rsquo;ourika​. Guid Assurance transport Ce Qui N’est Pas Inclus: Restauration en supplément (12€)",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/02/vallee-ourika.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/02/vallee-ourika.jpg"
+      ],
+      "location": "route vers Marrakech",
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "day-trip-to-essaouira",
+      "title": "Day trip to Essaouira",
+      "excerpt": "Day trip from Marrakech to Essaouira. Explore the white and blue medina, the port, and the ramparts, with a stop at Sidi Kaouki.",
+      "description": "Take a day trip to Essaouira and immerse yourself in the unique atmosphere of this coastal town. Departing from Marrakech, you&rsquo;ll pass through magnificent scenery before reaching the medina of Essaouira, a UNESCO World Heritage site. On the way, a stop at Sidi Kaouki, famous for its wild beaches and bohemian ambience, offers you a moment of relaxation facing the Atlantic. Once in Essaouira, stroll through the medina with its white and blue alleyways, explore the bustling port and admire the imposing ramparts overlooking the ocean. Enjoy lunch in an Essaouira restaurant, where you can sample fresh fish and local specialties. After a day rich in discoveries, return to Marrakech in the late afternoon. Why choose this tour? Discover Essaouira&rsquo;s medina, port and ramparts. Visit Sidi Kaouki, a popular spot for nature lovers and surfers. Taste fresh fish in an Essaouira restaurant. Comfortable transport with pick-up from your accommodation in Marrakech. Prices and options: 600 Dh (60€) per person 300 Dh (30€) for children aged 3 to 12 What&rsquo;s included Round-trip transportation from Marrakech. What is not included: Catering.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/02/Essaouira-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/02/Essaouira-marrakech.jpg"
+      ],
+      "price": 60,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "excursion-dune-journee-a-essaouira",
+      "title": "Excursion d&rsquo;une journée à Essaouira",
+      "excerpt": "Excursion d&rsquo;une journée à Essaouira depuis Marrakech pour découvrir la médina, le port et les remparts.",
+      "description": "Partez pour une excursion d’une journée à Essaouira et plongez dans l’atmosphère unique de cette ville côtière. Au départ de Marrakech, vous traverserez des paysages magnifiques avant d’atteindre la médina d’Essaouira, classée au patrimoine mondial de l’UNESCO. En chemin, une pause à Sidi Kaouki, célèbre pour ses plages sauvages et son ambiance bohème, vous offrira un moment de détente face à l’Atlantique. Une fois à Essaouira, flânez dans la médina aux ruelles blanches et bleues, explorez le port animé et admirez les remparts imposants qui surplombent l’océan. Profitez d’un déjeuner dans un restaurant à Essaouira, où vous pourrez déguster du poisson frais et des spécialités locales. Après une journée riche en découvertes, retour à Marrakech en fin d’après-midi. Pourquoi choisir cette excursion ? Découverte de la médina d’Essaouira, son port et ses remparts. Visite de Sidi Kaouki, un spot prisé des amateurs de nature et de surf. Dégustation de poissons frais dans un restaurant à Essaouira. Transport confortable avec prise en charge depuis votre hébergement à Marrakech. Tarifs et Options: 600 Dh (60€) par personne 300 Dh (30€) pour les enfants de 3 à 12 ans Ce Qui Est Inclus Transport aller-retour depuis Marrakech. Ce Qui N’est Pas Inclus: Restauration.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/02/Essaouira-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/02/Essaouira-marrakech.jpg"
+      ],
+      "price": 60,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "t-roc",
+      "title": "T-roc",
+      "excerpt": "Rent a T-Roc in Marrakech and explore the city and surrounding areas in style and comfort.",
+      "description": "Rent a Volkswagen T-Roc in Marrakech to explore Marrakech and the surrounding area in style and comfort. With our T-Roc Marrakech rental service, you benefit from a compact SUV ideal for urban travel or excursions to tourist sites. Combining performance and elegance, it guarantees an exceptional driving experience. Rental price : from 950DH per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €2,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : 2000€ by bank transfer or 2000€ in cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Volkswagen-T-Roc-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Volkswagen-T-Roc-a-louer.jpg"
+      ],
+      "price": 950,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "location-t-roc",
+      "title": "T-roc",
+      "excerpt": "Louez un T-Roc à Marrakech pour explorer la ville et ses environs avec style, confort et élégance.",
+      "description": "Louez un Volkswagen T-Roc à Marrakech pour explorer Marrakech et ses environs avec style et confort. Avec notre service de location T-Roc Marrakech, vous bénéficiez d’un SUV compact idéal pour les déplacements urbains ou les excursions vers les sites touristiques. Alliant performance et élégance, il garantit une expérience de conduite exceptionnelle. Prix de location : à partir de 950DH par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l&rsquo;aéroport. Vous devrez régler une caution de 2000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l&rsquo;arrivée. Conditions de réservation : Caution : 2000€ par empreinte bancaire ou 2000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d&rsquo;années minimum Conditions d&rsquo;annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Volkswagen-T-Roc-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Volkswagen-T-Roc-a-louer.jpg"
+      ],
+      "price": 950,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "touareg",
+      "title": "Touareg",
+      "excerpt": "Rent a Touareg in Marrakech for a comfortable and stylish experience in the city or on a desert adventure.",
+      "description": "Renting a Touareg in Marrakech is the ideal option for exploring this magnificent city and its surroundings in comfort and style. Packed with modern features and robust performance, the Touareg offers an unrivalled driving experience, whether for a city getaway or a desert adventure. Book now and enjoy a carefree trip to the heart of Morocco. Rental prices : from 950DH per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €2,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : 2000€ by bank transfer or 2000€ in cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Touareg-a-louer-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Touareg-a-louer-marrakech.jpg"
+      ],
+      "price": 950,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "location-touareg",
+      "title": "Touareg",
+      "excerpt": "Louez le Touareg à Marrakech pour une exploration de la ville et du désert avec confort et style.",
+      "description": "Louer un Touareg à Marrakech est l&rsquo;option idéale pour explorer cette magnifique ville et ses environs avec confort et style. Doté de caractéristiques modernes et de performances robustes, le Touareg vous offre une expérience de conduite inégalée, que ce soit pour une escapade citadine ou une aventure dans le désert. Réservez dès maintenant et profitez d&rsquo;un voyage sans souci au cœur du Maroc. Prix de location : à partir de 950DH par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l&rsquo;aéroport. Vous devrez régler une caution de 2000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l&rsquo;arrivée. Conditions de réservation : Caution : 2000€ par empreinte bancaire ou 2000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d&rsquo;années minimum Conditions d&rsquo;annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Touareg-a-louer-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Touareg-a-louer-marrakech.jpg"
+      ],
+      "price": 950,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "range-rover-vogue",
+      "title": "Range rover vogue",
+      "excerpt": "Rent a Range Rover Vogue in Marrakech for a luxurious and powerful driving experience. Ideal for city tours or off-road adventures.",
+      "description": "Rent a Range Rover Vogue in Marrakech and discover the perfect blend of luxury and power. With its sumptuous interior and off-road capabilities, this vehicle lets you explore the wonders of the city and its surroundings with incomparable ease. Whether it&rsquo;s a city stroll or an off-road adventure, the Range Rover Vogue is the ideal choice for an exceptional driving experience. Rental price : from 2000DH per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €5,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: €5,000 bank transfer or €5,000 cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-de-Luxe-a-Louer-a-Marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-de-Luxe-a-Louer-a-Marrakech.jpg"
+      ],
+      "price": 2000,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "range-rover-vogue",
+      "title": "Range rover vogue",
+      "excerpt": "Explorez Marrakech en toute élégance avec le Range Rover Vogue, un mélange parfait de luxe et de puissance.",
+      "description": "Optez pour la location d&rsquo;un Range Rover Vogue à Marrakech et découvrez le parfait mélange de luxe et de puissance. Avec son intérieur somptueux et ses capacités tout-terrain, ce véhicule vous permet d&rsquo;explorer les merveilles de la ville et ses alentours avec une aisance incomparable. Que ce soit pour une balade en ville ou une aventure hors des sentiers battus, le Range Rover Vogue est le choix idéal pour une expérience de conduite exceptionnelle. Prix de location : à partir de 2000DH par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l&rsquo;aéroport. Vous devrez régler une caution de 5000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l&rsquo;arrivée. Conditions de réservation : Caution : 5000€ par empreinte bancaire ou 5000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d&rsquo;années minimum Conditions d&rsquo;annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-de-Luxe-a-Louer-a-Marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-de-Luxe-a-Louer-a-Marrakech.jpg"
+      ],
+      "price": 2000,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "range-rover-sport",
+      "title": "Range rover sport",
+      "excerpt": "Rent the elegant and powerful Range Rover Sport in Marrakech, perfect for urban excursions and off-road adventures.",
+      "description": "Explore Marrakech and the surrounding area with the Range Rover Sport, a powerful and elegant SUV. With its dynamic performance and refined design, this vehicle is ideal for both urban excursions and off-road adventures. Renting a Range Rover Sport in Marrakech guarantees a memorable driving experience, combining comfort and sophistication. Rental prices : from 2500DH per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €3,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : €3,000 by bank transfer or €3,000 in cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-sport-de-Luxe-a-Louer-a-Marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-sport-de-Luxe-a-Louer-a-Marrakech.jpg"
+      ],
+      "price": 2500,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "range-rover-sport",
+      "title": "Range rover sport",
+      "excerpt": "Louez le Range Rover Sport à Marrakech, parfait pour l&rsquo;aventure en ville ou hors route. Confort et élégance garantis.",
+      "description": "Explorez Marrakech et ses environs avec le Range Rover Sport, un SUV puissant et élégant. Avec ses performances dynamiques et son design raffiné, ce véhicule est idéal pour les excursions urbaines comme pour les aventures hors route. La location d&rsquo;une Range Rover Sport à Marrakech vous garantit une expérience de conduite mémorable, alliant confort et sophistication. Prix de location : à partir de 2500DH par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 3000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 3000€ par empreinte bancaire ou 3000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-sport-de-Luxe-a-Louer-a-Marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-Rover-sport-de-Luxe-a-Louer-a-Marrakech.jpg"
+      ],
+      "price": 2500,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "range-rover-baby-velar",
+      "title": "Range Rover baby velar",
+      "excerpt": "Rent a Range Rover Velar in Marrakech to explore the city and surrounding landscapes with a luxurious and modern SUV.",
+      "description": "Discover Marrakech with a Range Rover Velar, the perfect choice for those looking for a modern yet luxurious SUV. With its elegant lines and all-terrain capabilities, this vehicle lets you navigate easily through the city&rsquo;s streets and surrounding landscapes. Enjoy the comfort and cutting-edge technology of the Velar for a memorable trip to Morocco. Rental price : from 950DH per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €2,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : 2000€ by bank transfer or 2000€ in cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-rover-bb-velar.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-rover-bb-velar.jpg"
+      ],
+      "price": 950,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "range-rover-velar-marrakech",
+      "title": "Range Rover baby velar",
+      "excerpt": "Location d&rsquo;un Range Rover Velar à Marrakech, un SUV moderne et luxueux parfait pour explorer la ville avec élégance.",
+      "description": "Découvrez Marrakech avec un Range Rover Velar, le choix parfait pour ceux qui recherchent un SUV à la fois moderne et luxueux. Avec ses lignes élégantes et ses capacités tout-terrain, ce véhicule vous permet de naviguer facilement à travers les rues de la ville et les paysages environnants. Profitez du confort et de la technologie de pointe du Velar pour un voyage mémorable au Maroc. Prix de location : à partir de 950DH par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 2000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 2000€ par empreinte bancaire ou 2000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-rover-bb-velar.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Range-rover-bb-velar.jpg"
+      ],
+      "price": 950,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "porsche-macan",
+      "title": "Porsche Macan",
+      "excerpt": "Rent a Porsche Macan in Marrakech and explore the city in a luxurious, sporty SUV. Enjoy a smooth ride and a sophisticated design.",
+      "description": "Discover Marrakech in style by renting a Porsche Macan! This compact, sporty SUV offers a smooth, responsive ride, perfect for exploring the city&rsquo;s streets and breathtaking scenery. Its sophisticated design and luxury equipment guarantee optimum comfort for your journeys, making every moment behind the wheel unforgettable. Make your stay in Marrakech a memorable experience with the Porsche Macan. Rental price : from 2200DH per day Reservation process : To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €5,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : €5,000 bank transfer or €5,000 cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Porsche-Macan-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Porsche-Macan-marrakech.jpg"
+      ],
+      "price": 2200,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "porsche-macan-marrakech",
+      "title": "Porsche Macan",
+      "excerpt": "Conduisez une Porsche Macan à Marrakech, un SUV sportif et luxueux pour explorer la ville avec élégance.",
+      "description": "Découvrez Marrakech en grand style en louant une Porsche Macan ! Ce SUV compact et sportif vous offre une conduite fluide et réactive, parfaite pour explorer les rues de la ville et ses paysages époustouflants. Son design sophistiqué et ses équipements de luxe garantissent un confort optimal pour vos trajets, rendant chaque moment au volant inoubliable. Faites de votre séjour à Marrakech une expérience mémorable avec la Porsche Macan. Prix de location : à partir de 2200DH par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 5000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 5000€ par empreinte bancaire ou 5000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Porsche-Macan-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Porsche-Macan-marrakech.jpg"
+      ],
+      "price": 2200,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "mercedes-vito",
+      "title": "Mercedes vito",
+      "excerpt": "Rent a spacious and modern Mercedes Vito in Marrakech, perfect for groups and families traveling together.",
+      "description": "Rent a Mercedes Vito in Marrakech to explore the red city and its surroundings in style and comfort. Spacious and modern, the Mercedes Vito is perfect for groups or families wishing to travel together. Enjoy a reliable vehicle, equipped with all the necessary amenities, ideal for discovering the hidden treasures of Marrakech and beyond. With a flexible rental service and competitive prices, your experience will be worry-free. Rental prices : from 130 EUR per day if you wish to have a driver with you 25 EUR will be added each day. Airport transfer : If you only require a transfer to or from Marrakech airport, the price is 45 EUR.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-vito-pour-la-location.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-vito-pour-la-location.jpg"
+      ],
+      "price": 130,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "mercedes-vito-marrakech",
+      "title": "Mercedes vito",
+      "excerpt": "Louez une Mercedes Vito spacieuse à Marrakech, idéale pour les groupes et les familles. Un véhicule fiable pour explorer la ville.",
+      "description": "Louez une Mercedes Vito à Marrakech pour explorer la ville rouge et ses environs avec style et confort. Spacieuse et moderne, la Mercedes Vito est parfaite pour les groupes ou les familles souhaitant voyager ensemble. Profitez d’un véhicule fiable, équipé de toutes les commodités nécessaires, idéal pour découvrir les trésors cachés de Marrakech et au-delà. Avec un service de location flexible et des prix compétitifs, votre expérience sera sans souci. Prix de location : à partir de 130 EUR par jour si vous souhaitez avoir un chauffeur avec vous 25 EUR seront ajoutés chaque jour. Transfert Aéroport : Si vous souhaitez uniquement le transfert depuis ou vers l&rsquo;aéroport de Marrakech, le prix est de 45 EUR.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-vito-pour-la-location.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-vito-pour-la-location.jpg"
+      ],
+      "price": 130,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "mercedes-g-class",
+      "title": "Mercedes G-Class",
+      "excerpt": "Rent a Mercedes G-Class in Marrakech to explore the city and its surroundings with power and elegance. This luxury 4&#215;4 offers an incomparable driving experience.",
+      "description": "Rent a Mercedes G-Class in Marrakech and explore the city and its surroundings with power and elegance. This luxury 4&#215;4 combines off-road performance with top-of-the-range comfort, ideal for the discerning adventurer. Perfect for navigating Marrakech&rsquo;s bustling streets and Morocco&rsquo;s varied landscapes, the Mercedes G-Class offers an incomparable driving experience. With flexible rental options, enjoy a robust, refined vehicle equipped with the latest technology. Whether for a business trip or a getaway, renting a Mercedes G-Class in Marrakech guarantees a memorable adventure full of style. Rental prices : from 400 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €5,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: €5,000 bank transfer or €5,000 cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-class-G-a-louer-a-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-class-G-a-louer-a-marrakech.jpg"
+      ],
+      "price": 400,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "mercedes-class-g-marrakech",
+      "title": "Mercedes class G",
+      "excerpt": "Louez une Mercedes Classe G à Marrakech : un 4&#215;4 de luxe alliant puissance tout-terrain et confort haut de gamme pour une aventure mémorable.",
+      "description": "Louez une Mercedes Classe G à Marrakech et explorez la ville et ses environs avec puissance et élégance. Ce 4&#215;4 de luxe combine performance tout-terrain et confort haut de gamme, idéal pour les aventuriers exigeants. Parfait pour naviguer entre les rues animées de Marrakech et les paysages variés du Maroc, la Mercedes Classe G offre une expérience de conduite incomparable. Avec des options de location flexibles, profitez d’un véhicule robuste et raffiné, équipé des dernières technologies. Que ce soit pour un voyage d’affaires ou une escapade, louer une Mercedes Classe G à Marrakech vous garantit une aventure mémorable et pleine de style. Prix de location : à partir de 400 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 5000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 5000€ par empreinte bancaire ou 5000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-class-G-a-louer-a-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-class-G-a-louer-a-marrakech.jpg"
+      ],
+      "price": 400,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "mercedes-cla",
+      "title": "Mercedes Cla",
+      "excerpt": "Rent a Mercedes CLA in Marrakech and add a touch of elegance to your travels. This top-of-the-range compact sedan guarantees comfort and driving pleasure.",
+      "description": "Rent a Mercedes CLA in Marrakech and add a touch of elegance to your travels. With its sporty design and clean lines, the Mercedes CLA offers the perfect balance between performance and style. Ideal for couples or business trips, this top-of-the-range compact sedan guarantees comfort and driving pleasure. Our flexible rental options make renting a Mercedes CLA in Marrakech simple and convenient. Enjoy a modern vehicle, equipped with the latest technology for an exceptional driving experience, whether on the streets of the red city or on excursions in the surrounding area. Rental prices : from 110 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our booking form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €3,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : €3,000 by bank transfer or €3,000 in cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-Cla-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-Cla-a-louer.jpg"
+      ],
+      "price": 110,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "mercedes-cla-marrakech",
+      "title": "Mercedes Cla",
+      "excerpt": "Louez une Mercedes CLA à Marrakech pour des déplacements élégants. Cette berline allie performance, style et confort.",
+      "description": "Louez une Mercedes CLA à Marrakech et ajoutez une touche d’élégance à vos déplacements. Avec son design sportif et ses lignes épurées, la Mercedes CLA offre un équilibre parfait entre performance et style. Idéale pour les voyages en couple ou les déplacements professionnels, cette berline compacte haut de gamme garantit confort et plaisir de conduite. Grâce à nos options flexibles de location, louer une Mercedes CLA à Marrakech devient simple et pratique. Profitez d’un véhicule moderne, équipé des dernières technologies pour une expérience de conduite exceptionnelle, que ce soit dans les rues de la ville rouge ou lors d’excursions aux alentours. Prix de location : à partir de 110 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 3000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 3000€ par empreinte bancaire ou 3000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-Cla-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Mercedes-Cla-a-louer.jpg"
+      ],
+      "price": 110,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "golf-8",
+      "title": "Golf 8",
+      "excerpt": "Explore Marrakech in a Golf 8, a modern and comfortable car that combines style and exceptional performance.",
+      "description": "Discover Marrakech aboard the Golf 8, a modern car that combines style, comfort and exceptional performance. Ideal for city breaks or trips to the surrounding area, the Golf 8 offers a pleasant, economical drive. With its elegant design and advanced equipment, it&rsquo;s perfect for couples, families or groups of friends. Choosing the Golf 8 in Marrakech means opting for a compact, reliable vehicle that&rsquo;s perfectly suited to the red city&rsquo;s busy streets and long Moroccan roads. Thanks to our flexible rental options, you can enjoy your travels with complete peace of mind. Rental prices : from 85 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our booking form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €2,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit : 2000€ by bank transfer or 2000€ in cash + passport Minimum age : 18 years B driving license with no minimum number of years Cancellation policy : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Golf-8-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Golf-8-a-louer.jpg"
+      ],
+      "price": 85,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "golf-8-marrakech",
+      "title": "Golf 8",
+      "excerpt": "Louez une Golf 8 à Marrakech, une voiture moderne alliant style et confort. Idéale pour explorer la ville et ses environs.",
+      "description": "Découvrez Marrakech à bord de la Golf 8, une voiture moderne qui allie style, confort et performances exceptionnelles. Idéale pour vos escapades en ville ou vos voyages dans les environs, la Golf 8 offre une conduite agréable et économique. Avec son design élégant et ses équipements avancés, elle répond parfaitement aux besoins des couples, familles ou groupes d’amis. Choisir la Golf 8 à Marrakech, c’est opter pour un véhicule compact et fiable, parfaitement adapté aux rues animées de la ville rouge et aux longues routes marocaines. Grâce à nos options de location flexibles, profitez pleinement de vos déplacements en toute sérénité. Prix de location : à partir de 85 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 2000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 2000€ par empreinte bancaire ou 2000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Golf-8-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Golf-8-a-louer.jpg"
+      ],
+      "price": 85,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "cupra-leon",
+      "title": "Cupra leon",
+      "excerpt": "Rent a Cupra Leon in Marrakech for a dynamic and elegant driving experience. This car combines sporty design and impressive performance.",
+      "description": "Renting a Cupra Leon in Marrakech means choosing a dynamic and elegant driving experience. With its sporty design and impressive performance, this car offers a unique driving experience. Perfect for exploring Marrakech and the surrounding area in style, the Cupra Leon combines comfort and cutting-edge technology to make every journey a pleasure. Rental price : from 85 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €3,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: €3,000 by bank transfer or €3,000 in cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email to",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Cupra-leon-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Cupra-leon-a-louer.jpg"
+      ],
+      "price": 85,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "cupra-leon-marrakech",
+      "title": "Cupra leon",
+      "excerpt": "Louez une Cupra Leon à Marrakech pour une conduite dynamique et élégante. Parfaite pour explorer la ville avec style.",
+      "description": "Louer une Cupra Leon à Marrakech, c&rsquo;est choisir une conduite dynamique et élégante. Avec son design sportif et ses performances impressionnantes, cette voiture vous offre une expérience de conduite unique. Parfaite pour explorer Marrakech et ses environs avec style, la Cupra Leon combine confort et technologie de pointe pour rendre chaque trajet agréable. Prix de location : à partir de 85 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 3000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 3000€ par empreinte bancaire ou 3000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Cupra-leon-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Cupra-leon-a-louer.jpg"
+      ],
+      "price": 85,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "bmw-m5",
+      "title": "BMW M5",
+      "excerpt": "Rent a powerful BMW M5 in Marrakech for an extraordinary driving experience. It combines luxury and performance for an unforgettable journey.",
+      "description": "Rent a BMW M5 in Marrakech and enjoy an extraordinary driving experience. With its powerful engine and refined design, this car embodies luxury and performance. Perfect for getting around Marrakech, the BMW M5 combines comfort and thrills for an unforgettable journey. Rental price : from 200 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €4000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: 4000€ by bank transfer or 4000€ in cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email to",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M5-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M5-a-louer.jpg"
+      ],
+      "price": 200,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "bmw-m5-marrakech",
+      "title": "BMW M5",
+      "excerpt": "Louez une BMW M5 à Marrakech pour une expérience de conduite exceptionnelle, alliant luxe, puissance et confort.",
+      "description": "Optez pour la location d&rsquo;une BMW M5 à Marrakech et vivez une expérience de conduite hors du commun. Avec son moteur puissant et son design raffiné, cette voiture incarne le luxe et la performance. Parfaite pour vos déplacements dans Marrakech, la BMW M5 allie confort et sensations fortes pour un voyage inoubliable. Prix de location : à partir de 200 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 4000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 4000€ par empreinte bancaire ou 4000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M5-a-louer.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M5-a-louer.jpg"
+      ],
+      "price": 200,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "bmw-m4",
+      "title": "Bmw M4",
+      "excerpt": "Rent a powerful and elegant BMW M4 in Marrakech. This car offers exceptional performance and advanced technology for a stylish journey.",
+      "description": "Renting a BMW M4 in Marrakech lets you enjoy a sporty and elegant driving experience. This powerful model offers exceptional performance, while guaranteeing optimum comfort. With its bold design and advanced technologies, the BMW M4 is the perfect choice for exploring Marrakech with style and power. Rental price : from 180 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €4000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: 4000€ by bank transfer or 4000€ in cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email to",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M4-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M4-marrakech.jpg"
+      ],
+      "price": 180,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "bmw-m4-marrakech",
+      "title": "Bmw M4",
+      "excerpt": "Location d&rsquo;une BMW M4 à Marrakech, le choix parfait pour une expérience de conduite sportive, élégante et puissante.",
+      "description": "La location d’une BMW M4 à Marrakech vous permet de vivre une expérience de conduite sportive et élégante. Ce modèle puissant offre une performance exceptionnelle, tout en garantissant un confort optimal. Avec son design audacieux et ses technologies avancées, la BMW M4 est le choix parfait pour explorer Marrakech avec style et puissance. Prix de location : à partir de 180 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 4000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 4000€ par empreinte bancaire ou 4000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M4-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/BMW-M4-marrakech.jpg"
+      ],
+      "price": 180,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "audi-rs3",
+      "title": "Audi Rs3",
+      "excerpt": "Rent an Audi RS3 in Marrakech and enjoy an unforgettable driving experience, combining performance and luxury. Explore the city in style and comfort.",
+      "description": "Renting an Audi RS3 in Marrakech offers you an unforgettable driving experience, combining performance and luxury. With its powerful engine and elegant design, this sporty car is ideal for those looking to explore the city in style and comfort. Enjoy every moment on the roads of Marrakech with a car that makes no compromises on quality. Rental price : from 110 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €3,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: €3,000 by bank transfer or €3,000 in cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email to",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Rs3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Rs3.jpg"
+      ],
+      "price": 110,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "audi-rs3-marrakech",
+      "title": "Audi Rs3",
+      "excerpt": "Louez une Audi RS3 à Marrakech pour une expérience de conduite luxueuse et performante, alliant élégance et puissance.",
+      "description": "La location d&rsquo;une Audi RS3 à Marrakech vous offre une expérience de conduite inoubliable, alliant performance et luxe. Avec son moteur puissant et son design élégant, cette voiture sportive est idéale pour ceux qui recherchent à explorer la ville avec style et confort. Profitez de chaque instant sur les routes de Marrakech avec une voiture qui ne fait aucun compromis sur la qualité. Prix de location : à partir de 110 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 3000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 3000€ par empreinte bancaire ou 3000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Rs3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Rs3.jpg"
+      ],
+      "price": 110,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "audi-q3",
+      "title": "Audi Q3",
+      "excerpt": "Rent an Audi Q3 in Marrakech for a pleasant and stylish driving experience. This compact SUV is perfect for exploring the city and its surroundings.",
+      "description": "Choose an Audi Q3 in Marrakech and enjoy a pleasant driving experience combining comfort and style. This compact SUV offers a smooth ride, ideal for exploring the city and its surroundings in style. Thanks to its modern design and generous space, the Audi Q3 is perfect for those looking to travel in luxury while enjoying great versatility. Rental price : from 120 EUR per day Reservation process: To reserve a vehicle, please fill in your details via our reservation form. We will confirm your reservation on WhatsApp and by email. On the day of your arrival, Nous will be waiting for you at the airport. You&rsquo;ll need to pay a deposit of €3,000 by bank transfer or cash, and show your passport. Payment is made on arrival. Booking conditions : Deposit: €3,000 by bank transfer or €3,000 in cash + passport Minimum age: 18 years B driving license with no minimum number of years Cancellation conditions : Cancellation free of charge. Cancellation requests must be sent by WhatsApp or email to",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Q3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Q3.jpg"
+      ],
+      "price": 120,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "car_rental",
+      "slug": "audi-q3-marrakech",
+      "title": "Audi Q3",
+      "excerpt": "Location d&rsquo;une Audi Q3 à Marrakech, un SUV compact et élégant, idéal pour explorer la ville.",
+      "description": "Optez pour un Audi Q3 à Marrakech et vivez une expérience de conduite agréable alliant confort et style. Ce SUV compact vous offre une conduite fluide, idéale pour explorer la ville et ses environs avec élégance. Grâce à son design moderne et son espace généreux, l&rsquo;Audi Q3 est parfaite pour ceux qui cherchent à voyager dans le luxe tout en bénéficiant d&rsquo;une grande polyvalence. Prix de location : à partir de 120 EUR par jour Processus de réservation : Pour réserver un véhicule, veuillez remplir vos informations via notre formulaire de réservation. Nous confirmerons votre réservation sur WhatsApp et par email. Le jour de votre arrivée, Nous vous attendra à l’aéroport. Vous devrez régler une caution de 3000€ par empreinte bancaire ou en espèces, ainsi que présenter votre passeport. Le paiement se fait à l’arrivée. Conditions de réservation : Caution : 3000€ par empreinte bancaire ou 3000€ en espèces + passeport Âge minimum : 18 ans Permis B sans nombre d’années minimum Conditions d’annulation : Annulation gratuite. Toute demande d’annulation doit être adressée par WhatsApp ou par email",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Q3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Audi-Q3.jpg"
+      ],
+      "price": 120,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-sultan",
+      "title": "Villa Sultan",
+      "excerpt": "Rent this luxurious 9 bedroom villa on the Route de l&rsquo;Ourika. It comes with a pool, a large garden, and house staff.",
+      "description": "Luxury 9-bedroom villa on the Route de l&rsquo;Ourika Swimming pool House staff Large garden Included in the rental price: Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-1-8-scaled.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-1-8-scaled.jpg"
+      ],
+      "location": "Route de l&rsquo;Ourika",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-sultan",
+      "title": "Villa Sultan",
+      "excerpt": "Louez cette luxueuse villa de 9 chambres sur la route de l&rsquo;Ourika. Elle dispose d&rsquo;une piscine, d&rsquo;un grand jardin et de personnel de maison.",
+      "description": "Villa Luxueuse de 9 Chambres sur la Route de l&rsquo;Ourika Piscine Personnel de maison Un grand jardin Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-1-8-scaled.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-1-8-scaled.jpg"
+      ],
+      "location": "route de l&rsquo;Ourika",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 9,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "nora-palace",
+      "title": "Nora Palace",
+      "excerpt": "Stay in a luxurious 20 room palace on the Route de l&rsquo;Ourika. It features a pool and a large garden on one hectare.",
+      "description": "Luxurious 20-room palace in Marrakech on the Route de l&rsquo;Ourika 1 Hectare Swimming pool Games Large garden Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Palace-3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Palace-3.jpg"
+      ],
+      "location": "Route de l&rsquo;Ourika",
+      "price": 20,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "palais-nora-marrakech",
+      "title": "Palais Nora",
+      "excerpt": "Sur la route de l&rsquo;Ourika, découvrez ce luxueux palais de 20 chambres. Profitez d&rsquo;une piscine, d&rsquo;un grand jardin, et d&rsquo;un hectare de terrain.",
+      "description": "Palais Luxueuse à Marrakech de 20 Chambres sur la Route de l’Ourika 1 Hectare Piscine Jeux Un grand jardin Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Palace-3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Palace-3.jpg"
+      ],
+      "location": "route de l&rsquo;Ourika",
+      "price": 20,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 20,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-targa",
+      "title": "Villa Targa",
+      "excerpt": "Enjoy a stay at this luxurious 4 bedroom villa in Targa, Marrakech. It features a swimming pool and a large garden.",
+      "description": "Luxurious 4 Bedroom Villa in Marrakech at Targa not far from the city center Swimming pool Large garden Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-1.jpg"
+      ],
+      "location": "Targa",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-targa-marrakech",
+      "title": "Villa Targa",
+      "excerpt": "Profitez d&rsquo;un séjour à la villa luxueuse de Targa, à Marrakech. Elle dispose de 4 chambres, d&rsquo;une piscine et d&rsquo;un grand jardin.",
+      "description": "Villa Luxueuse à Marrakech de 4 Chambres à Targa pas loin du centre ville Piscine Un grand jardin Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-1.jpg"
+      ],
+      "location": "Targa",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 4,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-zaytouna",
+      "title": "Villa Zaytouna",
+      "excerpt": "This luxurious 6 suite villa at Golf Argan in Marrakech offers a private pool, a large garden, and a panoramic golf view.",
+      "description": "Luxury Villa in Marrakech 6 Master Suite With Bathroom Golf argan Marrakech Private swimming pool Large private garden Panoramic view of the Golf course Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Zaytouna-8.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Zaytouna-8.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-zaytouna-marrakech",
+      "title": "Villa Zaytouna",
+      "excerpt": "Magnifique villa de 6 suites au Golf Argan à Marrakech. Profitez de sa piscine, de son grand jardin privés, et d&rsquo;une vue panoramique sur le golf.",
+      "description": "Villa Luxueuse à Marrakech de 6 suite Master Avec Salle de Bain Golf argan Marrakech Piscine privé Un grand jardin privé vue Panoramique sur le Golf Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Zaytouna-8.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Zaytouna-8.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-sirine",
+      "title": "Villa Sirine",
+      "excerpt": "Enjoy a luxurious stay at this 4 suite villa in Bab Atlas. It features a private pool, a large garden, and panoramic golf views.",
+      "description": "Luxury Villa in Marrakech 4 Master Suite With Bathroom in Bab atlas Marrakech Private swimming pool Large private garden Panoramic view of the Golf course Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-sirine-outside.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-sirine-outside.jpg"
+      ],
+      "location": "Bab Atlas",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-sirine-marrakech",
+      "title": "Villa Sirine",
+      "excerpt": "Villa luxueuse à Bab Atlas, Marrakech, avec 4 suites, une piscine privée, un grand jardin et une vue panoramique sur le golf.",
+      "description": "Villa Luxueuse à Marrakech de 4 suite Master Avec Salle de Bain à Bab atlas Marrakech Piscine privé Un grand jardin privé vue Panoramique sur le Golf Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-sirine-outside.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-sirine-outside.jpg"
+      ],
+      "location": "Bab Atlas",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-salmane",
+      "title": "Villa Salmane",
+      "excerpt": "Villa Salmane offers modern comfort in Marrakech. Enjoy a private pool, a spacious garden, and mountain views from this 7-bedroom villa.",
+      "description": "Located in Marrakech, Villa Salmane offers all modern comforts with air conditioning, private pool, garden and barbecue. Just 14 km from the Bahia Palace, this spacious villa has 7 bedrooms, a fully equipped kitchen and 7 bathrooms with walk-in showers. Located in Marrakech, Villa Salmane offers all modern comforts, including air conditioning, private pool, garden and barbecue. Just 14 km from the Bahia Palace, this spacious villa boasts 7 bedrooms, a fully equipped kitchen and 7 bathrooms with walk-in showers. Enjoy mountain and pool views from the furnished balcony. Guided tours and a children&rsquo;s playground are available nearby. Marrakech-Ménara airport is 19 km away, with shuttle service available. Included in the rental price: Concierge service 24-hour reception Bed linen and towels Electricity, water and gas consumption Cleaning lady Free Wifi Satellite TV 24-hour security Paying options : Stove Excursions Airport transfers Beauty treatments",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0021.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0021.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-salmane-marrakech",
+      "title": "Villa Salmane",
+      "excerpt": "Séjournez à la Villa Salmane à Marrakech. Cette villa de 7 chambres offre piscine privée, jardin, barbecue et une vue magnifique sur les montagnes.",
+      "description": "Située à Marrakech, la Villa Salmane offre tout le confort moderne avec climatisation, piscine privée, jardin et barbecue. À seulement 14 km du palais de la Bahia, cette spacieuse villa dispose de 7 chambres, d&rsquo;une cuisine équipée et de 7 salles de bains avec douche à l&rsquo;italienne. Profitez de la vue sur la montagne et la Située à Marrakech, la Villa Salmane offre tout le confort moderne avec climatisation, piscine privée, jardin et barbecue. À seulement 14 km du palais de la Bahia, cette spacieuse villa dispose de 7 chambres, d&rsquo;une cuisine équipée et de 7 salles de bains avec douche à l&rsquo;italienne. Profitez de la vue sur la montagne et la piscine depuis le balcon meublé. Des visites guidées et une aire de jeux pour enfants sont disponibles à proximité. L&rsquo;aéroport de Marrakech-Ménara est à 19 km avec possibilité de navette. Inclus dans le prix de la location : Service De Conciergerie Réception ouverte 24h/24 Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0021.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0021.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 7,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-rak",
+      "title": "Villa Rak",
+      "excerpt": "Stay at this 4 bedroom villa in the Palmeraie of Marrakech. It offers a private pool and a large garden for your enjoyment.",
+      "description": "Villa 4 Bedrooms at la palmerie Marrakech Private swimming pool Large private garden Included in the rental price: Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-2.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-2.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-rak-marrakech",
+      "title": "Villa Rak",
+      "excerpt": "Séjournez à la Palmeraie de Marrakech dans cette villa de 4 chambres, dotée d&rsquo;une piscine et d&rsquo;un grand jardin privés.",
+      "description": "Villa 4 Chambres à la palmerie Marrakech Piscine privé Un grand jardin privé Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-2.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-2.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 4,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-palmerie",
+      "title": "Villa Palmerie",
+      "excerpt": "This 6 bedroom villa in Marrakech&rsquo;s Palmeraie offers a private pool and a large garden.",
+      "description": "6 Bedroom Villa at la palmerie Marrakech Private swimming pool Large private garden Included in the rental price: Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-1.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-palmerie-marrakech",
+      "title": "Villa Palmerie",
+      "excerpt": "Une villa de 6 chambres à la Palmeraie de Marrakech, avec piscine et grand jardin privés. Idéale pour la détente.",
+      "description": "Villa 6 Chambres à la palmerie Marrakech Piscine privé Un grand jardin privé Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-2-1.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 6,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-palm",
+      "title": "Villa Palm",
+      "excerpt": "This 7 bedroom villa at Bab Atlas, Marrakech, offers a private swimming pool and a large private garden for a relaxing stay.",
+      "description": "7 Bedroom Villa at Bab Atlas Marrakech Private swimming pool Large private garden Included in the rental price: Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-plam-inside.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-plam-inside.jpg"
+      ],
+      "location": "Bab Atlas",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-palm-marrakech",
+      "title": "Villa Palm",
+      "excerpt": "Passez un séjour agréable dans cette villa de 7 chambres à Bab Atlas. Profitez de la piscine privée et du grand jardin.",
+      "description": "Villa 7 Chambres à Bab Atlas Marrakech Piscine privé Un grand jardin privé Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-plam-inside.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-plam-inside.jpg"
+      ],
+      "location": "Bab Atlas",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 7,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-ouasise",
+      "title": "Villa Ouasise",
+      "excerpt": "Enjoy a 4 suite villa on the Ourika road in Marrakech. It features a private pool, a large garden, and includes household staff.",
+      "description": "Villa 4 suites at route Ourika KM 8 Marrakech Private swimming pool Large private garden Included in the rental price: Concierge service Access to all villa facilities Household staff (cook, maid/housekeeper, gardener) Security staff Bed linen, towels Mineral water &amp; Moroccan tea Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Exclusive catering service Delivery service: €30 transportation from airport €40/van of 8/9 people Laundry and ironing service: €20 / day Excursions Airport transfers Beauty treatments",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0127.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0127.jpg"
+      ],
+      "location": "route Ourika KM 8 Marrakech Private swimming pool Large private garden Included in the rental price: Concierge service Access to all villa facilities Household staff (cook",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-ouasise-marrakech",
+      "title": "Villa Ouasise",
+      "excerpt": "Découvrez une villa de 4 suites sur la route d&rsquo;Ourika. Elle dispose d&rsquo;une piscine et d&rsquo;un grand jardin privés, avec personnel inclus.",
+      "description": "Villa 4 suites à la route Ourika KM 8 Marrakech Piscine privé Un grand jardin privé Inclus dans le prix de la location : Service De Conciergerie Accès à toutes les installations de la villa Personnel de maison (cuisinière, femme de chambre/femme de ménage, jardinier) Personnel de sécurité Draps, linge de maison Eau minérale &amp; thé marocain Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Service de restauration exclusif Service de livraison : 30 € ⁠transport depuis aéroport 40€/van de 8/9 personnes ⁠Service de blanchisserie et repassage du linge : 20 € / jour Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0127.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0127.jpg"
+      ],
+      "location": "route d&rsquo;Ourika",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 9
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-noria",
+      "title": "Villa Noria",
+      "excerpt": "This luxury 5 suite villa at Golf Noria has a private pool, jacuzzi, hammam, and billiards, all with panoramic golf views.",
+      "description": "Luxury Villa in Marrakech 5 Master Suite With Bathroom Golf Noria Private swimming pool Jacuzzi hammam beldi Billiards Large private garden Panoramic view of the golf course Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Golf-Noria.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Golf-Noria.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-noria-marrakech",
+      "title": "Villa Noria",
+      "excerpt": "Au Golf Noria, une villa de luxe avec 5 suites, piscine, jacuzzi, hammam et billard. Profitez d&rsquo;une vue panoramique.",
+      "description": "Villa Luxueuse à Marrakech de 5 suite Master Avec Salle de Bain Golf Noria Piscine privé jacuzzi hammam beldi Billard Un grand jardin privé vue Panoramique sur le Golf Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Golf-Noria.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Golf-Noria.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-mimouna",
+      "title": "Villa Mimouna",
+      "excerpt": "Stay in a luxurious 5 suite villa at Golf Argan in Marrakech. Enjoy the private pool, jacuzzi, hammam, and billiards.",
+      "description": "Luxury Villa in Marrakech 5 Master Suite With Bathroom Golf Argan Private swimming pool Jacuzzi hammam beldi Billiards Large private garden Panoramic view of the golf course Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Mimouna-pool.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Mimouna-pool.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-mimouna-marrakech",
+      "title": "Villa Mimouna",
+      "excerpt": "Découvrez une luxueuse villa de 5 suites au Golf Argan à Marrakech. Profitez de la piscine, du jacuzzi, du hammam et du billard.",
+      "description": "Villa de lux à Marrakech de 5 suite Master Avec Salle de Bain Golf Argan Piscine privé jacuzzi hammam beldi Billard Un grand jardin privé vue Panoramique sur le Golf Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Mimouna-pool.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Mimouna-pool.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-marrakchia",
+      "title": "Villa Marrakchia",
+      "excerpt": "Located 15 minutes from the center of Marrakech, this high-standing villa has 10 suites, a private pool, and panoramic Atlas Mountain views.",
+      "description": "High standing Villa in Marrakech of 10 Master Suite With Bathroom at 15 from Marrakech center Private swimming pool Panoramic view of Atlas Mountains Large private garden Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Marrakchia-10.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Marrakchia-10.jpg"
+      ],
+      "price": 10,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-marrakchia-marrakech",
+      "title": "Villa Marrakchia",
+      "excerpt": "À 15 minutes de Marrakech, cette villa haut standing offre 10 suites, une piscine privée et une vue panoramique sur les montagnes de l&rsquo;Atlas.",
+      "description": "Villa Haute standing à Marrakech de 10 suite Master Avec Salle de Bain à 15 de centre de Marrakech Piscine privé vue Panoramique sur Atlas Montagne Un grand jardin privé Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Marrakchia-10.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Marrakchia-10.jpg"
+      ],
+      "price": 15,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-lala",
+      "title": "Villa Lala",
+      "excerpt": "This luxury 5 suite villa at Golf Noria in Marrakech offers a private pool, a large garden, and panoramic mountain views.",
+      "description": "Luxury Villa in Marrakech 5 Master Suite With Bathroom Golf Noria Private swimming pool Large private garden Panoramic mountain view Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Lala-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Lala-1.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-marrakech",
+      "title": "Villa Lala",
+      "excerpt": "Profitez d&rsquo;un séjour luxueux au Golf Noria à Marrakech. Cette villa de 5 suites dispose d&rsquo;une piscine et d&rsquo;un grand jardin privés.",
+      "description": "Villa Luxueuse à Marrakech de 5 suite Master Avec Salle de Bain Golf Noria Piscine privé Un grand jardin privé vue Panoramique sur le Montagne Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Lala-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Lala-1.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-kech",
+      "title": "Villa Kech",
+      "excerpt": "Luxury villa at Golf Noria in Marrakech with 4 suites, a private pool, a large garden, and a panoramic mountain view.",
+      "description": "Luxury Villa in Marrakech 4 Master Suite With Bathroom Golf Noria Private swimming pool Large private garden Panoramic mountain view Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-marrakech.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-kech-marrakech",
+      "title": "Villa Kech",
+      "excerpt": "Villa de luxe au Golf Noria à Marrakech. Elle dispose de 4 suites avec salles de bain, d&rsquo;une piscine et d&rsquo;un grand jardin privés.",
+      "description": "Villa de lux à Marrakech de 4 suite Master Avec Salle de Bain Golf Noria Piscine privé Un grand jardin privé vue Panoramique sur le Montagne Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-marrakech.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-fes",
+      "title": "Villa Fes",
+      "excerpt": "This luxurious 5 bedroom villa on Fes road in Marrakech has a private pool, a large garden, and panoramic views.",
+      "description": "Luxurious 5-bedroom villa in Marrakech on Fes road Private swimming pool Large private garden Panoramic view Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-3.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-fes-marrakech",
+      "title": "Villa Fes",
+      "excerpt": "Cette villa de 5 chambres sur la route de Fès à Marrakech offre une piscine et un grand jardin privés.",
+      "description": "Villa Luxueuse à Marrakech de 5 chambres sur route Fes Piscine privé Un grand jardin privé vue Panoramique Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-3.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-3.jpg"
+      ],
+      "location": "route de Fès à Marrakech offre une piscine et un grand jardin privés",
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 5,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-fassia",
+      "title": "Villa Fassia",
+      "excerpt": "Stay in a high-standing villa just 20 minutes from Marrakech. It features 3 suites, a private pool, a large garden, and a panoramic mountain view.",
+      "description": "High standing villa route de fes 20 min to downtown Marrakech. 3 master suite with bathroom. Private swimming pool Large private garden Panoramic mountain view Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Fassia-7.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Fassia-7.jpg"
+      ],
+      "location": "route de fes 20 min to downtown Marrakech",
+      "price": 20,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-fassia-marrakech",
+      "title": "Villa Fassia",
+      "excerpt": "Villa haut standing à 20 min du centre de Marrakech. Elle dispose d&rsquo;une piscine, d&rsquo;un jardin privé et d&rsquo;une vue sur la montagne.",
+      "description": "Villa Haute standing route de fes 20 min à centre ville Marrakech. 3 suite Master Avec Salle de Bain . Piscine privé Un grand jardin privé vue Panoramique sur le Montagne Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Fassia-7.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Villa-Fassia-7.jpg"
+      ],
+      "location": "route de fes 20 min à centre ville Marrakech",
+      "price": 20,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-crystal",
+      "title": "Villa Crystal",
+      "excerpt": "Villa Crystal in Marrakech offers a private pool, a garden, a terrace, and free Wi-Fi, all with a beautiful mountain view.",
+      "description": "Featuring a garden, terrace and bar, Villa Crystal offers accommodation with free Wi-Fi and mountain views in Marrakech. Guests enjoy a private swimming pool and free private parking. This air-conditioned villa features 6 bedrooms, a living room, a fully equipped kitchen with a fridge and coffee machine, and 6 bathrooms fitted with a shower and free toiletries. It also features a flat-screen TV. A continental or halal breakfast is served on site. VillaCrystal is 35 km from the Bahia Palace and 36 km from Marrakech&rsquo;s Orientalist Museum. The nearest airport, Marrakech-Ménara, is 41 km away. Highlights Outdoor pool Free Wi-Fi connection Free parking Non-smoking rooms Terrace Bar Garden Air conditioning Breakfast",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0084.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0084.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-crystal",
+      "title": "Villa Crystal",
+      "excerpt": "La Villa Crystal, à Marrakech, propose un hébergement avec piscine privée, jardin, Wi-Fi gratuit et vue sur la montagne.",
+      "description": "Dotée d&rsquo;un jardin, d&rsquo;une terrasse et d&rsquo;un bar, la Villa Crystal propose un hébergement avec une connexion Wi-Fi gratuite et une vue sur la montagne à Marrakech. Vous profiterez d&rsquo;une piscine privée et d&rsquo;un parking privé gratuit. Cette villa climatisée comprend 6 chambres, un salon, une cuisine entièrement équipée avec un réfrigérateur et une machine à café ainsi que 6 salles de bains pourvues d&rsquo;une douche et d&rsquo;articles de toilette gratuits. Il dispose également d&rsquo;une télévision à écran plat. Un petit-déjeuner continental ou halal est servi sur place. La VillaCrystal se trouve à 35 km du palais de la Bahia et à 36 km du musée orientaliste de Marrakech. L&rsquo;aéroport de Marrakech-Ménara, le plus proche, est implanté à 41 km. Ses points forts Piscine extérieure Connexion Wi-Fi gratuite Parking gratuit Chambres non-fumeurs Terrasse Bar Jardin Climatisation Petit-déjeuner",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0084.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241128-WA0084.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 6,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-chouchou",
+      "title": "Villa Chouchou",
+      "excerpt": "Enjoy a luxurious 4 bedroom villa in the Palmeraie of Marrakech. It offers a private pool, a large garden and panoramic views.",
+      "description": "Luxurious 4 bedroom villa in the Palmeraie Marrakech Private swimming pool Large private garden Panoramic view Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24h/24 security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0144.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0144.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-chouchou",
+      "title": "Villa Chouchou",
+      "excerpt": "Profitez d&rsquo;un séjour luxueux à la Palmeraie de Marrakech. Cette villa avec 4 chambres offre piscine et jardin privés.",
+      "description": "Villa Luxueuse de 4 chambres à la Palmeraie Marrakech Piscine privé Un grand jardin privé vue Panoramique Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0144.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/IMG-20241110-WA0144.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 4,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-golf-argan",
+      "title": "Villa Golf Argan",
+      "excerpt": "Luxurious 5 suite villa on the Argane Golf Course in Marrakech. It features a private pool and a large garden with panoramic golf views.",
+      "description": "Luxurious 5 Suite Master Villa With Bathroom on the Argane Golf Course in Marrakech Private swimming pool Large private garden Panoramic view of the golf course Included in the rental price : Concierge service Sheets, household linen Electricity, water, gas Cleaning lady Free Wifi Satellite TV 24-hour security Optional extras : Stove Excursions Airport transfers Beauty care",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-day.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-day.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-golf-argan-marrakech",
+      "title": "Villa Golf Argan",
+      "excerpt": "Luxueuse villa sur le golf Argane à Marrakech, avec 5 suites, piscine et grand jardin privés.",
+      "description": "Villa Luxueuse de 5 suite Master Avec Salle de Bain sur le golf argane à Marrakech Piscine privé Un grand jardin privé vue Panoramique sur le Golf Inclus dans le prix de la location : Service De Conciergerie Draps, linge de maison Consommation électrique, eau, gaz Femme de ménage Wifi gratuit TV par satellite Sécurité 24h/24 Options payantes : Cuisinière Excursions Transferts aéroport Soin de beauté",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-day.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/12/Pool-day.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "flying-dress-photo-shoot",
+      "title": "Flying Dress photo shoot",
+      "excerpt": "Live a magical experience with a flying dress photoshoot in the Agafay Desert. A professional photographer will capture your memories in a breathtaking setting.",
+      "description": "Flying Dress Shooting in the Agafay Desert Live a magical and elegant experience with a flying dress shooting session in the heart of the Agafay Desert. Surrounded by breathtaking scenery, let yourself be sublimated in aerial gowns that create memorable and unique shots. An unforgettable photographic experience Turn your visit to the desert into a real fairytale with : Elegant, colorful dresses (ecru white, green, burgundy red). A professional photographer to capture every magical moment. The opportunity to share this adventure as a couple, with friends or family. Men&rsquo;s linen outfits and Flying Dresses are available in sizes XS to XXL. Activity program Departure from Marrakech at 5pm : Transport included with the photographer. Arrival in the Agafay desert at 6pm : Preparation and start of the shoot. 40-minute photo session : Up to 60 edited, unretouched shots. Return to Marrakech around 7:30 pm . Rates and Options (180 €) per adult, minimum booking 2 adults. (30 €) per child under 13. Additional Flying Dress : 35 € per dress. Additional transportation : 150 DH (5-10 km) or 250 DH (10-20 km) beyond Marrakech. What&rsquo;s included Flying Dress rental. Round-trip transportation from Marrakech. Between 40 and 70 edited photos. What&rsquo;s not included Gratuities. Additional dresses or accessories.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/image00001-3-1024x683-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/image00001-3-1024x683-1.jpeg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "shooting-photo-flying-dress",
+      "title": "Shooting photo Flying Dress",
+      "excerpt": "Shooting photo en flying dress dans le désert d&rsquo;Agafay. Robes, transport et photographe professionnelle.",
+      "description": "Shooting Flying Dress dans le Désert d’Agafay Vivez une expérience magique et élégante avec une séance tenue de tir volante au cœur du désert d’Agafay. Entouré par des paysages à couper le souffle, laissez-vous sublimer dans des robes aériennes qui créent des clichés mémorables et uniques. Une Expérience Photographique Inoubliable Transformez votre passage dans le désert en un véritable conte de fées grâce à : Des robes élégantes et colorées (blanc écru, vert, rouge bordeaux). Un service de photographe professionnelle qui capture chaque instant magique. La possibilité de partager cette aventure en couple, entre amis, ou en famille. Les tenues pour hommes, un ensemble en lin, et les robes Flying Dress sont disponibles dans les tailles allant du XS au XXL. Programme de l’Activité Départ à 17h de Marrakech : Transport inclus avec la photographe. Arrivée au désert d’Agafay à 18h : Préparation et début du shooting. Séance photo de 40 minutes : Jusqu’à 60 clichés édités non retouchés. Retour à Marrakech vers 19h30 . Tarifs et Options (180 €) par adulte, réservation pour 2 adultes minimum. (30 €) par enfant de moins de 13 ans. Flying Dress supplémentaire : 35 € par robe. Transport additionnel : 150 DH (5-10 km) ou 250 DH (10-20 km) au-delà de Marrakech. Ce Qui Est Inclus Location d’une Flying Dress . Transport aller-retour depuis Marrakech. Entre 40 et 70 photos éditées. Ce Qui N’est Pas Inclus Pourboires. Robes ou accessoires supplémentaires.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/image00001-3-1024x683-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/image00001-3-1024x683-1.jpeg"
+      ],
+      "price": 40,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "hot-air-balloon",
+      "title": "Hot air balloon Marrakech",
+      "excerpt": "Experience an exceptional hot-air balloon flight over Marrakech. Enjoy a panoramic view of the Atlas Mountains and Berber villages.",
+      "description": "A Unique Experience: Ballooning in Marrakech Enjoy an exceptional adventure with a hot air balloon flight in Marrakech. Marvel at the panoramic view of the Atlas Mountains, picturesque Berber villages and the bustling city that awakens under the first rays of the sun. An unforgettable program Your aerial escapade begins at dawn, with attention to every detail to make this experience second to none. Private 4&#215;4 transport before sunrise 40-60 minute flight depending on weather conditions Traditional Berber breakfast in a caidal tent Souvenir flight certificate Prices and Ballooning Options : Standard fare: 2050 DH/person Children&rsquo;s rate: half price Exclusive option: private flight with breakfast in the air Why choose this experience? Whether it&rsquo;s for a special occasion or simply to explore Marrakech from a new angle, a hot-air balloon flight is a must-do activity. Book now and let us orchestrate an experience that will remain etched in your memories.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/hot-air-balloon.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/hot-air-balloon.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "montgolfiere-marrakech",
+      "title": "Montgolfière Marrakech",
+      "excerpt": "Vol en montgolfière à Marrakech, vue panoramique sur l&rsquo;Atlas et petit-déjeuner berbère inclus.",
+      "description": "Une Expérience Unique : Vol en Montgolfière Marrakech Vivez une aventure exceptionnelle avec un vol en montgolfière à Marrakech. Laissez-vous émerveiller par la vue panoramique sur les montagnes de l’Atlas, les villages berbères pittoresques et la ville animée qui s’éveille sous les premiers rayons du soleil. Un Programme Inoubliable Votre escapade aérienne commence dès l’aube, avec une attention portée à chaque détail pour rendre cette expérience inégalée. Transport privé en 4&#215;4 avant le lever du soleil Vol de 40 à 60 minutes selon les conditions météorologiques Petit-déjeuner traditionnel berbère sous une tente caïdale Certificat de vol offert en souvenir Tarifs et Options de Montgolfière : Tarif standard : 170 EUR/personne Tarif enfant : à moitié prix Option exclusive : vol privatisé avec petit-déjeuner dans les airs Pourquoi Choisir Cette Expérience ? Que ce soit pour une occasion spéciale ou simplement pour explorer Marrakech sous un nouvel angle, le vol en montgolfière est une activité incontournable. Réservez dès maintenant et laissez-nous orchestrer une expérience qui restera gravée dans vos souvenirs.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/hot-air-balloon.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/hot-air-balloon.jpg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "quad-lunch-and-pool-access-at-le-bedouin-transport",
+      "title": "Quad + lunch and pool access at Le Bédouin + transport",
+      "excerpt": "Spend an unforgettable day in the Agafay Desert with a quad ride and lunch at Camp Le Bédouin.",
+      "description": "An Unforgettable Day in the Agafay Desert Morning Quad Biking thrills Experience a thrilling adventure in the heart of the Agafay Desert. Just one hour from Marrakech, start your day with a 2-hour quad ride, accompanied by a guide. Take a tea break to admire the scenery before heading off to your next destination. Lunch and swimming pool at Camp Le Bédouin Join us at Camp Le Bédouin, an authentic spot where you can enjoy a full Moroccan lunch (excluding drinks). Then relax by the pool, where a musical atmosphere adds a festive touch to the day. Towels and deckchairs are included for your comfort. Comfortable return to Marrakech End your day with a group transfer back to Marrakech, at the time of your choice (5 or 7 p.m.). Program and Rates : Morning Quad 2-hour guided ride Tea break included Price: 700 DH (70€ ) per person Lunch and swimming pool at Camp Le Bédouin Lunch (starter, main course, dessert &#8211; drinks not included) Pool access, deckchairs and towels provided Price: 450 DH (45€ ) per person Return transport Group return to Marrakech Price: 150 DH (15€) per person Important information : Payment : In cash, separately for each service provider. Languages accepted : Euros and dirhams. Closed shoes required for quad biking. Reservation for 2 people minimum . Surcharge for hotels located more than 10 km from Marrakech. &nbsp; See location",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/01/Desert-agafay-a-marrakech.webp",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/01/Desert-agafay-a-marrakech.webp",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "marrakech-piscine",
+      "title": "Quad + déjeuner et accès piscine au Bédouin + transport",
+      "excerpt": "Journée complète dans le désert d&rsquo;Agafay : quad, déjeuner marocain et piscine.",
+      "description": "Une Journée Inoubliable au Désert d’Agafay Sensations Fortes en Matinée avec le Quad Vivez une aventure palpitante au cœur du désert d’Agafay. À seulement une heure de Marrakech, commencez votre journée par une balade en quad de 2 heures, encadrée par un guide. Faites une pause thé pour admirer le paysage avant de rejoindre votre prochaine destination. Déjeuner et Piscine au Camp Le Bédouin Rejoignez le camp Le Bédouin, un lieu authentique où vous dégusterez un déjeuner marocain complet (hors boissons). Relaxez-vous ensuite près de la piscine, où une ambiance musicale ajoute une touche festive à cette journée. Les serviettes et transats sont inclus pour votre confort. Retour Confortable à Marrakech Terminez votre journée par un transport retour en groupe vers Marrakech, à l’heure de votre choix (17h ou 19h). Programme et Tarifs : Matinée Quad 2 heures de balade avec guide Pause thé incluse Prix : 700 DH (70€) par personne Déjeuner et Piscine au Camp Le Bédouin Déjeuner (entrée, plat, dessert – hors boissons) Accès piscine, transats et serviettes fournies Prix : 450 DH (45€) par personne Transport Retour Retour en groupe à Marrakech Prix : 150 DH (15€) par personne Informations Importantes : Paiement : En espèces, séparément pour chaque prestataire. Langues acceptées : Euros et dirhams. Chaussures fermées requises pour le quad. Réservation pour 2 personnes minimum . Supplément pour les hôtels situés à plus de 10 km de Marrakech. Voir la localisation",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2025/01/Desert-agafay-a-marrakech.webp",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2025/01/Desert-agafay-a-marrakech.webp",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-afourar",
+      "title": "Villa Afourar",
+      "excerpt": "Enjoy a stay at this villa 30 minutes from Marrakech. It features a pool, tennis courts, and a mini golf course.",
+      "description": "Time to city center: 30 mn The villa accepts only families, groups of women friends and couples. Moroccan couples must present a marriage certificate. Minimum number of nights: 2 nights The rooms 3 bedrooms 3 bathrooms Air conditioning Heating Kitchen Fully equipped kitchen Coffee machine Barbecue Children&rsquo;s equipment 1 baby bed 1 high chair Leisure TV (IPTV + Netflix) Swimming pool 2 tennis courts (rackets on request) Mini soccer pitch Mini golf course Children&rsquo;s playground Special equipment Air conditioning Heating Ironing facilities Washing machine Tumble dryer Wifi Additional beds (extra charge) Rates Low season rates (rest of the year): 200€ per night High season rates (May, June, July, August and September): 250€ per night Included in the price -Bed linen and towels -Towels -Janitor 24/24 -WIFI Internet access -Electricity, water and gas consumption -UP to Marrakech service: we accompany you throughout your stay to advise you on the best of Marrakech. Cancellation policy -All modification and cancellation requests must be sent by email. -The booking deposit is not refunded in the event of cancellation.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-01-05-at-11.40.29-1-1024x794-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-01-05-at-11.40.29-1-1024x794-1.jpeg"
+      ],
+      "price": 30,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-afourar",
+      "title": "Villa Afourar",
+      "excerpt": "Passez un séjour agréable dans cette villa à 30 min de Marrakech. Profitez de la piscine et des terrains de sport.",
+      "description": "Temps jusqu’au centre ville : 30 mn La villa accepte uniquement les familles, groupe d’amis de femmes et les couples. Les couples marocains doivent présenter un certificat de mariage. Nombre de nuits minimum : 2 nuits minimum Les chambres 3 chambres 3 salles de bain Climatisation Chauffage Cuisine Cuisine équipée Machine à café Barbecue Équipements enfants 1 lit bébé 1 chaise haute Loisirs TV (IPTV + Netflix) Piscine 2 cours de tennis (raquettes sur demandes) Terrain de mini foot Mini terrain de golf Air de jeux pour enfants Équipements spécifiques Climatisation Chauffage Fer à repasser Lave linge Sèche linge Wifi Lits d’appoints (en suppléments) Tarifs Tarifs en basse saison (reste de l’année): 200€ par nuit Tarifs en haute saison (mai, juin, juillet, août et septembre): 250€ par nuit Inclus dans le prix -Draps et linge de maison -Serviettes -Gardien 24/24 -Internet WIFI -Consommation électrique, eau, gaz -Service de UP to Marrakech : on vous accompagne tout le temps de votre séjour pour vous conseiller le meilleur de Marrakech. Conditions d&rsquo;annulation -Toute demande de modification et d’annulation doit être adressée par email. -L’acompte de réservation n’est pas remboursé en cas d’annulation.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-01-05-at-11.40.29-1-1024x794-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-01-05-at-11.40.29-1-1024x794-1.jpeg"
+      ],
+      "location": "centre ville",
+      "price": 30,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 3,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-dar-zineb",
+      "title": "Villa Dar Zineb",
+      "excerpt": "Just 30 minutes from Marrakech, this villa is a great option for families, couples, or groups of women. It includes a pool, hammam, and a children&rsquo;s play area.",
+      "description": "Time to city center: 30 mn The villa accepts only families, groups of women friends and couples. Moroccan couples must present a marriage certificate. Minimum number of nights: 3 nights The rooms 3 bedrooms plus 3 extra beds 3 bathrooms Air conditioning Heating Kitchen Fully equipped kitchen Coffee machine Barbecue Children&rsquo;s equipment 1 baby bed 1 high chair Leisure TV (IPTV + Netflix) Heated pool (surcharge) Hammam (surcharge) Swing Children&rsquo;s play area Petanque court Special facilities Air conditioning Heating Ironing facilities Washing machine Tumble dryer Wifi Extra bed (extra charge from 9th person) Rates Low season rates: €190 per night High season rates (from December 24th to January 3rd, and from June to August): 370€ per night Cancellation policy -All modification and cancellation requests must be sent by email. -The booking deposit is not refunded in the event of cancellation.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/IMG_7992-1024x768-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/IMG_7992-1024x768-1.jpeg"
+      ],
+      "price": 190,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-dar-zineb",
+      "title": "Villa Dar Zineb",
+      "excerpt": "Découvrez cette villa à 30 min de Marrakech avec piscine chauffée et hammam. Idéale pour les familles, les couples, et les groupes de femmes.",
+      "description": "Temps jusqu’au centre ville : 30 mn La villa accepte uniquement les familles, groupe d’amis de femmes et les couples. Les couples marocains doivent présenter un certificat de mariage. Nombre de nuits minimum : 3 nuits minimum Les chambres 3 chambres plus 3 lits supplémentaires 3 salles de bain Climatisation Chauffage Cuisine Cuisine équipée Machine à café Barbecue Équipements enfants 1 lit bébé 1 chaise haute Loisirs TV (IPTV + Netflix) Piscine chauffée (en supplément) Hammam (en supplément) Balançoire Espace jeux pour enfants Terrain de pétanque Équipements spécifiques Climatisation Chauffage Fer à repasser Lave linge Sèche linge Wifi Lit d’appoint (en supplément à partir de la 9ème personne) Tarifs Tarifs en basse saison: 190€ par nuit Tarifs en haute saison (du 24 décembre au 3 janvier, et du mois de juin à août): 370€ par nuit Conditions d&rsquo;annulation -Toute demande de modification et d’annulation doit être adressée par email. -L’acompte de réservation n’est pas remboursé en cas d’annulation.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/IMG_7992-1024x768-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/IMG_7992-1024x768-1.jpeg"
+      ],
+      "location": "centre ville",
+      "price": 30,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 3,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-majo",
+      "title": "Villa Majo",
+      "excerpt": "Just 25 minutes from Marrakech, Villa Majo is a luxurious villa with a huge swimming pool, a hammam, a fully equipped kitchen, and a large garden.",
+      "description": "Villa Majo is a place synonymous with relaxation and comfort, just a stone&rsquo;s throw from Marrakech. It&rsquo;s a magnificent, brand-new villa in a secure residence. It&rsquo;s beautifully decorated, and here&rsquo;s a little bonus: all the furnishings are for sale! What&rsquo;s more, it has a hammam, a fully equipped kitchen and a bar next to its huge swimming pool. Time to city center: 25 min. The villa accepts families, groups of female friends and couples only. Moroccan couples must present a marriage certificate. Our rooms 5 suites 5 bathrooms Air conditioning Heating Kitchen Fully equipped kitchen Delonghi coffee machine Children&rsquo;s equipment 1 High chair 1 Cot (on request) Leisure Swimming pool Hammam TV with Netflix Balls, petanque balls, badminton rackets Petanque court Tennis court and golf course in the residence Tennis racket, 2 yoga mats, spike ball Specific equipment Air conditioning Heating Audio system Hair dryer Iron Washing machine Rates 3 rooms, 6 people: €360 per night 4 rooms, 8 people: 480€ per night 5 rooms, 10 people: 600€ per night &nbsp; Cancellation policy All modification and cancellation requests must be sent by email. -The 40% booking deposit is refunded if the cancellation is made more than 30 days before the arrival date. -The 40% booking deposit is non-refundable if the cancellation is made less than 30 days before the arrival date.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2022-06-20-18-36-32-4-1024x682-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2022-06-20-18-36-32-4-1024x682-1.jpg"
+      ],
+      "price": 360,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 0,
+        "people": 0
+      },
+      "published": true
+    },
+    {
+      "categoryType": "accommodation",
+      "slug": "villa-majo",
+      "title": "Villa Majo",
+      "excerpt": "Détendez-vous à la villa Majo, une villa sécurisée à 25 minutes de Marrakech. Elle dispose d&rsquo;une piscine immense et d&rsquo;un hammam.",
+      "description": "La villa Majo est un lieu synonyme de détente et de confort à deux pas de Marrakech. C’est une magnifique villa, toute neuve dans une résidence sécurisée. Elle est joliment décorée et petit plus : toute la décoration est à vendre ! De plus, elle est dotée d’un hammam, d’une cuisine entièrement équipée et d’un bar à côté de son immense piscine. Temps jusqu’au centre ville : 25 mn La villa accepte uniquement les familles, groupe d’amis de femmes et les couples. Les couples marocains doivent présenter un certificat de mariage. Les chambres 5 suites 5 salles de bain Climatisation Chauffage Cuisine Cuisine équipée Machine à café Delonghi Équipements enfants 1 Chaise haute 1 Lit bébé (sur demande) Loisirs Piscine Hammam Tv avec Netflix Ballons, boules de pétanque, raquettes de badminton Terrain de pétanque Terrain de tennis et golf dans la résidence Raquette de tennis, 2 tapis de yoga, spike ball Équipements spécifiques Climatisation Chauffage Système audio Sèche Cheveux Fer à repasser Lave linge Tarifs 3 chambres, 6 personnes : 360€ par nuit 4 chambres, 8 personnes : 480€ par nuit 5 chambres, 10 personnes : 600€ par nuit Conditions d’annulation Toute demande de modification et d’annulation doit être adressée par email. -L’acompte de réservation de 40% est remboursé si l’annulation a lieu + de 30 jours avant la date d’arrivée. -L’acompte de réservation de 40% n’est pas remboursé si l’annulation a lieu – de 30 jours avant la date d’arrivée. &nbsp;",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2022-06-20-18-36-32-4-1024x682-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2022-06-20-18-36-32-4-1024x682-1.jpg"
+      ],
+      "location": "centre ville",
+      "price": 360,
+      "priceUnit": "night",
+      "accommodation": {
+        "rooms": 3,
+        "people": 6
+      },
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "alhambra-baths",
+      "title": "Alhambra Baths",
+      "excerpt": "At Les Bains de l&rsquo;Alhambra, experience a charming spa in the medina with traditional Moroccan beauty rituals, two hammams, and six massage rooms.",
+      "description": "One of the Medina&rsquo;s most charming riads transformed into a Spa! Les Bains de l&rsquo;Alhambra is a spa in the middle of the medina, entirely dedicated to relaxation and well-being. The typically Moroccan setting, with a few more modern touches, plunges you right into the world of Moroccan beauty rituals. Take advantage of the two marble and taddelakt hammams, as well as the baths to rejuvenate your skin with oriental treatments featuring local products. 6 massage rooms are available for total relaxation. IMPORTANT INFORMATION : -Payment must be made on site. -Please note the name of your accommodation in the comments if you require private transport. See location Rates Discovery hammam and 1h00 massage of your choice at 520dh This is a traditional hammam with soaping and scrubbing with eucalyptus soap and horsehair glove. Relaxation hammam and massage 1h00 of your choice at 570Dh Traditional Hammam with soaping, ghassoul face mask flavored with seven plants (for those who don&rsquo;t need a scrub) Hammam complete experience and massage 1h00 at 620dh traditional application of eucalyptus black soap, followed by exfoliation with a horsehair glove, a ghassoul face mask flavored with seven plants, and a white or green clay wrap.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/IMGP1573.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/IMGP1573.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 520,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "les-bains-de-lalhambra",
+      "title": "Les Bains de l&rsquo;Alhambra",
+      "excerpt": "Offrez-vous un moment de bien-être aux Bains de l&rsquo;Alhambra. Hammams, massages et rituels de beauté marocains vous y attendent.",
+      "description": "Un des riads transformés en Spa les plus charmants de la Médina ! Les Bains de l’Alhambra est un spa situé au milieu de la médina et entièrement consacré à la relaxation et au bien-être. Le lieu typiquement marocain avec quelques touches plus modernes, vous plonge dès l’entrée dans l’univers des rituels de beauté marocains. Vous pourrez profiter des deux hammams en marbre et taddelakt, ainsi que des bains pour ressourcer votre peau avec des soins orientaux valorisant les produits locaux. 6 salles de massages sont à disposition, pour se relaxer pleinement. INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Merci de noter le nom de votre logement en commentaire si vous souhaitez le transport privé. Voir la localisation Tarifs Le hammam découverte et massage 1h00 au choix à 520dh C’est hammam traditionnel avec savonnage et gommage au savon noir à l’eucalyptus et gant de crin Le hammam détente et massage 1h00 au choix à 570Dh Hammam traditionnel avec savonnage, masque du visage au ghassoul aromatisée aux sept plantes (pour les personnes n’ayant pas besoin de gommage) Le hammam experience complète et massage 1h00 au choix à 620dh application traditionnel du savon noir à l’eucalyptus, suivi d’un gommage au gant en crin, masque du visage au ghassoul aromatisée aux sept plantes, et enveloppement d’argile blanche ou verte.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/IMGP1573.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/IMGP1573.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "yemaya-spa",
+      "title": "Yemaya Spa",
+      "excerpt": "A 1200m² sanctuary in the heart of Marrakech, Yemaya Spa blends Moroccan and Thai cultures for an unforgettable experience of calm and sophistication with a heated indoor pool.",
+      "description": "Located in the heart of the Hivernage district, Yemaya Spa welcomes you to its 1200m² sanctuary. The spa combines Moroccan and Thai cultures for an unforgettable experience of calm and sophistication. A little extra: Yemaya Spa has a heated indoor pool, so you can relax after your treatments. IMPORTANT INFORMATION : -Payment must be made on site. -A deposit will be required by the spa for bookings of 5 people or more. -Children aged 12 and over are welcome. -The heated pool is for both men and women. -The spa has a men&rsquo;s side and a women&rsquo;s side. -Couples may be accommodated together, subject to spa availability. See location The map Click here to see the map.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/YEMAYA-MASSAGE-1024x683-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/YEMAYA-MASSAGE-1024x683-1.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "yemaya-spa",
+      "title": "Yemaya Spa",
+      "excerpt": "Sanctuaire de 1200m² au cœur de Marrakech. Le Yemaya Spa associe cultures marocaine et thaïlandaise pour une expérience de bien-être.",
+      "description": "Situé au cœur du quartier de l’Hivernage, le Yemaya Spa vous accueille dans son sanctuaire de 1200m². Le spa associe les cultures marocaines et thaïlandaises afin de vous permettre de vivre une expérience inoubliable de calme et sophistication. Petit plus: le Yemaya spa dispose d’une piscine intérieure chauffée qui vous permettra de profiter d’un lieu de détente après vos soins. INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Un acompte sera demandé par le spa pour les réservations de 5 personnes et plus. -Les enfants sont acceptés à partir de 12 ans. -La piscine chauffée est mixte. -Le spa dispose d’un côté homme et d’un côté femme. -Les couples pourront être ensemble selon disponibilité du spa. Voir la localisation La carte Cliquez ici pour consulter la carte.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/YEMAYA-MASSAGE-1024x683-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/YEMAYA-MASSAGE-1024x683-1.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 1200,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "the-house-of-tui-na",
+      "title": "The House of Tui Na",
+      "excerpt": "La Maison du Tui Na in Marrakech offers a unique spa experience with ancestral massage techniques to relieve tension and regain serenity.",
+      "description": "Nestled in the heart of the Medina, La Maison du Tui Na is a must for massage practitioners in Marrakech. Derived from Traditional Chinese Medicine, Tui Na works in depth to revitalize body and mind. They offer ancestral massage techniques that relieve tension and release energy. Treat yourself to the ultimate relaxation experience, eliminate stress, fatigue and tension, and regain serenity and balance. IMPORTANT INFORMATION : -Payment must be made on site. -Children aged 6 and over are permitted. -A deposit is required for groups of 6 or more. -Male and female masseurs are available. If you have a preference, please indicate it in the comments. See location Rates Tui Na: 570 DH (57€) instead of 630 DH (63€) Hammam, 30-minute scrub + 60-minute Tui Na oil massage. Le Jonan: 660 DH (66€) instead of 730 DH (73€) Hammam, body scrub 60 min + choice of massage 60 min. Le Beauté: 1040 DH (104€) instead of 1150 DH (115€) Hammam, scrub 45 min + choice of massage 60 min + Jade Power Lift 60 min. Other treatments appear on the menu. The menu Click here to view the map. &nbsp;",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2024-01-03-18-19-55.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2024-01-03-18-19-55.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 57,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "spa",
+      "slug": "la-maison-du-tui-na",
+      "title": "La Maison du Tui Na",
+      "excerpt": "Ressourcez-vous à la Maison du Tui Na à Marrakech. Massage ancestral pour un bien-être ultime, relaxation, et équilibre.",
+      "description": "Nichée au cœur de la Médina, la Maison du Tui Na est une référence incontournable en matière de massage à Marrakech. Issu de la Médecine Traditionnelle Chinoise, le Tui Na agit en profondeur pour revitaliser le corps et l’esprit. Ils vous proposent des techniques ancestrales de massage qui dénouent les tensions et libèrent l’énergie. Offrez-vous une expérience de relaxation et de détente ultime, éliminez le stress, la fatigue et les tensions, et retrouvez sérénité et équilibre. INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Les enfants sont autorisés à partir de 6 ans. -Un acompte est demandé à partir de 6 personnes. -L’établissement propose des masseurs hommes et femmes. En cas de préférence, merci de l’indiquer en commentaire. &nbsp; Voir la localisation Tarifs Le Tui Na : 570 DH (57€) au lieu de 630 DH (63€) Hammam, gommage 30 min + massage Tui Na aux huiles 60 min. Le Jonan : 660 DH (66€) au lieu de 730 DH (73€) Hammam, gommage 60 min + massage au choix 60 min. Le Beauté : 1040 DH (104€) au lieu de 1150 DH (115€) Hammam, gommage 45 min + massage au choix 60 min + Jade Power Liftant 60 min. Les autres soins apparaissent dans la carte. La carte Cliquez ici pour consulter la carte.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2024-01-03-18-19-55.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/PHOTO-2024-01-03-18-19-55.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 57,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "night_club",
+      "slug": "theatro",
+      "title": "Theatro",
+      "excerpt": "Theatro Marrakech, located in the Es Saadi hotel complex, is a legendary club with shows by world-renowned artists and DJs. A must-visit for unforgettable nights.",
+      "description": "Theatro Marrakech: The Red City&rsquo;s legendary club Theatro Marrakech , located within the prestigious Es Saadi hotel complex, is a legendary venue for party lovers. With its lively evenings and dazzling shows, it remains an essential reference point for Marrakesh nightlife. A Unique Stage at Theatro Marrakech The heart of the Theatro is its central stage, where world-renowned artists and DJs perform. The atmosphere is enhanced by captivating theatrical decor, spectacular lighting effects and impressive special effects. This unique setting offers an immersive experience, perfect for dancing and having fun until the end of the night. Cosmopolitan clientele in an electrifying setting Attended by visitors from all over the world, this club seduces with its sophisticated and vibrant atmosphere. Whether you&rsquo;re a club regular or looking for a memorable evening out, this venue guarantees unforgettable moments in a chic, theatrical setting. Important information: Payment is made on site. Reservations accepted until 8pm. Access strictly forbidden to minors. With its unique shows and electrifying atmosphere, Theatro Marrakech is the place to be for a sophisticated night out in the red city. See location",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/Theatro-Marrakech-700x450-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/Theatro-Marrakech-700x450-1.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "night_club",
+      "slug": "club-marrakech",
+      "title": "Theatro",
+      "excerpt": "Plongez dans la vie nocturne du Theatro Marrakech, un club légendaire avec DJs internationaux et spectacles.",
+      "description": "Theatro Marrakech : Le Club Légendaire de la Ville Rouge Theatro Marrakech , situé dans l’enceinte du prestigieux complexe hôtelier Es Saadi, est un lieu mythique pour les amateurs de fête. Avec ses soirées animées et ses spectacles éblouissants, il reste une référence incontournable de la vie nocturne marrakchie. Une Scène Unique au Theatro Marrakech Le cœur du Theatro est sa scène centrale, où des artistes et DJ de renommée mondiale se produisent. L&rsquo;ambiance est renforcée par une décoration théâtrale captivante, des jeux de lumières spectaculaires, et des effets spéciaux impressionnants. Ce cadre unique offre une expérience immersive, parfaite pour danser et s’amuser jusqu’au bout de la nuit. Une Clientèle Cosmopolite dans un Cadre Électrisant Fréquenté par des visiteurs du monde entier, ce club séduit par son atmosphère sophistiquée et vibrante. Que vous soyez un habitué des clubs ou à la recherche d’une soirée mémorable, ce lieu garantit des moments inoubliables dans un décor chic et théâtral. Informations Importantes: Le paiement se fait sur place. Les réservations sont acceptées jusqu&rsquo;à 20h. Accès strictement interdit aux mineurs. Avec ses spectacles uniques et son ambiance électrisante, Theatro Marrakech est le club incontournable pour une nuit festive et sophistiquée dans la ville rouge. Voir la localisation",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/Theatro-Marrakech-700x450-1.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/Theatro-Marrakech-700x450-1.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "night_club",
+      "slug": "babouchka",
+      "title": "Babouchka",
+      "excerpt": "Babouchka, an elegant nightclub in Marrakech, offers a captivating atmosphere with a mix of modern and traditional music, perfect for dancing and enjoyment.",
+      "description": "Babouchka: Club Chic de l&rsquo;Hivernage in Marrakech Discover an unmissable venue for your evenings out in Marrakech: Babouchka , an elegant, modern nightclub nestled in the prestigious Hivernage district. With its sophisticated Oriental ambience, it&rsquo;s a popular destination for lovers of unique parties. A fusion of music at Babouchka This club stands out for its varied musical program, blending contemporary sounds with traditional influences. Each evening is hosted by talented DJs who create a spellbinding atmosphere, perfect for dancing and escapism. Signature cocktails and elegant ambience Babushka is more than just a club: it&rsquo;s also a space where customers can enjoy unique cocktails, designed to surprise and delight palates. Attention to detail and chic surroundings make every evening a memorable experience. Important information Payment on site. Reservations possible until 8pm. Access forbidden to minors. Immerse yourself in a captivating atmosphere and let yourself be seduced by the charm of the Babushka , a place where party and refinement meet to offer unforgettable nights. See location",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/BABOUCHKA-2.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/BABOUCHKA-2.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "night_club",
+      "slug": "babouchka-marrakech",
+      "title": "Babouchka",
+      "excerpt": "Babouchka, un club de nuit à Marrakech, propose une ambiance orientale sophistiquée avec DJs et cocktails uniques.",
+      "description": "Babouchka : Le Club Chic de l&rsquo;Hivernage à Marrakech Découvrez un lieu incontournable pour vos soirées à Marrakech : Babouchka , est un club de nuit élégant et moderne niché dans le prestigieux quartier de l’Hivernage. Avec son ambiance orientale sophistiquée, c’est une destination prisée pour les amateurs de fêtes uniques. Une Fusion de Musiques au Babouchka Ce club se distingue par sa programmation musicale variée, mêlant sonorités contemporaines et influences traditionnelles. Chaque soirée est animée par des DJ talentueux qui créent une atmosphère envoûtante, parfaite pour danser et s’évader. Cocktails Signature et Ambiance Élégante Babouchka ne se contente pas d’être un simple club : c’est aussi un espace où les clients peuvent savourer des cocktails uniques, conçus pour surprendre et ravir les palais. L’attention portée aux détails et le cadre chic font de chaque soirée une expérience mémorable. Informations Importantes Le paiement se fait sur place. Réservations possibles jusqu’à 20h. Accès interdit aux mineurs. Plongez dans une ambiance captivante et laissez-vous séduire par le charme du Babouchka , un lieu où fête et raffinement se rencontrent pour offrir des nuits inoubliables. &nbsp; Voir la localisation",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/BABOUCHKA-2.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/BABOUCHKA-2.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "myah-bay",
+      "title": "Myah Bay",
+      "excerpt": "Myah Bay is a luxurious beach club in Marrakech. Relax by the pool, enjoy lounge music, and experience the elegant atmosphere.",
+      "description": "Myah Bay is a luxury Marrakech beach club. Offering an exclusive experience, the club features sumptuous Marrakech pools, private cabanas and a gourmet restaurant. Visitors can relax in the sun, enjoy lounge music or attend a Marrakech pool party in a chic, casual atmosphere. Myah Bay is the ideal place for a relaxing day or an elegant evening by the water. To find out more about Marrakech beach club prices, please visit our dedicated page or contact us directly. IMPORTANT INFORMATION : -Payment must be made on site. -Reservations are accepted until 1 p.m. -Minors are not allowed. See location The map Click here to see the map.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/92083C4E-B3AC-499C-B758-D781AB7BB38C-1024x589-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/92083C4E-B3AC-499C-B758-D781AB7BB38C-1024x589-1.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "myah-bay-marrakech",
+      "title": "Myah Bay",
+      "excerpt": "Profitez d&rsquo;une journée de luxe au Myah Bay, un beach club à Marrakech avec piscines, cabanas et restaurant.",
+      "description": "Myah Bay est un beach club Marrakech de luxe. Offrant une expérience exclusive, le club dispose de somptueuses piscines à Marrakech, de cabanas privées et d’un restaurant gastronomique. Les visiteurs peuvent se détendre au soleil, profiter de la musique lounge ou assister à une pool party Marrakech dans une ambiance chic et décontractée. Myah Bay est l&rsquo;endroit idéal pour une journée de détente ou une soirée élégante au bord de l&rsquo;eau. Pour en savoir plus sur les beach club Marrakech prix, n’hésitez pas à consulter notre page dédiée ou à nous contacter directement. INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Les réservations sont acceptées jusque 13H. -Les mineurs ne sont pas autorisés. Voir la localisation La carte Cliquez ici pour consulter la carte.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/92083C4E-B3AC-499C-B758-D781AB7BB38C-1024x589-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/92083C4E-B3AC-499C-B758-D781AB7BB38C-1024x589-1.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "famous-beach",
+      "title": "Famous Beach",
+      "excerpt": "Famous Beach Marrakech is a popular beach club with sparkling pools, a gourmet restaurant, and a festive atmosphere with DJs.",
+      "description": "Famous Beach Marrakech is a popular beach club located on the outskirts of Marrakech. Known for its sparkling pools, comfortable Balinese beds and impeccable service, Famous Beach is the perfect place to relax and soak up the sun. The club offers refined cuisine with international dishes and local specialties, accompanied by refreshing cocktails. Resident DJs create a festive atmosphere with upbeat music, making Famous Beach a favorite spot for party lovers and relaxation enthusiasts. For Famous Beach Marrakech prices, simply visit our dedicated page or contact us directly; you&rsquo;ll find options to suit every style of day. IMPORTANT INFORMATION : -Payment must be made on site. -Reservations are accepted until 1pm. -Minors are not allowed. See location The map Click here to see the map.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/experience-the-epitome.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/experience-the-epitome.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "famous-beach",
+      "title": "Famous Beach",
+      "excerpt": "Profitez d&rsquo;une ambiance festive et relaxante au Famous Beach Marrakech avec piscines, DJ, et cocktails.",
+      "description": "Famous Beach Marrakech est un beach club populaire situé à la périphérie de Marrakech. Connu pour ses piscines scintillantes, ses lits balinais confortables et son service impeccable, Famous Beach est l&rsquo;endroit parfait pour se détendre et profiter du soleil. Le club propose une cuisine raffinée avec des plats internationaux et des spécialités locales, accompagnés de cocktails rafraîchissants. Les DJ résidents créent une ambiance festive avec de la musique entraînante, faisant de Famous Beach un lieu de prédilection pour les amateurs de fête et de relaxation. Pour connaître les famous beach marrakech prix, il suffit de consulter notre page dédiée ou de nous contacter directement, vous trouverez des options adaptées à tous les styles de journée. INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Les réservations sont acceptées jusque 13H. -Les mineurs ne sont pas autorisés. Voir la localisation La carte Cliquez ici pour consulter la carte.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/experience-the-epitome.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/experience-the-epitome.jpg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "cafe-del-mar-marrakech",
+      "title": "Cafe Del Mar Marrakech",
+      "excerpt": "Discover the Café Del Mar in Marrakech, a unique place with an artistic and festive atmosphere, shows, and international DJs. Enjoy comfort and relaxation.",
+      "description": "Cafe Del Mar Marrakech welcomes you to the heart of the city with a unique ambience blending creativity, authenticity and modernity. Enjoy an artistic and festive atmosphere with a variety of shows and the music of international DJs. Whether on your own or with a group, Le Cafe Del Mar Marrakech offers comfortable spaces that guarantee unrivalled moments of relaxation. Transfer service not provided. Upon request, private driver service available (Starting at (50€) for groups of 1-7 passengers IMPORTANT INFORMATION : -Payment must be made on site. -Reservations are accepted until 1pm. -Minors are not allowed. See location The map DRINKS: Click here to see the map. FOOD: Click here to view the menu.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/1709405133842.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/1709405133842.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "cafe-del-mar-marrakech",
+      "title": "Cafe Del Mar Marrakech",
+      "excerpt": "Vivez une expérience unique au Café Del Mar Marrakech : ambiance festive, DJs internationaux et spectacles variés.",
+      "description": "Le cafe del mar Marrakech vous accueille au cœur de la ville avec une ambiance unique mêlant créativité, authenticité et modernité. Profitez d&rsquo;une atmosphère artistique et festive avec des spectacles variés et la musique des DJs internationaux. Seul ou en groupe, Le cafe del mar Marrakech offre espaces confortables qui vous garantissent des moments de détente inégalés. INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Les réservations sont acceptées jusque 13H. -Les mineurs ne sont pas autorisés. Le transport n&rsquo;est pas compris dans l&rsquo;offre. Possibilité d&rsquo;organiser un service de transport avec chauffeur personnel sur demande (Dès (50€) jusqu&rsquo;à 7 voyageurs) Voir la localisation La carte DRINKS: Cliquez ici pour consulter la carte. FOOD : Cliquez ici pour consulter la carte.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/1709405133842.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/1709405133842.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "night_club",
+      "slug": "555-club",
+      "title": "555 Club",
+      "excerpt": "The 555 Club is a must-visit for memorable nights in Marrakech&rsquo;s Agdal district. It offers a festive and sophisticated atmosphere with world-renowned DJs.",
+      "description": "555 Club Marrakech : The Temple of the Night Discover the 555 Club Marrakech , an emblematic address for memorable evenings in the lively Agdal district. Renowned for its festive, sophisticated atmosphere, this club promises magical moments at the heart of Marrakesh nightlife. An incomparable musical experience at 555 Club This club transports you into an electrifying world of sound, with renowned DJs and breathtaking artistic performances. Each evening is a spectacle where music and light harmonize to create an unforgettable energy. Refinement and exclusive services Treat yourself to an exceptional evening with this Club&rsquo;s VIP options. Choose from tables adapted to your needs and enjoy premium service in an elegant, modern ambience, ideal for unique moments. Rates and Key Information P1 : Standard VIP table (3 to 5 guests) &#8211; 2,500 MAD P2 : VIP table with privileged location (3 to 5 guests) &#8211; 5,000 MAD P3 : Ultimate VIP table for an unforgettable evening (3 to 5 guests) &#8211; 10,000 MAD Immerse yourself in the refined ambience of 555 Club Marrakech , a place where every detail is designed to enhance your nights. Book your table and enjoy a unique experience in a setting that lives up to your expectations.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/555-club-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/555-club-marrakech.jpg"
+      ],
+      "price": 555,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "night_club",
+      "slug": "555-club-marrakech",
+      "title": "555 Club",
+      "excerpt": "Soirées inoubliables au 555 Club Marrakech : DJs renommés, performances artistiques et options VIP.",
+      "description": "555 Club Marrakech : Le Temple de la Nuit Découvrez le 555 Club Marrakech , une adresse emblématique pour des soirées mémorables dans le quartier animé de l’Agdal. Réputé pour son ambiance festive et sophistiquée, ce club promet des instants magiques au cœur de la vie nocturne marrakchie. Une Expérience Musicale Incomparable au 555 Club Ce Club vous transporte dans un univers sonore électrisant avec des DJ renommés et des performances artistiques à couper le souffle. Chaque soirée est un spectacle où musique et lumières s’harmonisent pour créer une énergie inoubliable. Raffinement et Services Exclusifs Offrez-vous une soirée d’exception avec les options VIP de ce Club. Choisissez parmi des tables adaptées à vos envies et profitez d’un service premium dans une ambiance élégante et moderne, idéale pour des moments uniques. Tarifs et Informations Clés P1 : Table VIP standard (3 à 5 invités) – 2 500 MAD P2 : Table VIP avec emplacement privilégié (3 à 5 invités) – 5 000 MAD P3 : Table VIP ultime pour une soirée inoubliable (3 à 5 invités) – 10 000 MAD Plongez dans l’ambiance raffinée du 555 Club Marrakech , un lieu où chaque détail est pensé pour sublimer vos nuits. Réservez votre table et vivez une expérience unique dans un cadre à la hauteur de vos attentes. &nbsp; &nbsp;",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/555-club-marrakech.jpg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/555-club-marrakech.jpg"
+      ],
+      "price": 555,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "quad-biking-in-agafay",
+      "title": "Quad biking in Agafay",
+      "excerpt": "Go on an unforgettable quad biking adventure in the Agafay Desert. A 2-hour guided ride includes a tea break in a traditional bivouac.",
+      "description": "Quad Biking in the Agafay Desert: An Unforgettable Adventure Discover the wonders of the Agafay Desert on a 2-hour quad bike ride . Set off on an adventure through desert landscapes, guided by local experts, and enjoy a tea break in a traditional bivouac. The Program of Your Quad Ride in Agafay Transport included : Pick-up from your accommodation in Marrakech. Scenic drive : Approximately 45 minutes to the desert. Briefing and departure : Explanations on the quads (300 cc KYMCO brand). 2-hour guided ride : Exploration of the dunes and photo stops. Tea break : Relaxation in an authentic Berber bivouac. Rates and conditions 700 DH (70 €) per person for a quad (300 cc). 400 DH (40 €) for an additional passenger on the same quad. Surcharge of 100 DH (10 €) for accommodation more than 10 km from Marrakech city center. Important points to know Activity reserved for 2 people or more. Guide included. Bring closed shoes for your comfort. Payment on site. The activity is carried out in small groups.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/3B971CCF-6321-4DFB-90FA-112BDFE959FD.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/3B971CCF-6321-4DFB-90FA-112BDFE959FD.jpeg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "activity",
+      "slug": "quad-a-agafay",
+      "title": "Quad dans le desert marrakech​",
+      "excerpt": "Aventure en quad de 2h dans le désert d&rsquo;Agafay avec pause thé et transport depuis Marrakech inclus.",
+      "description": "Balade en Quad dans le Désert d’Agafay : Une Aventure Inoubliable Découvrez les merveilles du désert d’Agafay lors d’une balade en quad de 2 heures . Partez à l’aventure à travers les paysages désertiques, guidés par des experts locaux, et profitez d’une pause thé dans un bivouac traditionnel. Le Programme de Votre Balade Quad à Agafay Transport inclus : Prise en charge depuis votre logement à Marrakech. Route panoramique : Environ 45 minutes de trajet jusqu’au désert. Briefing et départ : Explications sur les quads (300 cc marque KYMCO). Balade guidée de 2 heures : Exploration des dunes et arrêts photos. Pause thé : Détente dans un bivouac berbère authentique. Tarifs et Conditions (70 €) par personne pour un quad (300 cc). (40 €) pour un passager supplémentaire sur le même quad. Supplément de (10 €) pour les logements à plus de 10 km du centre-ville de Marrakech. Points Importants à Savoir Activité réservée à partir de 2 personnes. Guide accompagnateur inclus. Prévoyez des chaussures fermées pour votre confort. Le paiement s’effectue sur place. L&rsquo;activité est réalisée en petit groupe.",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/3B971CCF-6321-4DFB-90FA-112BDFE959FD.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/3B971CCF-6321-4DFB-90FA-112BDFE959FD.jpeg"
+      ],
+      "location": "Route panoramique : Environ 45 minutes de trajet jusqu’au désert",
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "rhoul-palace",
+      "title": "Rhoul Palace",
+      "excerpt": "Enjoy a relaxing day at the Rhoul Palace in Marrakech. You can relax by the pool and admire the beauty of this place, which looks like a palace from a thousand and one nights.",
+      "description": "The Rhoul Palace is like a palace from a thousand and one nights&#8230; you just can&rsquo;t get enough of its beauty. Relax by the pool, enjoy a meal and admire its beauty. This beautiful palace is located in the Palmeraie, in a large, peaceful estate. No need to stay at the palace to enjoy it. IMPORTANT INFORMATION : -Payment must be made on site. -Children under 14 are not allowed. -Correct dress is required, as the establishment reserves the right of entry. Reservations will be cancelled after a 30-minute delay. See location",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/13155095-FE3B-498E-BBB0-57654931117A-1024x512-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/13155095-FE3B-498E-BBB0-57654931117A-1024x512-1.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    },
+    {
+      "categoryType": "beach_club",
+      "slug": "palais-rhoul",
+      "title": "Palais Rhoul",
+      "excerpt": "Détendez-vous et déjeunez au somptueux palais Rhoul, un havre de paix dans la Palmeraie de Marrakech.",
+      "description": "Le palais Rhoul est un véritable palais des milles et une nuits… on ne se lasse pas de sa beauté. Vous pourrez vous détendre autour de la piscine, profitez d’un repas et admirer sa beauté. Ce beau palais est situé à la Palmeraie dans un grand domaine très calme. Pas besoin de loger au palais pour y profiter. &nbsp; INFORMATIONS IMPORTANTES : -Le paiement se fait sur place. -Les enfants de -14 ans ne sont pas autorisés. -Tenue correcte exigée, l’établissement se reserve le droit d’entrée. -La réservation sera annulée après un retard de 30 min. Voir la localisation",
+      "coverImage": "https://uptomarrakech.com/wp-content/uploads/2024/11/13155095-FE3B-498E-BBB0-57654931117A-1024x512-1.jpeg",
+      "gallery": [
+        "https://uptomarrakech.com/wp-content/uploads/2024/11/13155095-FE3B-498E-BBB0-57654931117A-1024x512-1.jpeg",
+        "https://marrakechbestof.com/wp-content/themes/gbo/images/maps.svg"
+      ],
+      "price": 0,
+      "priceUnit": "day",
+      "published": true
+    }
+  ]
+}
