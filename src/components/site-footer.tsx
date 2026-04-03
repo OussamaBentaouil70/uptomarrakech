@@ -6,6 +6,7 @@ const footerNav = [
   { href: "/accommodation", label: "Accommodation" },
   { href: "/activities", label: "Activities" },
   { href: "/beach-clubs", label: "Beach Clubs" },
+  { href: "/restaurants", label: "Restaurants" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -22,11 +23,15 @@ export function SiteFooter() {
     <footer className="mt-20 border-t border-border/70 bg-[linear-gradient(165deg,rgba(255,250,243,0.9),rgba(245,236,218,0.72))]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 text-sm md:grid-cols-3">
         <div className="space-y-3">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-11 w-11 overflow-hidden rounded-full border border-border/80 bg-white p-1">
-              <Image src="/assets/images/uptomarrakech.png" alt="UpToMarrakech" fill className="object-contain" />
+          <Link href="/" className="group inline-block">
+            <div className="relative h-12 w-24 overflow-hidden transition-transform duration-500 group-hover:scale-105">
+              <Image 
+                src="https://res.cloudinary.com/dj-events101/image/upload/v1775210807/UP-removebg-preview-1-1.png-removebg-preview_fdegio.png" 
+                alt="UP" 
+                fill 
+                className="object-contain" 
+              />
             </div>
-            <p className="ui-heading text-lg font-semibold">UpToMarrakech</p>
           </Link>
           <p className="ui-subtle">Premium stays, activities and concierge services in Marrakech.</p>
           <p className="text-zinc-700">contact@uptomarrakech.com</p>

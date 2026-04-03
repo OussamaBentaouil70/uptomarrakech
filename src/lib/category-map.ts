@@ -8,6 +8,7 @@ export const categoryPathMap: Record<CategoryType, string> = {
   spa: "spa",
   car_rental: "transport/car-rental",
   tourist_transport: "transport/tourist-transport",
+  restaurant: "restaurants",
 };
 
 export const categoryLabelMap: Record<CategoryType, string> = {
@@ -18,5 +19,6 @@ export const categoryLabelMap: Record<CategoryType, string> = {
   spa: "Spa",
   car_rental: "Car rental",
   tourist_transport: "Tourist transport",
+  restaurant: "Restaurants",
 };
 

@@ -7,6 +7,8 @@ import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/components/providers";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { WhatsAppFAB } from "@/components/whatsapp-fab";
+import { PublicComponents } from "@/components/public-components";
 
 const sans = Plus_Jakarta_Sans({
   variable: "--font-sans-modern",
@@ -39,12 +41,15 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${sans.variable} ${display.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         <Providers>
-          <SiteHeader />
-          <div className="flex-1">{children}</div>
-          <SiteFooter />
+          {/* PublicComponents currently renders Header, Footer, and FAB. 
+              To fix the order, we need the Header here, then children, then Footer. */}
+          <PublicComponents>
+            <div className="flex-1 flex flex-col">{children}</div>
+          </PublicComponents>
           <Toaster richColors />
         </Providers>
       </body>

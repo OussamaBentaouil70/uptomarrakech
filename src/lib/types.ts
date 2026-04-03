@@ -6,6 +6,7 @@ export const CATEGORY_TYPES = [
   "spa",
   "car_rental",
   "tourist_transport",
+  "restaurant",
 ] as const;
 
 export type CategoryType = (typeof CATEGORY_TYPES)[number];
@@ -24,6 +25,13 @@ export type Category = {
   published: boolean;
 };
 
+export type Review = {
+  name: string;
+  rating: number;
+  comment: string;
+  date: string;
+};
+
 export type Item = {
   id: string;
   categoryType: CategoryType;
@@ -34,8 +42,11 @@ export type Item = {
   coverImage: string;
   gallery: string[];
   location?: string;
+  locationUrl?: string;
   price: number;
   priceUnit: PriceUnit;
+  carte?: string; // URL to menu or text
+  reviews?: Review[];
   accommodation?: {
     rooms: number;
     people: number;
@@ -60,3 +71,15 @@ export type Inquiry = {
   createdAt?: string;
 };
 
+export type BlogPost = {
+  id: string;
+  slug: string;
+  title: string;
+  content: string;
+  excerpt: string;
+  coverImage: string;
+  gallery: string[];
+  date: string;
+  published: boolean;
+  createdAt?: any;
+};
