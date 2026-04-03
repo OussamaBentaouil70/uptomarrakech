@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "import:wordpress": "node scripts/import-wordpress.mjs",
-    "import:wordpress:firestore": "node scripts/import-wordpress.mjs --to-firestore"
+    "import:wordpress:firestore": "node scripts/import-wordpress.mjs --to-firestore",
+    "seed:restaurant-category": "node scripts/seed-restaurant-category.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
