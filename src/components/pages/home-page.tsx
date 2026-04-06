@@ -101,7 +101,7 @@ function CategorySlider({ title, items }: { title: string; items: Item[] }) {
             <SwiperSlide key={item.id}>
               <Link
                 href={`/${categoryPathMap[item.categoryType]}/${item.slug}`}
-                className="group/card block relative h-[420px] overflow-hidden rounded-3xl bg-secondary/30 transition-all duration-500 hover:shadow-2xl"
+                className="group/card block relative h-[320px] overflow-hidden rounded-3xl bg-secondary/30 transition-all duration-500 hover:shadow-2xl"
               >
                 <Image
                   src={item.coverImage}
@@ -300,7 +300,7 @@ export function HomePage() {
             </div>
 
             {showSuggestions && (suggestions.length > 0 || matchingCategories.length > 0) && (
-              <div className="absolute top-full left-0 right-0 mt-4 max-h-[400px] overflow-y-auto rounded-3xl border border-white/20 bg-black/60 p-2 shadow-3xl backdrop-blur-3xl z-50 animate-reveal">
+              <div className="absolute top-full left-0 right-0 mt-4 max-h-[320px] overflow-y-auto rounded-3xl border border-white/20 bg-black/60 p-2 shadow-3xl backdrop-blur-3xl z-50 animate-reveal">
                 {suggestions.map((item) => (
                   <button
                     key={item.id}

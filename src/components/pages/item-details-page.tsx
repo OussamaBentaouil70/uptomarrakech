@@ -249,7 +249,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
               <SwiperSlide key={suggestion.id}>
                 <Link
                   href={`/${categoryPathMap[suggestion.categoryType]}/${suggestion.slug}`}
-                  className="group/card block relative h-105 overflow-hidden rounded-3xl bg-secondary/30 transition-all duration-500 hover:shadow-2xl"
+                  className="group/card block relative h-80 overflow-hidden rounded-3xl bg-secondary/30 transition-all duration-500 hover:shadow-2xl"
                 >
                   <img
                     src={suggestion.coverImage}
