@@ -373,7 +373,7 @@ export function HomePage() {
       <section className="reveal-on-scroll mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2">
         <div className="relative h-80 overflow-hidden rounded-3xl border border-border/70 animate-soft-pulse">
           <Image
-            src="https://uptomarrakech.com/wp-content/uploads/2024/11/UP-removebg-preview-1-1.png.webp"
+            src="https://images.pexels.com/photos/30682505/pexels-photo-30682505.jpeg"
             alt="About UpToMarrakech"
             fill
             className="object-cover"

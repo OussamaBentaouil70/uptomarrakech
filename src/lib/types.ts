@@ -61,10 +61,15 @@ export type Inquiry = {
   itemId: string;
   itemSlug: string;
   categoryType: CategoryType;
-  name: string;
+  firstName?: string;
+  lastName?: string;
+  name?: string;
   phone: string;
-  email?: string;
+  email: string;
+  date?: string;
+  time?: string;
   message: string;
+  // Legacy fields for old reservations.
   startDate?: string;
   endDate?: string;
   status: InquiryStatus;

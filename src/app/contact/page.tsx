@@ -64,7 +64,7 @@ export default function ContactPage() {
 
           <div className="relative mt-5 overflow-hidden rounded-2xl border border-border/50">
             <Image
-              src="https://images.unsplash.com/photo-1597211684565-dca64d8108fd?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.pexels.com/photos/30682505/pexels-photo-30682505.jpeg"
               alt="Marrakech city scene"
               width={1200}
               height={800}

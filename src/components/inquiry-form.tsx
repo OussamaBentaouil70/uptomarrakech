@@ -25,9 +25,12 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
       itemId,
       itemSlug,
       categoryType,
-      name: "",
+      firstName: "",
+      lastName: "",
       phone: "",
       email: "",
+      date: "",
+      time: "",
       message: "",
     },
   });
@@ -41,9 +44,12 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
         itemId,
         itemSlug,
         categoryType,
-        name: "",
+        firstName: "",
+        lastName: "",
         phone: "",
         email: "",
+        date: "",
+        time: "",
         message: "",
       });
     } catch (error) {
@@ -55,17 +61,30 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
   });
 
   return (
-    <form onSubmit={onSubmit} className="ui-surface space-y-3 p-4">
-      <h3 className="ui-heading text-xl font-semibold">Reservation request</h3>
-      <Input placeholder="Full name" {...form.register("name")} />
-      <Input placeholder="Phone" {...form.register("phone")} />
-      <Input placeholder="Email (optional)" {...form.register("email")} />
-      <div className="grid grid-cols-2 gap-2">
-        <Input type="date" {...form.register("startDate")} />
-        <Input type="date" {...form.register("endDate")} />
+    <form onSubmit={onSubmit} className="ui-surface space-y-4 p-6 md:p-7">
+      <h3 className="ui-heading text-2xl font-semibold">Reservation request</h3>
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+        <Input className="h-11 px-4" placeholder="First name" {...form.register("firstName")} />
+        <Input className="h-11 px-4" placeholder="Last name" {...form.register("lastName")} />
       </div>
-      <Textarea rows={4} placeholder="Message" {...form.register("message")} />
-      <Button disabled={submitting} className="w-full bg-primary text-primary-foreground hover:brightness-110">
+      <Input className="h-11 px-4" placeholder="Phone" {...form.register("phone")} />
+      <Input className="h-11 px-4" placeholder="Email" type="email" {...form.register("email")} />
+      <div className="grid grid-cols-2 gap-2">
+        <div className="space-y-1">
+          <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            Date
+          </label>
+          <Input className="h-11 px-4" type="date" {...form.register("date")} />
+        </div>
+        <div className="space-y-1">
+          <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+            Time
+          </label>
+          <Input className="h-11 px-4" type="time" {...form.register("time")} />
+        </div>
+      </div>
+      <Textarea className="min-h-40 px-4 py-3" rows={7} placeholder="Message" {...form.register("message")} />
+      <Button disabled={submitting} className="h-12 w-full bg-primary text-base text-primary-foreground hover:brightness-110">
         {submitting ? "Sending..." : "Send reservation"}
       </Button>
     </form>

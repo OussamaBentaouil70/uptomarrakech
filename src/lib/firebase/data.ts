@@ -132,8 +132,10 @@ export async function deleteItem(id: string) {
 }
 
 export async function createInquiry(input: InquiryInput) {
+  const fullName = `${input.firstName} ${input.lastName}`.trim();
   const created = await addDoc(inquiriesCol, {
     ...input,
+    name: fullName,
     status: "new",
     createdAt: serverTimestamp(),
   });
