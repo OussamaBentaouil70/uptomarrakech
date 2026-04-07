@@ -43,7 +43,7 @@ export default function RootLayout({
       className={`${sans.variable} ${display.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <Providers>
           {/* PublicComponents currently renders Header, Footer, and FAB. 
               To fix the order, we need the Header here, then children, then Footer. */}

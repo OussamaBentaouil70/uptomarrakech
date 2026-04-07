@@ -313,6 +313,64 @@
   @apply w-6 rounded-full;
 }
 
+/* Rich Text Editor Styles */
+.prose {
+  @apply max-w-none;
+}
+
+.prose h1 {
+  @apply text-3xl font-heading font-bold mt-6 mb-4 text-foreground;
+}
+
+.prose h2 {
+  @apply text-2xl font-heading font-bold mt-5 mb-3 text-foreground;
+}
+
+.prose h3 {
+  @apply text-xl font-heading font-bold mt-4 mb-2 text-foreground;
+}
+
+.prose p {
+  @apply my-3 leading-relaxed text-muted-foreground;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-4 pl-6;
+}
+
+.prose li {
+  @apply mb-2 text-muted-foreground;
+}
+
+.prose strong {
+  @apply font-semibold text-foreground;
+}
+
+.prose em {
+  @apply italic text-muted-foreground;
+}
+
+.prose code {
+  @apply rounded bg-muted/50 px-1.5 py-0.5 font-mono text-sm text-foreground;
+}
+
+.prose pre {
+  @apply rounded-lg bg-muted p-4 mb-4 overflow-x-auto;
+}
+
+.prose pre code {
+  @apply bg-transparent px-0 py-0;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary pl-4 italic text-muted-foreground my-4;
+}
+
+.prose a {
+  @apply text-primary hover:underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal-on-scroll,
   .animate-fade-up,

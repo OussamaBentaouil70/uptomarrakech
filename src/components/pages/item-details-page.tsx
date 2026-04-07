@@ -5,6 +5,8 @@ import { getItemBySlug, listItems } from "@/lib/firebase/data";
 import type { CategoryType, Item } from "@/lib/types";
 import { InquiryForm } from "@/components/inquiry-form";
 import { GallerySlider } from "@/components/gallery-slider";
+import { StarRating } from "@/components/ui/star-rating";
+import { ReviewAvatar } from "@/components/review-avatar";
 import Link from "next/link";
 import { categoryLabelMap, categoryPathMap } from "@/lib/category-map";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -101,9 +103,20 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
             <div className="space-y-8">
               <h2 className="ui-heading text-3xl font-semibold border-l-4 border-primary pl-6">About this experience</h2>
               <div className="prose prose-zinc max-w-none prose-lg leading-relaxed text-muted-foreground">
-                {item.description.split('\n').map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+                {item.description.includes('<') ? (
+                  // Render as HTML if it contains HTML tags
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: item.description,
+                    }}
+                    className="space-y-4"
+                  />
+                ) : (
+                  // Render as plain text with line breaks
+                  item.description.split('\n').map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))
+                )}
               </div>
             </div>
 
@@ -133,25 +146,43 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
               <div className="space-y-8">
                 <h2 className="ui-heading text-3xl font-semibold">Guest Impressions</h2>
                 <div className="grid gap-6">
-                  {item.reviews.map((review, i) => (
-                    <div key={i} className="ui-surface p-8 space-y-4 bg-card/40 backdrop-blur-sm border-border/40">
-                      <div className="flex items-center justify-between">
-                        <div className="flex gap-1 text-primary">
-                          {Array.from({ length: review.rating }).map((_, j) => (
-                            <Star key={j} className="h-4 w-4 fill-current" />
-                          ))}
+                  {item.reviews.map((review, i) => {
+                    const authorName = review.authorName || review.name || "Guest";
+                    return (
+                      <div key={i} className="ui-surface p-8 space-y-4 bg-card/40 backdrop-blur-sm border-border/40">
+                        <div className="flex items-start gap-4">
+                          <ReviewAvatar
+                            src={review.authorImage}
+                            alt={authorName}
+                            size="md"
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center justify-between gap-2">
+                              <p className="font-semibold text-base">— {authorName}</p>
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">
+                                {review.createdAt
+                                  ? new Date(review.createdAt).toLocaleDateString("en-US", {
+                                      year: "numeric",
+                                      month: "short",
+                                      day: "numeric",
+                                    })
+                                  : review.date || ""}
+                              </span>
+                            </div>
+                            <div className="mt-2">
+                              <StarRating value={review.rating} readonly size="sm" />
+                            </div>
+                          </div>
                         </div>
-                        <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">{review.date}</span>
+                        <div className="relative">
+                          <Quote className="absolute -left-2 -top-2 h-8 w-8 text-primary/10 -z-10" />
+                          <p className="text-muted-foreground italic font-serif text-lg leading-relaxed">
+                            "{review.comment}"
+                          </p>
+                        </div>
                       </div>
-                      <div className="relative">
-                        <Quote className="absolute -left-2 -top-2 h-8 w-8 text-primary/10 -z-10" />
-                        <p className="text-muted-foreground italic font-serif text-lg leading-relaxed">
-                          "{review.comment}"
-                        </p>
-                      </div>
-                      <p className="font-semibold text-sm">— {review.name}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             )}

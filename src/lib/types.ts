@@ -26,10 +26,14 @@ export type Category = {
 };
 
 export type Review = {
-  name: string;
+  id?: string;
+  name?: string;
+  authorName?: string;
+  authorImage?: string;
   rating: number;
   comment: string;
-  date: string;
+  date?: string;
+  createdAt?: string;
 };
 
 export type Item = {

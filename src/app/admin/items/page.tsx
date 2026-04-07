@@ -2,9 +2,11 @@
 
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { RichTextEditor } from "@/components/rich-text-editor";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { listItems, upsertItem, deleteItem } from "@/lib/firebase/data";
 import type { CategoryType, Item, PriceUnit } from "@/lib/types";
@@ -12,7 +14,7 @@ import { CATEGORY_TYPES } from "@/lib/types";
 import { categoryLabelMap } from "@/lib/category-map";
 import { ImageUpload } from "@/components/admin/image-upload";
 import { toast } from "sonner";
-import { Plus, Trash2, Edit2, X, Star } from "lucide-react";
+import { Plus, Trash2, Edit2, X, Star, MessageSquare } from "lucide-react";
 
 type ItemForm = {
   id: string | null;
@@ -61,8 +63,14 @@ function ItemsContent() {
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
   const [editingItem, setEditingItem] = useState<ItemForm | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const refresh = async () => {
+    if (!isMounted) return;
     setLoading(true);
     const filters = typeFilter ? { categoryType: typeFilter } : {};
     const data = await listItems(filters);
@@ -71,8 +79,10 @@ function ItemsContent() {
   };
 
   useEffect(() => {
-    void refresh();
-  }, [typeFilter]);
+    if (isMounted) {
+      void refresh();
+    }
+  }, [typeFilter, isMounted]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -122,7 +132,7 @@ function ItemsContent() {
     editingItem?.categoryType === "beach_club";
 
   return (
-    <div className="p-8 space-y-8">
+    <div className="p-8 space-y-8" suppressHydrationWarning>
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold tracking-tight">
           {typeFilter ? categoryLabelMap[typeFilter] : "All Items"}
@@ -295,11 +305,10 @@ function ItemsContent() {
 
                   <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Professional Description</label>
-                    <Textarea
-                      className="rounded-2xl border-border/60 bg-white/50 min-h-[250px] leading-relaxed"
-                      value={editingItem.description}
-                      onChange={(e) => setEditingItem({ ...editingItem, description: e.target.value })}
-                      placeholder="Describe the experience in detail..."
+                    <RichTextEditor
+                      content={editingItem.description}
+                      onChange={(content) => setEditingItem({ ...editingItem, description: content })}
+                      placeholder="Describe the experience in detail with formatting..."
                     />
                   </div>
                 </section>
@@ -313,25 +322,31 @@ function ItemsContent() {
                   <div className="space-y-6">
                     <div className="space-y-3">
                       <label className="text-xs font-medium text-muted-foreground">Cover Masterpiece</label>
-                      {editingItem.coverImage && (
-                        <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border/40 shadow-sm group/img">
-                          <img src={editingItem.coverImage} className="h-full w-full object-cover transition-transform duration-700 group-hover/img:scale-110" />
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
-                            <Button type="button" variant="destructive" size="sm" onClick={() => setEditingItem({ ...editingItem, coverImage: "" })} className="rounded-full">
-                              <Trash2 className="h-4 w-4 mr-2" /> Remove
-                            </Button>
+                      <div className="space-y-3">
+                        {editingItem.coverImage && (
+                          <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border/40 shadow-sm group/img">
+                            <img src={editingItem.coverImage} className="h-full w-full object-cover transition-transform duration-700 group-hover/img:scale-110" />
+                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center gap-2">
+                              <Button 
+                                type="button" 
+                                variant="destructive" 
+                                size="sm" 
+                                onClick={() => setEditingItem({ ...editingItem, coverImage: "" })} 
+                                className="rounded-full"
+                              >
+                                <Trash2 className="h-4 w-4 mr-2" /> Remove
+                              </Button>
+                            </div>
                           </div>
-                        </div>
-                      )}
-                      {!editingItem.coverImage && (
+                        )}
                         <ImageUpload 
-                          label="Main Showcase Image" 
+                          label={editingItem.coverImage ? "Replace Image" : "Main Showcase Image"} 
                           onUploaded={(url) => {
                             const finalUrl = Array.isArray(url) ? url[0] : url;
                             setEditingItem({ ...editingItem, coverImage: finalUrl });
                           }} 
                         />
-                      )}
+                      </div>
                     </div>
 
                     <div className="space-y-3">
@@ -402,6 +417,16 @@ function ItemsContent() {
                   <p className="text-xs text-muted-foreground line-clamp-1 mt-1">{item.location}</p>
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-end gap-2">
+                  <Link href={`/admin/items/${item.id}/reviews`}>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="gap-2"
+                    >
+                      <MessageSquare className="h-4 w-4" />
+                      Reviews ({item.reviews?.length || 0})
+                    </Button>
+                  </Link>
                   <Button 
                     variant="ghost" 
                     size="sm" 
