@@ -48,21 +48,32 @@ export function SiteHeader() {
   const isHomePage = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const useTransparentHeader = isHomePage && !scrolled;
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
+    if (!isMounted) return;
+    
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMounted]);
+
+  const useTransparentHeader = isMounted && isHomePage && !scrolled;
 
   return (
-    <header className={cn(
-      "inset-x-0 top-0 z-50 transition-all duration-500",
-      useTransparentHeader
-        ? "fixed bg-transparent py-4"
-        : "sticky bg-white/90 py-2 shadow-sm supports-backdrop-filter:backdrop-blur-md"
-    )}>
+    <header 
+      className={cn(
+        "inset-x-0 top-0 z-50 transition-all duration-500",
+        useTransparentHeader
+          ? "fixed bg-transparent py-4"
+          : "sticky bg-white/90 py-2 shadow-sm supports-backdrop-filter:backdrop-blur-md"
+      )}
+      suppressHydrationWarning
+    >
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="group py-1">

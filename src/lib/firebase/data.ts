@@ -11,7 +11,7 @@ import {
   where,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase/firestore";
-import type { Category, CategoryType, Inquiry, Item, BlogPost } from "@/lib/types";
+import type { Category, CategoryType, Inquiry, Item, BlogPost, Review } from "@/lib/types";
 import type {
   CategoryInput,
   InquiryInput,
@@ -129,6 +129,61 @@ export async function upsertItem(id: string | null, input: ItemInput) {
 
 export async function deleteItem(id: string) {
   await deleteDoc(doc(db, "items", id));
+}
+
+export async function addReview(itemId: string, review: Omit<Review, "id">) {
+  const item = await getItemById(itemId);
+  if (!item) throw new Error("Item not found");
+  
+  const newReview = {
+    id: Math.random().toString(36).substr(2, 9),
+    ...review,
+    createdAt: new Date().toISOString(),
+  };
+  
+  const reviews = item.reviews || [];
+  reviews.push(newReview);
+  
+  await updateDoc(doc(db, "items", itemId), { reviews });
+  return newReview;
+}
+
+export async function updateReview(itemId: string, reviewId: string, updates: Partial<Omit<Review, "id">>) {
+  const item = await getItemById(itemId);
+  if (!item) throw new Error("Item not found");
+  
+  const reviews = (item.reviews || []).map((r) =>
+    r.id === reviewId ? { ...r, ...updates } : r,
+  );
+  
+  await updateDoc(doc(db, "items", itemId), { reviews });
+}
+
+export async function deleteReview(itemId: string, reviewId: string) {
+  const item = await getItemById(itemId);
+  if (!item) throw new Error("Item not found");
+  
+  const reviews = (item.reviews || []).filter((r) => r.id !== reviewId);
+  
+  await updateDoc(doc(db, "items", itemId), { reviews });
+}
+
+export async function bulkAddReviews(itemId: string, reviews: Omit<Review, "id">[]) {
+  const item = await getItemById(itemId);
+  if (!item) throw new Error("Item not found");
+  
+  const newReviews = reviews.map((r, idx) => ({
+    id: Math.random().toString(36).substr(2, 9),
+    ...r,
+    createdAt: new Date().toISOString(),
+  }));
+  
+  const existingReviews = item.reviews || [];
+  await updateDoc(doc(db, "items", itemId), { 
+    reviews: [...existingReviews, ...newReviews] 
+  });
+  
+  return newReviews;
 }
 
 export async function createInquiry(input: InquiryInput) {

@@ -59,15 +59,15 @@ const partners = [
     logo: "https://uptomarrakech.com/wp-content/uploads/2024/11/theatro-logo.png.webp",
   },
   {
-    name: "Square",
-    logo: "https://uptomarrakech.com/wp-content/uploads/2024/11/square-removebg-preview.png.webp",
+    name: "Nobu",
+    logo: "https://uptomarrakech.com/wp-content/uploads/2024/11/340582921_936843590988992_5307670405723882152_n-removebg-preview.png.webp",
   },
   {
     name: "Epicurien",
     logo: "https://uptomarrakech.com/wp-content/uploads/2024/11/epucrioen-logo-tr.png.webp",
   },
-  { name: "Atlas Privilege", logo: "https://p7.hiclipart.com/preview/1014/899/581/partnership-organization-business-corporation-leadership-business.jpg" },
-  { name: "Riad Collection", logo: "https://www.clipartmax.com/png/middle/246-2465396_hairdressing-hairdressers-logo.png" },
+  { name: "555", logo: "https://555marrakech.com/wp-content/uploads/2022/11/logo-555-marrakech.webp" },
+  { name: "Dar Soukar", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjNCpo3l3ceNKbxC_ShikNlae7giXNujSCw&s" },
 ];
 function CategorySlider({ title, items }: { title: string; items: Item[] }) {
   return (
@@ -561,14 +561,14 @@ export function HomePage() {
         >
           {partners.map((partner, index) => (
             <SwiperSlide key={index}>
-              <div className="group flex h-32 items-center justify-center transition-all duration-500">
+              <div className="group flex h-40 items-center justify-center transition-all duration-500">
                 {partner.logo ? (
-                  <div className="relative h-24 w-full transition-all duration-500 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110">
+                  <div className="relative h-28 w-52 transition-all duration-500 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-105">
                     <Image
                       src={partner.logo}
                       alt={partner.name}
                       fill
-                      className="object-contain" // This ensures it fits perfectly without cropping
+                      className="object-contain"
                     />
                   </div>
                 ) : (
