@@ -58,6 +58,9 @@ export default function AdminDashboard() {
     { label: "System Admins", value: stats.admins, icon: Users, color: "text-purple-600", bg: "bg-purple-50" },
   ];
 
+  const getFullName = (inq: Inquiry) =>
+    [inq.firstName, inq.lastName].filter(Boolean).join(" ") || inq.name || "Unknown";
+
   return (
     <div className="p-8 space-y-8 animate-reveal">
       <div className="space-y-1">
@@ -98,27 +101,31 @@ export default function AdminDashboard() {
             ) : recentInquiries.length === 0 ? (
               <div className="p-12 text-center text-muted-foreground">No recent inquiries to show.</div>
             ) : (
-              recentInquiries.map((inq) => (
-                <div key={inq.id} className="p-4 flex items-center justify-between hover:bg-muted/10 transition-colors">
-                  <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                      {inq.name.charAt(0)}
+              recentInquiries.map((inq) => {
+                const fullName = getFullName(inq);
+
+                return (
+                  <div key={inq.id} className="p-4 flex items-center justify-between hover:bg-muted/10 transition-colors">
+                    <div className="flex items-center gap-4">
+                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                        {fullName.charAt(0)}
+                      </div>
+                      <div>
+                        <p className="font-medium text-sm">{fullName}</p>
+                        <p className="text-xs text-muted-foreground">{inq.itemSlug} • {categoryLabelMap[inq.categoryType]}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-medium text-sm">{inq.name}</p>
-                      <p className="text-xs text-muted-foreground">{inq.itemSlug} • {categoryLabelMap[inq.categoryType]}</p>
+                    <div className="text-right">
+                      <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-tighter ${inq.status === 'new' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
+                        {inq.status}
+                      </span>
+                      <p className="text-[10px] text-muted-foreground mt-1">
+                        {inq.createdAt ? new Date(inq.createdAt).toLocaleDateString() : 'Just now'}
+                      </p>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <span className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-tighter ${inq.status === 'new' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
-                      {inq.status}
-                    </span>
-                    <p className="text-[10px] text-muted-foreground mt-1">
-                      {inq.createdAt ? new Date(inq.createdAt).toLocaleDateString() : 'Just now'}
-                    </p>
-                  </div>
-                </div>
-              ))
+                );
+              })
             )}
           </div>
         </div>

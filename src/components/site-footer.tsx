@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 const footerNav = [
   { href: "/", label: "Home" },
@@ -12,10 +14,21 @@ const footerNav = [
 ];
 
 const socialLinks = [
-  { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://facebook.com", label: "Facebook" },
-  { href: "https://tiktok.com", label: "TikTok" },
-  { href: "https://wa.me/212699124735", label: "WhatsApp" },
+  {
+    href: "https://www.instagram.com/uptomarrakech/",
+    label: "Instagram",
+    icon: faInstagram,
+  },
+  {
+    href: "https://www.facebook.com/profile.php?id=61560347476465",
+    label: "Facebook",
+    icon: faFacebookF,
+  },
+  {
+    href: "https://www.tiktok.com/@uptomarrakech",
+    label: "TikTok",
+    icon: faTiktok,
+  },
 ];
 
 export function SiteFooter() {
@@ -58,9 +71,11 @@ export function SiteFooter() {
                 href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-border/70 bg-white/85 px-3 py-1.5 text-xs font-medium text-zinc-700 transition-all hover:bg-white hover:text-zinc-950"
+                aria-label={item.label}
+                className="inline-flex h-14 w-14 items-center justify-center text-zinc-700 transition-colors hover:text-zinc-950"
               >
-                {item.label}
+                <FontAwesomeIcon icon={item.icon} className="h-7 w-7" />
+                <span className="sr-only">{item.label}</span>
               </a>
             ))}
           </div>

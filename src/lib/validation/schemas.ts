@@ -46,10 +46,15 @@ export const inquirySchema = z.object({
   itemId: z.string().min(1),
   itemSlug: z.string().min(1),
   categoryType: categoryTypeSchema,
-  name: z.string().min(2),
+  firstName: z.string().min(2),
+  lastName: z.string().min(2),
   phone: z.string().min(6),
-  email: z.string().email().optional().or(z.literal("")),
+  email: z.string().email(),
+  date: z.string().min(1),
+  time: z.string().min(1),
   message: z.string().min(10),
+  // Backward compatibility for existing data shape in admin views.
+  name: z.string().optional(),
   startDate: z.string().optional(),
   endDate: z.string().optional(),
 });

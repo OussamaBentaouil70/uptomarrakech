@@ -34,6 +34,16 @@ export default function InquiriesPage() {
     }
   };
 
+  const getFullName = (inquiry: Inquiry) =>
+    [inquiry.firstName, inquiry.lastName].filter(Boolean).join(" ") || inquiry.name || "Unknown";
+
+  const getReservationSlot = (inquiry: Inquiry) => {
+    if (inquiry.date && inquiry.time) return `${inquiry.date} at ${inquiry.time}`;
+    if (inquiry.date) return inquiry.date;
+    if (inquiry.startDate) return `${inquiry.startDate} to ${inquiry.endDate || inquiry.startDate}`;
+    return "General inquiry";
+  };
+
   return (
     <div className="p-8 space-y-8">
       <div className="flex items-center justify-between">
@@ -55,7 +65,7 @@ export default function InquiriesPage() {
             <div key={inquiry.id} className="ui-surface p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:border-primary/40 transition-colors">
               <div className="space-y-3 flex-1">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-xl font-semibold">{inquiry.name}</h3>
+                  <h3 className="text-xl font-semibold">{getFullName(inquiry)}</h3>
                   <span className={cn(
                     "rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider",
                     inquiry.status === "new" ? "bg-primary text-primary-foreground" : "bg-emerald-100 text-emerald-700"
@@ -73,7 +83,7 @@ export default function InquiriesPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-primary/60" /> 
-                    {inquiry.startDate ? `${inquiry.startDate} to ${inquiry.endDate}` : "General inquiry"}
+                    {getReservationSlot(inquiry)}
                   </div>
                   <div className="flex items-center gap-2 font-medium text-foreground">
                     <Clock className="h-4 w-4 text-primary/60" /> 
