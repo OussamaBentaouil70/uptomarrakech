@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getItemBySlug, listItems } from "@/lib/firebase/data";
 import type { CategoryType, Item } from "@/lib/types";
 import { InquiryForm } from "@/components/inquiry-form";
@@ -19,11 +19,18 @@ type Props = {
 
 import { Mail, Phone, MapPin, Utensils, Star, Quote, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { sanitizeHTML } from "@/lib/sanitize";
 
 export function ItemDetailsPage({ categoryType, slug }: Props) {
   const [item, setItem] = useState<Item | null>(null);
   const [suggestions, setSuggestions] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const safeDescriptionHtml = useMemo(() => {
+    if (!item?.description || !item.description.includes("<")) return "";
+    const cleaned = sanitizeHTML(item.description).trim();
+    return cleaned || item.description;
+  }, [item?.description]);
 
   useEffect(() => {
     let active = true;
@@ -98,16 +105,16 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid lg:grid-cols-3 gap-16">
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-16">
+          <div className="lg:col-span-2 min-w-0 space-y-16">
             <GallerySlider coverImage={item.coverImage} gallery={item.gallery} alt={item.title} />
             <div className="space-y-8">
               <h2 className="ui-heading text-3xl font-semibold border-l-4 border-primary pl-6">About this experience</h2>
-              <div className="prose prose-zinc max-w-none prose-lg leading-relaxed text-muted-foreground">
+              <div className="prose prose-zinc max-w-none prose-lg leading-relaxed text-muted-foreground min-w-0 wrap-anywhere **:max-w-full [&_img]:h-auto [&_img]:max-w-full [&_table]:block [&_table]:max-w-full [&_table]:overflow-x-auto">
                 {item.description.includes('<') ? (
                   // Render as HTML if it contains HTML tags
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: item.description,
+                      __html: safeDescriptionHtml,
                     }}
                     className="space-y-4"
                   />
@@ -143,23 +150,23 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
             )}
 
             {item.reviews && item.reviews.length > 0 && (
-              <div className="space-y-8">
+              <div className="max-w-full space-y-8">
                 <h2 className="ui-heading text-3xl font-semibold">Guest Impressions</h2>
-                <div className="grid gap-6">
+                <div className="grid max-w-full gap-4 sm:gap-6">
                   {item.reviews.map((review, i) => {
                     const authorName = review.authorName || review.name || "Guest";
                     return (
-                      <div key={i} className="ui-surface p-8 space-y-4 bg-card/40 backdrop-blur-sm border-border/40">
-                        <div className="flex items-start gap-4">
+                      <div key={i} className="ui-surface min-w-0 w-full max-w-full border-border/40 bg-card/40 p-4 space-y-4 backdrop-blur-sm sm:p-6 lg:p-8">
+                        <div className="flex min-w-0 items-start gap-4">
                           <ReviewAvatar
                             src={review.authorImage}
                             alt={authorName}
                             size="md"
                           />
                           <div className="flex-1 min-w-0">
-                            <div className="flex items-center justify-between gap-2">
-                              <p className="font-semibold text-base">— {authorName}</p>
-                              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground whitespace-nowrap">
+                            <div className="flex w-full min-w-0 flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
+                              <p className="font-semibold text-base wrap-anywhere">— {authorName}</p>
+                              <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground wrap-anywhere sm:whitespace-nowrap">
                                 {review.createdAt
                                   ? new Date(review.createdAt).toLocaleDateString("en-US", {
                                       year: "numeric",
@@ -174,9 +181,9 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                             </div>
                           </div>
                         </div>
-                        <div className="relative">
-                          <Quote className="absolute -left-2 -top-2 h-8 w-8 text-primary/10 -z-10" />
-                          <p className="text-muted-foreground italic font-serif text-lg leading-relaxed">
+                        <div className="relative pl-1">
+                          <Quote className="pointer-events-none absolute left-0 top-0 h-7 w-7 text-primary/10" />
+                          <p className="text-muted-foreground italic font-serif text-base leading-relaxed wrap-anywhere sm:text-lg">
                             "{review.comment}"
                           </p>
                         </div>

@@ -4,19 +4,43 @@
  */
 export function sanitizeHTML(html: string): string {
   const allowedTags = [
-    'p', 'br', 'strong', 'em', 'u', 's', 'mark',
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-    'ul', 'ol', 'li',
-    'pre', 'code',
-    'a', 'blockquote',
+    "p",
+    "br",
+    "strong",
+    "em",
+    "u",
+    "s",
+    "mark",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "ul",
+    "ol",
+    "li",
+    "pre",
+    "code",
+    "a",
+    "blockquote",
   ];
 
   const allowedAttributes: Record<string, string[]> = {
-    'a': ['href', 'title', 'target', 'rel'],
+    a: ["href", "title", "target", "rel"],
   };
 
+  const blockedTags = new Set([
+    "script",
+    "style",
+    "iframe",
+    "object",
+    "embed",
+    "noscript",
+  ]);
+
   // Create a temporary element to parse HTML
-  const temp = document.createElement('div');
+  const temp = document.createElement("div");
   temp.innerHTML = html;
 
   /**
@@ -31,7 +55,12 @@ export function sanitizeHTML(html: string): string {
       const element = node as Element;
       const tagName = element.tagName.toLowerCase();
 
-      // Remove disallowed tags
+      // Drop dangerous tags and their content entirely.
+      if (blockedTags.has(tagName)) {
+        return document.createTextNode("");
+      }
+
+      // Remove disallowed tags but keep their safe children.
       if (!allowedTags.includes(tagName)) {
         const fragment = document.createDocumentFragment();
         element.childNodes.forEach((child) => {
@@ -47,6 +76,12 @@ export function sanitizeHTML(html: string): string {
       const allowedAttrs = allowedAttributes[tagName] || [];
       Array.from(element.attributes).forEach((attr) => {
         if (allowedAttrs.includes(attr.name)) {
+          if (tagName === "a" && attr.name === "href") {
+            const href = attr.value.trim().toLowerCase();
+            if (href.startsWith("javascript:")) {
+              return;
+            }
+          }
           newElement.setAttribute(attr.name, attr.value);
         }
       });
@@ -62,6 +97,10 @@ export function sanitizeHTML(html: string): string {
     return node;
   };
 
-  const cleaned = cleanTree(temp);
-  return (cleaned as HTMLElement).innerHTML;
+  const output = document.createElement("div");
+  temp.childNodes.forEach((child) => {
+    output.appendChild(cleanTree(child));
+  });
+
+  return output.innerHTML;
 }

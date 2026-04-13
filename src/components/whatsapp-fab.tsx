@@ -13,7 +13,7 @@ export function WhatsAppFAB() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-[100] flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all hover:scale-110 active:scale-95 group animate-float-y"
+      className="fixed bottom-6 right-6 z-100 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all hover:scale-110 active:scale-95 group animate-float-y"
       aria-label="Contact us on WhatsApp"
     >
       {/* Background glow effect */}
@@ -30,7 +30,7 @@ export function WhatsAppFAB() {
         />
       </div>
 
-      <span className="absolute right-full mr-4 whitespace-nowrap rounded-lg bg-zinc-900 px-3 py-1.5 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100 backdrop-blur-md border border-white/10 shadow-lg">
+      <span className="absolute right-full mr-4 hidden whitespace-nowrap rounded-lg border border-white/10 bg-zinc-900 px-3 py-1.5 text-xs font-medium text-white opacity-0 shadow-lg backdrop-blur-md transition-opacity group-hover:opacity-100 lg:block">
         Chat with us
       </span>
     </Link>

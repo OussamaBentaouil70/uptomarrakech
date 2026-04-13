@@ -7,18 +7,96 @@ const BASE_URL = "https://uptomarrakech.com";
 const OUTPUT_DIR = path.join(process.cwd(), "scripts", "output");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "wordpress-import.json");
 
+function parseEnvFile(content) {
+  const out = {};
+  for (const rawLine of content.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("#")) continue;
+
+    const eq = line.indexOf("=");
+    if (eq <= 0) continue;
+
+    const key = line.slice(0, eq).trim();
+    let value = line.slice(eq + 1).trim();
+
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    out[key] = value;
+  }
+
+  return out;
+}
+
+async function loadEnvFiles() {
+  const envPaths = [
+    path.join(process.cwd(), ".env"),
+    path.join(process.cwd(), ".env.local"),
+  ];
+
+  for (const envPath of envPaths) {
+    try {
+      const content = await fs.readFile(envPath, "utf8");
+      const parsed = parseEnvFile(content);
+      for (const [key, value] of Object.entries(parsed)) {
+        if (!process.env[key]) {
+          process.env[key] = value;
+        }
+      }
+    } catch {
+      // Ignore missing or unreadable env files.
+    }
+  }
+}
+
 const CATEGORY_MAP = {
-  "location-villas": { type: "accommodation", slug: "accommodation", name: "Accommodation" },
-  "rent-villa": { type: "accommodation", slug: "accommodation", name: "Accommodation" },
-  "boites-de-nuit": { type: "night_club", slug: "night-clubs", name: "Night clubs" },
-  "night-club": { type: "night_club", slug: "night-clubs", name: "Night clubs" },
+  "location-villas": {
+    type: "accommodation",
+    slug: "accommodation",
+    name: "Accommodation",
+  },
+  "rent-villa": {
+    type: "accommodation",
+    slug: "accommodation",
+    name: "Accommodation",
+  },
+  "boites-de-nuit": {
+    type: "night_club",
+    slug: "night-clubs",
+    name: "Night clubs",
+  },
+  "night-club": {
+    type: "night_club",
+    slug: "night-clubs",
+    name: "Night clubs",
+  },
   activites: { type: "activity", slug: "activities", name: "Activities" },
   activities: { type: "activity", slug: "activities", name: "Activities" },
-  "beach-club-marrakech": { type: "beach_club", slug: "beach-clubs", name: "Beach clubs" },
-  "beach-club": { type: "beach_club", slug: "beach-clubs", name: "Beach clubs" },
+  "beach-club-marrakech": {
+    type: "beach_club",
+    slug: "beach-clubs",
+    name: "Beach clubs",
+  },
+  "beach-club": {
+    type: "beach_club",
+    slug: "beach-clubs",
+    name: "Beach clubs",
+  },
   spas: { type: "spa", slug: "spa", name: "Spa" },
-  "location-de-voiture": { type: "car_rental", slug: "transport/car-rental", name: "Car rental" },
-  "car-rental": { type: "car_rental", slug: "transport/car-rental", name: "Car rental" },
+  "location-de-voiture": {
+    type: "car_rental",
+    slug: "transport/car-rental",
+    name: "Car rental",
+  },
+  "car-rental": {
+    type: "car_rental",
+    slug: "transport/car-rental",
+    name: "Car rental",
+  },
   "transport-touristique": {
     type: "tourist_transport",
     slug: "transport/tourist-transport",
@@ -91,21 +169,28 @@ async function scrape() {
       const title = stripHtml(product.title.rendered);
       const excerpt = stripHtml(product.excerpt?.rendered || "");
       const description = stripHtml(product.content?.rendered || excerpt);
-      const coverImage = product._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
+      const coverImage =
+        product._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
       if (!coverImage) continue;
 
       const gallery = new Set([coverImage]);
       const html = product.content?.rendered || "";
-      const srcMatches = [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map((m) => m[1]);
+      const srcMatches = [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(
+        (m) => m[1],
+      );
       for (const src of srcMatches) {
         if (src && src.startsWith("http")) gallery.add(src);
       }
 
       const joined = `${title} ${excerpt} ${description}`;
-      const locationMatch = joined.match(/(route [^,.]+|targa|centre ville|route de f[eè]s|bab atlas)/i);
+      const locationMatch = joined.match(
+        /(route [^,.]+|targa|centre ville|route de f[eè]s|bab atlas)/i,
+      );
       const roomsMatch = joined.match(/(\d+)\s*chambres?/i);
       const peopleMatch = joined.match(/(\d+)\s*personnes?/i);
-      const priceText = stripHtml(product.yoast_head_json?.og_description || joined);
+      const priceText = stripHtml(
+        product.yoast_head_json?.og_description || joined,
+      );
       const priceMatch = priceText.match(/(\d{2,5}(?:[.,]\d+)?)/);
 
       items.push({
@@ -175,7 +260,9 @@ async function importToFirestore(data) {
   };
 
   const clean = (obj) =>
-    Object.fromEntries(Object.entries(obj).filter(([, value]) => value !== undefined));
+    Object.fromEntries(
+      Object.entries(obj).filter(([, value]) => value !== undefined),
+    );
 
   for (const category of data.categories) {
     const ref = db.collection("categories").doc();
@@ -191,15 +278,21 @@ async function importToFirestore(data) {
     if (count >= batchSize) await commitIfNeeded();
   }
   await commitIfNeeded();
-  console.log(`Imported to Firestore: ${data.categories.length} categories, ${data.items.length} items.`);
+  console.log(
+    `Imported to Firestore: ${data.categories.length} categories, ${data.items.length} items.`,
+  );
 }
 
 async function run() {
+  await loadEnvFiles();
+
   const toFirestore = process.argv.includes("--to-firestore");
   console.log("Scraping WordPress data...");
   const data = await scrape();
   await writeOutput(data);
-  console.log(`Found ${data.categories.length} categories and ${data.items.length} items.`);
+  console.log(
+    `Found ${data.categories.length} categories and ${data.items.length} items.`,
+  );
 
   if (toFirestore) {
     await importToFirestore(data);
@@ -212,4 +305,3 @@ run().catch((error) => {
   console.error(error);
   process.exit(1);
 });
-
