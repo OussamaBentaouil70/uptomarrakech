@@ -3,7 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import admin from "firebase-admin";
 
-const BASE_URL = "https://uptomarrakech.com";
+const BASE_URL = "https://mymarrakechtrip.com";
 const OUTPUT_DIR = path.join(process.cwd(), "scripts", "output");
 const OUTPUT_FILE = path.join(OUTPUT_DIR, "wordpress-import.json");
 

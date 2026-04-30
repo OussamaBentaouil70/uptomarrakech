@@ -58,8 +58,8 @@ In your Firebase project:
 
 1. Enable **Authentication** > Email/Password.
 2. Create the admin user (example):
-   - Email: `admin@uptomarrakech.local`
-   - Password: `uptomarrakech@@123`
+   - Email: `admin@mymarrakechtrip.local`
+   - Password: `mymarrakechtrip@@123`
 3. Enable **Firestore Database**.
 4. Deploy security rules:
 
@@ -106,7 +106,7 @@ npm run build
 This project includes a migration script:
 
 - `npm run import:wordpress`
-  - Scrapes WordPress products/categories from `https://uptomarrakech.com/wp-json/wp/v2`
+   - Scrapes WordPress products/categories from `https://mymarrakechtrip.com/wp-json/wp/v2`
   - Extracts item images (featured + gallery images from content)
   - Writes output JSON to:
     - `scripts/output/wordpress-import.json`

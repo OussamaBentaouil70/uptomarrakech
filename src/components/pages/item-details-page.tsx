@@ -11,6 +11,8 @@ import Link from "next/link";
 import { categoryLabelMap, categoryPathMap } from "@/lib/category-map";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 type Props = {
   categoryType: CategoryType;
@@ -218,9 +220,11 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                     </div>
                   )}
                   {item.location && (
-                    <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-start justify-between gap-4 text-sm">
                       <span className="text-muted-foreground">Area</span>
-                      <span className="font-semibold">{item.location}</span>
+                      <span className="max-w-[60%] break-words text-right text-xs leading-snug font-semibold sm:text-sm">
+                        {item.location}
+                      </span>
                     </div>
                   )}
                   {item.locationUrl && (
@@ -247,15 +251,14 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                   </a>
                   <a href={`https://wa.me/212699124735`} className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
                     <div className="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
-                      <Quote className="h-4 w-4 rotate-180" />
+                      <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4" />
                     </div>
                     WhatsApp Concierge
                   </a>
                 </div>
               </div>
 
-              <div className="ui-surface shadow-2xl p-8 border-primary/10 bg-white">
-                <h3 className="ui-heading text-xl font-semibold mb-6">Inquire Now</h3>
+              <div className="ui-surface p-6 shadow-2xl border-primary/15 bg-linear-to-b from-white to-card sm:p-8">
                 <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
               </div>
             </div>

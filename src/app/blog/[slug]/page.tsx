@@ -40,7 +40,7 @@ export default async function BlogDetailsPage({
             </h1>
             <div className="flex items-center justify-center gap-8 text-muted-foreground text-xs font-bold uppercase tracking-widest pt-4">
               <span className="flex items-center gap-2"><Calendar className="h-3 w-3" /> {post.date}</span>
-              <span className="flex items-center gap-2"><User className="h-3 w-3" /> By UpToMarrakech</span>
+              <span className="flex items-center gap-2"><User className="h-3 w-3" /> By MyMarrakechTrip</span>
             </div>
           </div>
         </div>

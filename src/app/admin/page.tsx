@@ -65,7 +65,7 @@ export default function AdminDashboard() {
     <div className="p-8 space-y-8 animate-reveal">
       <div className="space-y-1">
         <h1 className="text-3xl font-bold tracking-tight">Overview</h1>
-        <p className="text-muted-foreground">Welcome back to the UpToMarrakech control panel.</p>
+        <p className="text-muted-foreground">Welcome back to the MyMarrakechTrip control panel.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -15,7 +15,7 @@ const footerNav = [
 
 const socialLinks = [
   {
-    href: "https://www.instagram.com/uptomarrakech/",
+    href: "https://www.instagram.com/mymarrakechtrip/",
     label: "Instagram",
     icon: faInstagram,
   },
@@ -25,7 +25,7 @@ const socialLinks = [
     icon: faFacebookF,
   },
   {
-    href: "https://www.tiktok.com/@uptomarrakech",
+    href: "https://www.tiktok.com/@mymarrakechtrip",
     label: "TikTok",
     icon: faTiktok,
   },
@@ -37,17 +37,17 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 text-sm md:grid-cols-3">
         <div className="space-y-3">
           <Link href="/" className="group inline-block">
-            <div className="relative h-12 w-24 overflow-hidden transition-transform duration-500 group-hover:scale-105">
+            <div className="relative h-32 w-64 overflow-hidden transition-transform duration-500 group-hover:scale-105">
               <Image 
-                src="https://res.cloudinary.com/dj-events101/image/upload/v1775210807/UP-removebg-preview-1-1.png-removebg-preview_fdegio.png" 
-                alt="UP" 
+                src="/assets/images/logo_mymarrakechtrip.png" 
+                alt="MyMarrakechTrip" 
                 fill 
                 className="object-contain" 
               />
             </div>
           </Link>
           <p className="ui-subtle">Premium stays, activities and concierge services in Marrakech.</p>
-          <p className="text-zinc-700">contact@uptomarrakech.com</p>
+          <p className="text-zinc-700">contact@mymarrakechtrip.com</p>
           <p className="text-zinc-700">+212 6 99-12 47 35</p>
         </div>
 
@@ -79,7 +79,7 @@ export function SiteFooter() {
               </a>
             ))}
           </div>
-          <p className="mt-5 text-zinc-500">Copyright © 2026 UpToMarrakech</p>
+          <p className="mt-5 text-zinc-500">Copyright © 2026 MyMarrakechTrip</p>
         </div>
       </div>
     </footer>

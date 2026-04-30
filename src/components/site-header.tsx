@@ -77,10 +77,10 @@ export function SiteHeader() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="group py-1">
-            <div className="relative h-14 w-32 overflow-hidden group-hover:scale-105 transition-transform duration-500 md:h-16 md:w-36">
+            <div className="relative h-20 w-48 overflow-hidden group-hover:scale-105 transition-transform duration-500 md:h-24 md:w-56">
               <Image 
-                src="https://res.cloudinary.com/dj-events101/image/upload/v1775210807/UP-removebg-preview-1-1.png-removebg-preview_fdegio.png" 
-                alt="UP" 
+                src="/assets/images/logo_mymarrakechtrip.png" 
+                alt="MyMarrakechTrip" 
                 fill 
                 className={cn(
                   "object-contain transition-[filter] duration-500",
@@ -184,12 +184,12 @@ export function SiteHeader() {
                     {link.subLinks?.map((sub) => (
                       <DropdownMenuItem
                         key={sub.href}
-                        className="p-0 rounded-xl overflow-hidden bg-white text-zinc-700 hover:bg-black hover:text-zinc-950 focus:bg-white focus:text-zinc-950 data-highlighted:bg-white data-highlighted:text-zinc-950"
+                        className="p-0 rounded-xl overflow-hidden bg-white text-zinc-700 hover:bg-black hover:text-white focus:bg-white focus:text-zinc-950 data-highlighted:bg-black data-highlighted:text-white"
                       >
                         <Link 
                           href={sub.href}
                           className={cn(
-                              "flex w-full items-center px-4 py-2.5 text-sm transition-colors bg-white text-zinc-700 hover:bg-white hover:text-zinc-950",
+                              "flex w-full items-center px-4 py-2.5 text-sm transition-colors bg-white text-zinc-700 hover:bg-black hover:text-white",
                               pathname === sub.href
                                 ? "bg-primary/10 text-primary font-semibold"
                                 : ""

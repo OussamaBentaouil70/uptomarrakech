@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { createInquiry } from "@/lib/firebase/data";
 import { inquirySchema, type InquiryInput } from "@/lib/validation/schemas";
@@ -60,31 +61,115 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
     }
   });
 
+  const errors = form.formState.errors;
+
   return (
-    <form onSubmit={onSubmit} className="ui-surface space-y-4 p-6 md:p-7">
-      <h3 className="ui-heading text-2xl font-semibold">Reservation request</h3>
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-        <Input className="h-11 px-4" placeholder="First name" {...form.register("firstName")} />
-        <Input className="h-11 px-4" placeholder="Last name" {...form.register("lastName")} />
+    <form onSubmit={onSubmit} className="space-y-5">
+      <div className="space-y-1">
+        <h3 className="ui-heading text-2xl font-semibold tracking-tight">Reservation request</h3>
+        <p className="text-sm text-muted-foreground">
+          Fill in your details and our concierge team will contact you quickly.
+        </p>
       </div>
-      <Input className="h-11 px-4" placeholder="Phone" {...form.register("phone")} />
-      <Input className="h-11 px-4" placeholder="Email" type="email" {...form.register("email")} />
-      <div className="grid grid-cols-2 gap-2">
-        <div className="space-y-1">
-          <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="space-y-2">
+          <Label htmlFor="inquiry-first-name" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
+            First name
+          </Label>
+          <Input
+            id="inquiry-first-name"
+            className="h-11 border-border/60 bg-background px-4"
+            placeholder="First name"
+            {...form.register("firstName")}
+          />
+          {errors.firstName && <p className="text-xs text-red-600">{errors.firstName.message}</p>}
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="inquiry-last-name" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
+            Last name
+          </Label>
+          <Input
+            id="inquiry-last-name"
+            className="h-11 border-border/60 bg-background px-4"
+            placeholder="Last name"
+            {...form.register("lastName")}
+          />
+          {errors.lastName && <p className="text-xs text-red-600">{errors.lastName.message}</p>}
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="inquiry-phone" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
+          Phone
+        </Label>
+        <Input
+          id="inquiry-phone"
+          className="h-11 border-border/60 bg-background px-4"
+          placeholder="+212 ..."
+          {...form.register("phone")}
+        />
+        {errors.phone && <p className="text-xs text-red-600">{errors.phone.message}</p>}
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="inquiry-email" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
+          Email
+        </Label>
+        <Input
+          id="inquiry-email"
+          className="h-11 border-border/60 bg-background px-4"
+          placeholder="you@example.com"
+          type="email"
+          {...form.register("email")}
+        />
+        {errors.email && <p className="text-xs text-red-600">{errors.email.message}</p>}
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="space-y-2">
+          <Label htmlFor="inquiry-date" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
             Date
-          </label>
-          <Input className="h-11 px-4" type="date" {...form.register("date")} />
+          </Label>
+          <Input
+            id="inquiry-date"
+            className="h-11 border-border/60 bg-background px-4"
+            type="date"
+            {...form.register("date")}
+          />
+          {errors.date && <p className="text-xs text-red-600">{errors.date.message}</p>}
         </div>
-        <div className="space-y-1">
-          <label className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+
+        <div className="space-y-2">
+          <Label htmlFor="inquiry-time" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
             Time
-          </label>
-          <Input className="h-11 px-4" type="time" {...form.register("time")} />
+          </Label>
+          <Input
+            id="inquiry-time"
+            className="h-11 border-border/60 bg-background px-4"
+            type="time"
+            {...form.register("time")}
+          />
+          {errors.time && <p className="text-xs text-red-600">{errors.time.message}</p>}
         </div>
       </div>
-      <Textarea className="min-h-40 px-4 py-3" rows={7} placeholder="Message" {...form.register("message")} />
-      <Button disabled={submitting} className="h-12 w-full bg-primary text-base text-primary-foreground hover:brightness-110">
+
+      <div className="space-y-2">
+        <Label htmlFor="inquiry-message" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
+          Message
+        </Label>
+        <Textarea
+          id="inquiry-message"
+          className="min-h-32 border-border/60 bg-background px-4 py-3"
+          rows={6}
+          placeholder="Tell us what you need: number of guests, special requests, preferred time..."
+          {...form.register("message")}
+        />
+        {errors.message && <p className="text-xs text-red-600">{errors.message.message}</p>}
+      </div>
+
+      <Button disabled={submitting} className="h-12 w-full bg-primary text-base font-semibold text-primary-foreground hover:brightness-110">
         {submitting ? "Sending..." : "Send reservation"}
       </Button>
     </form>

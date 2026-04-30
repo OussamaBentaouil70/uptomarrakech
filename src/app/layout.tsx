@@ -21,13 +21,16 @@ const display = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "UpToMarrakech",
+  title: "MyMarrakechTrip",
   description: "Votre expérience exclusive à Marrakech commence ici.",
-  metadataBase: new URL("https://uptomarrakech.com"),
+  metadataBase: new URL("https://mymarrakechtrip.com"),
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
-    title: "UpToMarrakech",
+    title: "MyMarrakechTrip",
     description: "Activities, accommodation, transport and premium experiences in Marrakech.",
-    siteName: "UpToMarrakech",
+    siteName: "MyMarrakechTrip",
     type: "website",
   },
 };

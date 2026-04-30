@@ -57,8 +57,8 @@ export default function ContactPage() {
           </button>
         </form>
         <div className="ui-surface-soft space-y-4 p-5 sm:p-6">
-          <p className="ui-heading text-lg font-semibold">UpToMarrakech</p>
-          <p className="text-zinc-700">Email: contact@uptomarrakech.com</p>
+          <p className="ui-heading text-lg font-semibold">MyMarrakechTrip</p>
+          <p className="text-zinc-700">Email: contact@mymarrakechtrip.com</p>
           <p className="text-zinc-700">Phone: +212 6 99-12 47 35</p>
           <p className="text-zinc-700">Address: Marrakech, Morocco</p>
 
