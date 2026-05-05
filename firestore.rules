@@ -17,7 +17,23 @@ service cloud.firestore {
 
     match /inquiries/{doc} {
       allow create: if true;
-      allow read, update, delete: if isSignedIn();
+      // Restrict read/update/delete to admin users only.
+      // Requires setting a custom claim `admin=true` on the user's ID token.
+      allow read, update, delete: if isSignedIn() && request.auth.token.admin == true;
+    }
+
+    match /blogs/{doc} {
+      // Allow public reads only for published blog posts.
+      allow read: if resource.data.published == true;
+      // Allow writes only to signed-in users (adjust to admin-only if needed).
+      allow write: if isSignedIn();
+    }
+
+    match /admins/{doc} {
+      // Allow signed-in users to read the admins list (for authorization checks).
+      allow read: if isSignedIn();
+      // Only allow writes to authenticated admins.
+      allow write: if isSignedIn() && request.auth.token.admin == true;
     }
   }
 }

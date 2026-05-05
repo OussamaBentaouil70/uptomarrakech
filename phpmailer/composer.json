@@ -1,0 +1,8 @@
+{
+  "name": "mymarrakechtrip/phpmailer-endpoint",
+  "description": "PHPMailer endpoint for MyMarrakechTrip forms",
+  "require": {
+    "phpmailer/phpmailer": "^6.10",
+    "vlucas/phpdotenv": "^5.6"
+  }
+}

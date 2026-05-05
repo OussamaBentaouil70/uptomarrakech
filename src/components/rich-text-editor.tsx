@@ -3,14 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Bold from '@tiptap/extension-bold';
-import Italic from '@tiptap/extension-italic';
 import Underline from '@tiptap/extension-underline';
-import Strike from '@tiptap/extension-strike';
-import Heading from '@tiptap/extension-heading';
-import BulletList from '@tiptap/extension-bullet-list';
-import OrderedList from '@tiptap/extension-ordered-list';
-import CodeBlock from '@tiptap/extension-code-block';
 import { Button } from '@/components/ui/button';
 import {
   Bold as BoldIcon,
@@ -52,26 +45,23 @@ export function RichTextEditor({
         heading: {
           levels: [1, 2, 3],
         },
+        bulletList: {
+          HTMLAttributes: {
+            class: 'list-disc list-inside',
+          },
+        },
+        orderedList: {
+          HTMLAttributes: {
+            class: 'list-decimal list-inside',
+          },
+        },
+        codeBlock: {
+          HTMLAttributes: {
+            class: 'bg-muted p-2 rounded font-mono text-sm',
+          },
+        },
       }),
-      Bold,
-      Italic,
       Underline,
-      Strike,
-      BulletList.configure({
-        HTMLAttributes: {
-          class: 'list-disc list-inside',
-        },
-      }),
-      OrderedList.configure({
-        HTMLAttributes: {
-          class: 'list-decimal list-inside',
-        },
-      }),
-      CodeBlock.configure({
-        HTMLAttributes: {
-          class: 'bg-muted p-2 rounded font-mono text-sm',
-        },
-      }),
     ],
     content: isMounted ? content : '',
     onUpdate: ({ editor }) => {

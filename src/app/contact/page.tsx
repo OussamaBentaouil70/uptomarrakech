@@ -1,6 +1,61 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { toast } from "sonner";
+import { sendFormEmail } from "@/lib/forms/mailer";
+
+const contactSchema = z.object({
+  fullName: z.string().min(2, "Please enter your full name"),
+  email: z.string().email("Please enter a valid email"),
+  phone: z.string().min(6, "Please enter a valid phone number"),
+  message: z.string().min(10, "Please enter at least 10 characters"),
+});
+
+type ContactFormInput = z.infer<typeof contactSchema>;
 
 export default function ContactPage() {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+  const form = useForm<ContactFormInput>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = form.handleSubmit(async (values) => {
+    try {
+      setSubmitting(true);
+      await sendFormEmail({
+        formType: "contact",
+        contact_name: values.fullName,
+        contact_email: values.email,
+        contact_phone: values.phone,
+        service_type: "General Contact",
+        message: values.message,
+      });
+
+      toast.success("Your message was sent successfully.");
+      form.reset();
+      router.push("/thank-you?type=contact");
+    } catch (error) {
+      console.error(error);
+      toast.error("We could not send your message. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  });
+
+  const errors = form.formState.errors;
+
   return (
     <main className="mx-auto max-w-7xl px-4 py-10 sm:py-12 space-y-8">
       <section className="overflow-hidden rounded-[2rem] border border-border/50 bg-[linear-gradient(150deg,rgba(255,255,255,0.82),rgba(248,238,221,0.92))] shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
@@ -46,16 +101,47 @@ export default function ContactPage() {
       </section>
 
       <div className="grid gap-6 md:grid-cols-2 md:gap-8">
-        <form className="ui-surface space-y-3 p-5 sm:p-6">
+        <form onSubmit={onSubmit} className="ui-surface space-y-3 p-5 sm:p-6">
           <p className="ui-eyebrow mb-2">Send a message</p>
-          <input className="w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Full name" />
-          <input className="w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Email" />
-          <input className="w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Phone" />
-          <textarea className="min-h-32 w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Message" />
-          <button className="rounded-full bg-primary px-6 py-3 text-primary-foreground transition-all hover:brightness-110">
-            Send
+
+          <input
+            className="w-full rounded-xl border border-border bg-white/90 p-3"
+            placeholder="Full name"
+            {...form.register("fullName")}
+          />
+          {errors.fullName && <p className="text-xs text-red-600">{errors.fullName.message}</p>}
+
+          <input
+            className="w-full rounded-xl border border-border bg-white/90 p-3"
+            placeholder="Email"
+            type="email"
+            {...form.register("email")}
+          />
+          {errors.email && <p className="text-xs text-red-600">{errors.email.message}</p>}
+
+          <input
+            className="w-full rounded-xl border border-border bg-white/90 p-3"
+            placeholder="Phone"
+            {...form.register("phone")}
+          />
+          {errors.phone && <p className="text-xs text-red-600">{errors.phone.message}</p>}
+
+          <textarea
+            className="min-h-32 w-full rounded-xl border border-border bg-white/90 p-3"
+            placeholder="Message"
+            {...form.register("message")}
+          />
+          {errors.message && <p className="text-xs text-red-600">{errors.message.message}</p>}
+
+          <button
+            type="submit"
+            disabled={submitting}
+            className="rounded-full bg-primary px-6 py-3 text-primary-foreground transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-70"
+          >
+            {submitting ? "Sending..." : "Send"}
           </button>
         </form>
+
         <div className="ui-surface-soft space-y-4 p-5 sm:p-6">
           <p className="ui-heading text-lg font-semibold">MyMarrakechTrip</p>
           <p className="text-zinc-700">Email: contact@mymarrakechtrip.com</p>
@@ -76,4 +162,3 @@ export default function ContactPage() {
     </main>
   );
 }
-

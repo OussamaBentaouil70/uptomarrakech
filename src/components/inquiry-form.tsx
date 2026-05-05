@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,6 +12,7 @@ import { createInquiry } from "@/lib/firebase/data";
 import { inquirySchema, type InquiryInput } from "@/lib/validation/schemas";
 import { toast } from "sonner";
 import type { CategoryType } from "@/lib/types";
+import { sendFormEmail } from "@/lib/forms/mailer";
 
 type Props = {
   itemId: string;
@@ -20,6 +22,7 @@ type Props = {
 
 export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
   const [submitting, setSubmitting] = useState(false);
+  const router = useRouter();
   const form = useForm<InquiryInput>({
     resolver: zodResolver(inquirySchema),
     defaultValues: {
@@ -40,6 +43,18 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
     try {
       setSubmitting(true);
       await createInquiry(values);
+      await sendFormEmail({
+        formType: "reservation",
+        contact_name: `${values.firstName} ${values.lastName}`.trim(),
+        contact_email: values.email,
+        contact_phone: values.phone,
+        service_type: values.categoryType,
+        preferred_date: values.date,
+        preferred_time: values.time,
+        item_slug: values.itemSlug,
+        category_type: values.categoryType,
+        message: values.message,
+      });
       toast.success("Reservation request sent.");
       form.reset({
         itemId,
@@ -53,9 +68,10 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
         time: "",
         message: "",
       });
+      router.push("/thank-you?type=reservation");
     } catch (error) {
       console.error(error);
-      toast.error("Failed to send request.");
+      toast.error("Failed to send request. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -169,8 +185,25 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
         {errors.message && <p className="text-xs text-red-600">{errors.message.message}</p>}
       </div>
 
-      <Button disabled={submitting} className="h-12 w-full bg-primary text-base font-semibold text-primary-foreground hover:brightness-110">
-        {submitting ? "Sending..." : "Send reservation"}
+      <Button
+        type="submit"
+        disabled={submitting}
+        aria-busy={submitting}
+        className={`h-12 w-full bg-primary text-base font-semibold text-primary-foreground hover:brightness-110 ${
+          submitting ? 'cursor-wait opacity-80' : 'cursor-pointer'
+        }`}
+      >
+        {submitting ? (
+          <span className="inline-flex items-center gap-2">
+            <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+            </svg>
+            Sending...
+          </span>
+        ) : (
+          'Send reservation'
+        )}
       </Button>
     </form>
   );

@@ -32,21 +32,26 @@ export default function AdminDashboard() {
 
   useEffect(() => {
     async function loadStats() {
-      const [items, inqs, cats, adminsSnap] = await Promise.all([
-        listItems(),
-        listInquiries(),
-        listCategories(),
-        getDocs(collection(db, "admins"))
-      ]);
-      
-      setStats({
-        items: items.length,
-        inquiries: inqs.length,
-        categories: cats.length,
-        admins: adminsSnap.size
-      });
-      setRecentInquiries(inqs.slice(0, 5));
-      setLoading(false);
+      try {
+        const [items, inqs, cats, adminsSnap] = await Promise.all([
+          listItems(),
+          listInquiries().catch(() => []),
+          listCategories(),
+          getDocs(collection(db, "admins")).catch(() => ({ size: 0 }))
+        ]);
+        
+        setStats({
+          items: items.length,
+          inquiries: inqs.length,
+          categories: cats.length,
+          admins: adminsSnap.size
+        });
+        setRecentInquiries(inqs.slice(0, 5));
+      } catch (err) {
+        console.error("Failed to load admin stats:", err);
+      } finally {
+        setLoading(false);
+      }
     }
     void loadStats();
   }, []);

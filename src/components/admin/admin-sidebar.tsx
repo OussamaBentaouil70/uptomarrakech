@@ -43,11 +43,11 @@ export function AdminSidebar() {
 
   return (
     <aside className="fixed left-0 top-0 hidden h-full w-72 flex-col border-r border-border/40 bg-card/30 backdrop-blur-xl lg:flex">
-      <div className="flex h-24 items-center px-8 border-b border-border/40">
-        <Link href="/" className="group w-full h-12 relative overflow-hidden transition-transform duration-500 hover:scale-105">
+      <div className="flex h-32 items-center px-8 border-b border-border/40">
+        <Link href="/" className="group w-full h-24 relative overflow-hidden transition-transform duration-500 hover:scale-105">
           <Image 
-            src="https://res.cloudinary.com/dj-events101/image/upload/v1775210807/UP-removebg-preview-1-1.png-removebg-preview_fdegio.png" 
-            alt="UP" 
+            src="https://i.postimg.cc/L8kqSsCc/logo-mymarrakechtrip.webp" 
+            alt="MyMarrakechTrip" 
             fill 
             className="object-contain object-left" 
           />
@@ -93,7 +93,7 @@ export function AdminSidebar() {
       <div className="p-4 border-t border-border/40">
         <button
           onClick={() => signOut(getClientAuth())}
-          className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-red-600 transition-all hover:bg-red-50"
+          className="flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium text-red-600 transition-all hover:bg-red-50 active:scale-95 cursor-pointer"
         >
           <LogOut className="h-5 w-5" />
           Log out

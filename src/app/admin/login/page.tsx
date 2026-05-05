@@ -43,12 +43,12 @@ export default function AdminLoginPage() {
         />
         <div className="absolute inset-0 bg-charcoal/30 backdrop-contrast-[1.1]" />
         <div className="absolute inset-0 flex flex-col justify-between p-12 text-white">
-          <Link href="/" className="relative h-12 w-32 overflow-hidden transition-transform duration-500 hover:scale-105">
+          <Link href="/" className="relative h-24 w-56 overflow-hidden transition-transform duration-500 hover:scale-105">
             <Image 
-              src="https://res.cloudinary.com/dj-events101/image/upload/v1775210807/UP-removebg-preview-1-1.png-removebg-preview_fdegio.png" 
-              alt="UP" 
+              src="https://i.postimg.cc/L8kqSsCc/logo-mymarrakechtrip.webp" 
+              alt="MyMarrakechTrip" 
               fill 
-              className="object-contain object-left brightness-0 invert" 
+              className="object-contain object-left brightness-0 invert drop-shadow-lg" 
             />
           </Link>
           <div className="space-y-4 max-w-md">
@@ -80,7 +80,7 @@ export default function AdminLoginPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="admin@uptomarrakech.com"
+                    placeholder="admin@mymarrakechtrip.com"
                     className="pl-10 h-10 border-border/40 focus:ring-primary"
                     required
                   />
@@ -125,7 +125,7 @@ export default function AdminLoginPage() {
 
           <footer className="pt-8 border-t border-border/40">
             <p className="text-xs text-center text-muted-foreground">
-              UpToMarrakech Console v2.0 • 2026
+              MyMarrakechTrip Admin Portal • 2026
             </p>
           </footer>
         </div>

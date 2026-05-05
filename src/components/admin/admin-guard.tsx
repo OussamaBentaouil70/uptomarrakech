@@ -1,6 +1,6 @@
 "use client";
 
-import { onAuthStateChanged, type User } from "firebase/auth";
+import { onAuthStateChanged, getIdTokenResult, type User } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getClientAuth } from "@/lib/firebase/auth";
@@ -27,23 +27,30 @@ export function AdminGuard({ children }: { children: React.ReactNode }) {
         return;
       }
 
-      // Check if authorized email
+      // Check id token claims and authorized email
       try {
         const email = u.email?.toLowerCase();
+
+        // Check ID token for an `admin` custom claim first
+        let isAdminClaim = false;
+        try {
+          const idToken = await getIdTokenResult(u);
+          isAdminClaim = !!idToken.claims?.admin;
+        } catch (claimErr) {
+          console.warn("Failed to verify ID token claims", claimErr);
+        }
+
+        // Fallback: check admins collection by email
         const q = query(collection(db, "admins"), where("email", "==", email));
         const snap = await getDocs(q);
-        
+
         // TEMPORARY: Allow master admin if DB is empty or if it's the owner's email
         const isMaster = email === "bentaouiloussama@gmail.com";
-        const authorized = !snap.empty || isMaster;
-        
+        const authorized = isAdminClaim || !snap.empty || isMaster;
+
         setUser(u);
         setIsAuthorized(authorized);
         setLoading(false);
-        
-        if (!authorized) {
-          // Keep loading false but isAuthorized false to show message
-        }
       } catch (err) {
         console.error("Auth check failed", err);
         setLoading(false);
