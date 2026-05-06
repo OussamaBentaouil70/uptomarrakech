@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "Votre expérience exclusive à Marrakech commence ici.",
   metadataBase: new URL("https://mymarrakechtrip.com"),
   icons: {
-    icon: "/favicon.ico",
+    icon: "/assets/MyMarrakechTrip_logo.ico",
   },
   openGraph: {
     title: "MyMarrakechTrip",

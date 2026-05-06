@@ -23,6 +23,9 @@ export async function sendFormEmail(payload: MailFormPayload): Promise<void> {
     throw new Error("Missing NEXT_PUBLIC_PHP_MAILER_ENDPOINT in environment variables.");
   }
 
+  console.log("Sending email to:", endpoint);
+  console.log("Payload:", payload);
+
   const response = await fetch(endpoint, {
     method: "POST",
     headers: {
@@ -31,7 +34,12 @@ export async function sendFormEmail(payload: MailFormPayload): Promise<void> {
     body: JSON.stringify(payload),
   });
 
+  console.log("Response status:", response.status);
+  console.log("Response headers:", response.headers);
+
   const result = (await response.json()) as MailerResponse;
+
+  console.log("PHP Response:", result);
 
   if (!response.ok || !result.success) {
     throw new Error(result.message || "Email sending failed.");

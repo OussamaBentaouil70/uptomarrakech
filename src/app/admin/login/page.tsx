@@ -45,7 +45,7 @@ export default function AdminLoginPage() {
         <div className="absolute inset-0 flex flex-col justify-between p-12 text-white">
           <Link href="/" className="relative h-24 w-56 overflow-hidden transition-transform duration-500 hover:scale-105">
             <Image 
-              src="https://i.postimg.cc/L8kqSsCc/logo-mymarrakechtrip.webp" 
+              src="https://res.cloudinary.com/dj-events101/image/upload/v1778106321/logo_mymarrakechtrip_f79qyw.png" 
               alt="MyMarrakechTrip" 
               fill 
               className="object-contain object-left brightness-0 invert drop-shadow-lg" 
