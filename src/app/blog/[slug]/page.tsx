@@ -1,9 +1,16 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getBlogBySlug } from "@/lib/firebase/data";
+import { getBlogBySlug, listBlogs } from "@/lib/firebase/data";
 import { GallerySlider } from "@/components/gallery-slider";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+
+export async function generateStaticParams() {
+  const posts = await listBlogs(true);
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 export default async function BlogDetailsPage({
   params,

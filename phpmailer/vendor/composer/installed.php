@@ -3,7 +3,7 @@
         'name' => 'mymarrakechtrip/phpmailer-endpoint',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '64391b7dcab75b33b2d630c828c86913c4589e7c',
+        'reference' => '0a4b5a714d95103daadb368cd80b06e64a3305ac',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'mymarrakechtrip/phpmailer-endpoint' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '64391b7dcab75b33b2d630c828c86913c4589e7c',
+            'reference' => '0a4b5a714d95103daadb368cd80b06e64a3305ac',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

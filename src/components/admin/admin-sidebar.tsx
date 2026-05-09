@@ -46,7 +46,7 @@ export function AdminSidebar() {
       <div className="flex h-32 items-center px-8 border-b border-border/40">
         <Link href="/" className="group w-full h-24 relative overflow-hidden transition-transform duration-500 hover:scale-105">
           <Image 
-            src="https://i.postimg.cc/L8kqSsCc/logo-mymarrakechtrip.webp" 
+            src="/assets/images/logo_mymarrakechtrip.png" 
             alt="MyMarrakechTrip" 
             fill 
             className="object-contain object-left" 

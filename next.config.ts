@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -12,10 +13,13 @@ const nextConfig: NextConfig = {
         protocol: "http",
         hostname: "**",
         pathname: "/**",
-        port: '',
+        port: "",
       },
     ],
   },
+  // Export static HTML for Hostinger shared hosting
+  output: "export",
+  trailingSlash: true,
 };
 
 export default nextConfig;

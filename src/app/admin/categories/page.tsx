@@ -119,7 +119,14 @@ export default function CategoriesPage() {
               <label className="text-sm font-medium">Hero Image URL</label>
               <div className="flex gap-2">
                 <Input value={editingCat.heroImage || ""} readOnly className="bg-muted" />
-                <ImageUpload onUploaded={(url) => setEditingCat({...editingCat, heroImage: url})} />
+                <ImageUpload
+                  onUploaded={(url) =>
+                    setEditingCat({
+                      ...editingCat,
+                      heroImage: Array.isArray(url) ? url[0] : url,
+                    })
+                  }
+                />
               </div>
               {editingCat.heroImage && (
                 <div className="mt-2 h-32 w-full rounded-2xl overflow-hidden border">
