@@ -89,7 +89,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
         <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
         <div className="absolute inset-0 flex items-end justify-center pb-20 px-6">
           <div className="max-w-4xl w-full text-center space-y-4">
-            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-primary animate-reveal">
+            <span className="inline-block rounded-full border border-primary bg-primary/50 backdrop-blur-md px-4 py-2 text-[10px] font-bold uppercase tracking-[0.4em] text-white animate-reveal">
               The Collection • {categoryType.replace('_', ' ')}
             </span>
             <h1 className="ui-display text-5xl md:text-7xl font-bold tracking-tight animate-reveal animation-delay-200">
