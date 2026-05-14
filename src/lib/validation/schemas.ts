@@ -52,6 +52,7 @@ export const inquirySchema = z.object({
   email: z.string().email(),
   date: z.string().min(1),
   time: z.string().min(1),
+  persons: z.number().int().min(1).optional(),
   message: z.string().min(10),
   // Backward compatibility for existing data shape in admin views.
   name: z.string().optional(),

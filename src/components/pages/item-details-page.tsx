@@ -129,7 +129,69 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
               </div>
             </div>
 
+            {/* Mobile Reservation Form - shown only on mobile */}
+            <div className="lg:hidden ui-surface p-6 shadow-2xl border-primary/15 bg-linear-to-b from-white to-card">
+              <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+            </div>
 
+            {/* Mobile Reservation Info - shown only on mobile */}
+            <div className="lg:hidden ui-surface space-y-6 p-8 border-primary/20 bg-card/60 backdrop-blur-xl">
+              <div className="space-y-1">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Reservation</p>
+                {item.price > 0 ? (
+                  <p className="ui-heading text-4xl font-bold">
+                    {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {item.priceUnit}</span>
+                  </p>
+                ) : (
+                  <p className="ui-heading text-2xl font-bold">Price on request</p>
+                )}
+              </div>
+
+              <div className="space-y-4 pt-6 border-t border-border/30">
+                {item.accommodation && (
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">Capacity</span>
+                    <span className="font-semibold">{item.accommodation.rooms} Rooms • {item.accommodation.people} Guests</span>
+                  </div>
+                )}
+                {item.location && (
+                  <div className="flex items-start justify-between gap-4 text-sm">
+                    <span className="text-muted-foreground">Area</span>
+                    <span className="max-w-[60%] break-words text-right text-xs leading-snug font-semibold sm:text-sm">
+                      {item.location}
+                    </span>
+                  </div>
+                )}
+                {item.locationUrl && (
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">Location</span>
+                    <a
+                      href={item.locationUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-primary hover:underline"
+                    >
+                      Open map
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <div className="pt-4 space-y-3">
+                <a href="tel:+212699124735" className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                    <Phone className="h-4 w-4" />
+                  </div>
+                  +212 6 99-12 47 35
+                </a>
+                <a href={`https://wa.me/212699124735`} className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
+                  <div className="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                    <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4" />
+                  </div>
+                  WhatsApp Concierge
+                </a>
+              </div>
+            </div>
 
             {item.carte && (
               <div className="ui-surface p-10 bg-primary/5 border-primary/10 space-y-6 text-center">
@@ -197,9 +259,13 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
             )}
           </div>
 
-          {/* Sidebar */}
-          <aside className="space-y-8">
+          {/* Sidebar - hidden on mobile */}
+          <aside className="hidden lg:block space-y-8">
             <div className="sticky top-28 space-y-8">
+              <div className="ui-surface p-6 shadow-2xl border-primary/15 bg-linear-to-b from-white to-card sm:p-8">
+                <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+              </div>
+
               <div className="ui-surface space-y-6 p-8 border-primary/20 bg-card/60 backdrop-blur-xl">
                 <div className="space-y-1">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Reservation</p>
@@ -256,10 +322,6 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                     WhatsApp Concierge
                   </a>
                 </div>
-              </div>
-
-              <div className="ui-surface p-6 shadow-2xl border-primary/15 bg-linear-to-b from-white to-card sm:p-8">
-                <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
               </div>
             </div>
           </aside>

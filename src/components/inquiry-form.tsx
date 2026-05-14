@@ -35,6 +35,7 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
       email: "",
       date: "",
       time: "",
+      persons: undefined,
       message: "",
     },
   });
@@ -66,6 +67,7 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
         email: "",
         date: "",
         time: "",
+        persons: undefined,
         message: "",
       });
       router.push("/thank-you?type=reservation");
@@ -169,6 +171,21 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
           />
           {errors.time && <p className="text-xs text-red-600">{errors.time.message}</p>}
         </div>
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="inquiry-persons" className="text-xs font-bold uppercase tracking-wider text-foreground/80">
+          Number of persons
+        </Label>
+        <Input
+          id="inquiry-persons"
+          className="h-11 border-border/60 bg-background px-4"
+          type="number"
+          min="1"
+          placeholder="1"
+          {...form.register("persons", { valueAsNumber: true })}
+        />
+        {errors.persons && <p className="text-xs text-red-600">{errors.persons.message}</p>}
       </div>
 
       <div className="space-y-2">
