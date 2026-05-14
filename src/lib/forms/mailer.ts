@@ -6,6 +6,7 @@ export type MailFormPayload = {
   service_type: string;
   preferred_date?: string;
   preferred_time?: string;
+  number_of_persons?: number;
   item_slug?: string;
   category_type?: string;
   message: string;
@@ -17,14 +18,7 @@ type MailerResponse = {
 };
 
 export async function sendFormEmail(payload: MailFormPayload): Promise<void> {
-  const endpoint = process.env.NEXT_PUBLIC_PHP_MAILER_ENDPOINT;
-
-  if (!endpoint) {
-    throw new Error("Missing NEXT_PUBLIC_PHP_MAILER_ENDPOINT in environment variables.");
-  }
-
-  console.log("Sending email to:", endpoint);
-  console.log("Payload:", payload);
+  const endpoint = process.env.NEXT_PUBLIC_PHP_MAILER_ENDPOINT?.trim() || "/api/send-email";
 
   const response = await fetch(endpoint, {
     method: "POST",
@@ -34,12 +28,7 @@ export async function sendFormEmail(payload: MailFormPayload): Promise<void> {
     body: JSON.stringify(payload),
   });
 
-  console.log("Response status:", response.status);
-  console.log("Response headers:", response.headers);
-
-  const result = (await response.json()) as MailerResponse;
-
-  console.log("PHP Response:", result);
+  const result = (await response.json().catch(() => ({ success: false, message: "Invalid response from mail service." }))) as MailerResponse;
 
   if (!response.ok || !result.success) {
     throw new Error(result.message || "Email sending failed.");

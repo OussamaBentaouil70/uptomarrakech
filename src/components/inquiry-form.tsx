@@ -52,6 +52,7 @@ export function InquiryForm({ itemId, itemSlug, categoryType }: Props) {
         service_type: values.categoryType,
         preferred_date: values.date,
         preferred_time: values.time,
+        number_of_persons: values.persons,
         item_slug: values.itemSlug,
         category_type: values.categoryType,
         message: values.message,
