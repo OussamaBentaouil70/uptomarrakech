@@ -178,13 +178,13 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
               </div>
 
               <div className="pt-4 space-y-3">
-                <a href="tel:+212699124735" className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
+                <a href="tel:+212771444668" className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
                   <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                     <Phone className="h-4 w-4" />
                   </div>
-                  +212 6 99-12 47 35
+                  +212 771-444668
                 </a>
-                <a href={`https://wa.me/212699124735`} className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
+                <a href={`https://wa.me/212771444668`} className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
                   <div className="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                     <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4" />
                   </div>
@@ -199,7 +199,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                 <div className="space-y-2">
                   <h3 className="ui-heading text-2xl font-semibold tracking-tight">Gastronomic Journey</h3>
                   <p className="text-muted-foreground max-w-md mx-auto">
-                    Découvrez l'art de vivre à travers notre sélection culinaire exclusive.
+                    Discover the art of living through our exclusive culinary selection.
                   </p>
                 </div>
                 <a
@@ -309,13 +309,13 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                 </div>
 
                 <div className="pt-4 space-y-3">
-                  <a href="tel:+212699124735" className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
+                  <a href="tel:+212771444668" className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
                     <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                       <Phone className="h-4 w-4" />
                     </div>
-                    +212 6 99-12 47 35
+                    +212 771-444668
                   </a>
-                  <a href={`https://wa.me/212699124735`} className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
+                  <a href={`https://wa.me/212771444668`} className="flex items-center gap-3 text-sm font-medium hover:text-primary transition-colors">
                     <div className="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                       <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4" />
                     </div>

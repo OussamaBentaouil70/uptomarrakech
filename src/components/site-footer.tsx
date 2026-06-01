@@ -48,7 +48,7 @@ export function SiteFooter() {
           </Link>
           <p className="ui-subtle">Premium stays, activities and concierge services in Marrakech.</p>
           <p className="text-zinc-700">contact@mymarrakechtrip.com</p>
-          <p className="text-zinc-700">+212 6 99-12 47 35</p>
+          <p className="text-zinc-700">+212 771-444668</p>
         </div>
 
         <div>

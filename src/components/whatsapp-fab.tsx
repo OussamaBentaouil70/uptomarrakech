@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function WhatsAppFAB() {
-  const phoneNumber = "212699124735";
+  const phoneNumber = "212771444668";
   const message = "Hello, I would like to inquire about your services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
