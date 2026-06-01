@@ -356,21 +356,21 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="reveal-on-scroll -mt-8 pb-12 pt-8">
+      <section className="reveal-on-scroll hidden md:block -mt-8 pb-12 pt-8">
         <div className="mx-auto max-w-7xl px-4">
           <div className="ui-surface animate-reveal grid gap-5 p-6 md:grid-cols-4 md:items-center" style={{ animationDelay: "280ms" }}>
             <p className="text-sm font-medium text-zinc-700 md:col-span-4 md:text-center">
-              Planifiez et réservez en ligne avec une assistance locale premium.
+              Plan and book online with premium local support.
             </p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><ThumbsUp className="h-4 w-4 text-emerald-700" /> Annulation gratuite*</p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><HandCoins className="h-4 w-4 text-emerald-700" /> Paiement sur place*</p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><PhoneCall className="h-4 w-4 text-emerald-700" /> Assistance 7j/7j</p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><Ticket className="h-4 w-4 text-emerald-700" /> Concierge premium</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><ThumbsUp className="h-4 w-4 text-emerald-700" /> Free cancellation*</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><HandCoins className="h-4 w-4 text-emerald-700" /> Pay on site*</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><PhoneCall className="h-4 w-4 text-emerald-700" /> Support 7 days a week</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><Ticket className="h-4 w-4 text-emerald-700" /> Premium concierge</p>
           </div>
         </div>
       </section>
 
-      <section className="reveal-on-scroll mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2">
+      <section className="reveal-on-scroll hidden md:grid mx-auto max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2">
         <div className="relative h-80 overflow-hidden rounded-3xl border border-border/70 animate-soft-pulse">
           <Image
             src="https://images.pexels.com/photos/30682505/pexels-photo-30682505.jpeg"
@@ -395,10 +395,10 @@ export function HomePage() {
       </section>
 
       <div className="mx-auto max-w-7xl px-4">
-        <div className="ui-divider" />
+        <div className="ui-divider hidden md:block" />
       </div>
 
-      <section className="reveal-on-scroll mx-auto max-w-7xl px-4 pb-14">
+      <section className="reveal-on-scroll hidden md:block mx-auto max-w-7xl px-4 pb-14">
         <div className="ui-shell ui-shell-ornament">
           <p className="ui-eyebrow mb-2">Our Process</p>
           <h2 className="ui-section-title mb-7">A seamless journey from idea to experience</h2>
@@ -431,7 +431,7 @@ export function HomePage() {
       </section>
 
       <div className="mx-auto max-w-7xl px-4">
-        <div className="ui-divider" />
+        <div className="ui-divider hidden md:block" />
       </div>
 
       <section className="reveal-on-scroll mx-auto max-w-7xl px-4 pb-12">
@@ -458,6 +458,21 @@ export function HomePage() {
         {sliders.map((slider) => (
           <CategorySlider key={slider.type} title={slider.title} items={slider.items} />
         ))}
+      </section>
+
+      {/* Mobile-only: promo features after sliders */}
+      <section className="reveal-on-scroll block md:hidden pb-12 pt-8">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="ui-surface animate-reveal grid gap-5 p-6 md:grid-cols-4 md:items-center" style={{ animationDelay: "280ms" }}>
+            <p className="text-sm font-medium text-zinc-700 md:col-span-4 md:text-center">
+              Plan and book online with premium local support.
+            </p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><ThumbsUp className="h-4 w-4 text-emerald-700" /> Free cancellation*</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><HandCoins className="h-4 w-4 text-emerald-700" /> Pay on site*</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><PhoneCall className="h-4 w-4 text-emerald-700" /> Support 7 days a week</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><Ticket className="h-4 w-4 text-emerald-700" /> Premium concierge</p>
+          </div>
+        </div>
       </section>
 
       <section className="reveal-on-scroll mx-auto max-w-7xl px-4 py-12">
@@ -504,6 +519,54 @@ export function HomePage() {
             ))}
           </div>
         )}
+      </section>
+
+      {/* Mobile: re-insert Who We Are and Our Process after sliders */}
+      <section className="reveal-on-scroll block md:hidden mx-auto max-w-7xl px-4 py-8">
+        <div className="space-y-5">
+          <p className="ui-eyebrow">Who We Are</p>
+          <h2 className="ui-section-title">About us</h2>
+          <p className="ui-prose">
+            UpToMarrakech is your premium local partner to discover the best of Marrakech:
+            accommodation, activities, beach clubs, transport and wellness. We curate elegant
+            experiences with trusted partners and personal support.
+          </p>
+          <Link href="/contact" className="btn-luxe inline-flex items-center gap-2">
+            Contact us <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
+      <section className="reveal-on-scroll block md:hidden mx-auto max-w-7xl px-4 pb-14">
+        <div className="ui-shell ui-shell-ornament">
+          <p className="ui-eyebrow mb-2">Our Process</p>
+          <h2 className="ui-section-title mb-7">A seamless journey from idea to experience</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {[
+              {
+                n: "01",
+                title: "Discover",
+                text: "We understand your style, dates, preferences and travel priorities.",
+              },
+              {
+                n: "02",
+                title: "Curate",
+                text: "Our team selects premium stays, activities and logistics tailored to you.",
+              },
+              {
+                n: "03",
+                title: "Enjoy",
+                text: "You experience Marrakech with smooth coordination and local support.",
+              },
+            ].map((step) => (
+              <article key={step.n} className="rounded-2xl border border-border/70 bg-white/75 p-5">
+                <p className="ui-eyebrow text-zinc-400">{step.n}</p>
+                <h3 className="ui-heading mt-1 text-xl font-semibold">{step.title}</h3>
+                <p className="ui-prose mt-2 text-sm">{step.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="reveal-on-scroll bg-[linear-gradient(170deg,rgba(255,250,242,0.7),rgba(235,224,199,0.52))] py-16">
