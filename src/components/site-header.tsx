@@ -163,7 +163,7 @@ export function SiteHeader() {
                 )}
                </nav>
                <div className="mt-6 px-5">
-                 <DropdownMenu className="lg:hidden">
+                 <DropdownMenu>
                    <DropdownMenuTrigger
                      className={cn(
                        "inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium transition-colors duration-300 outline-none",
