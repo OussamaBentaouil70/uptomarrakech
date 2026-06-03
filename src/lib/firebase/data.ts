@@ -116,6 +116,12 @@ export async function upsertItem(id: string | null, input: ItemInput) {
     ...input,
     updatedAt: serverTimestamp(),
   });
+  
+  // Clean reviews array if present to remove undefined fields
+  if (payload.reviews && Array.isArray(payload.reviews)) {
+    payload.reviews = payload.reviews.map((r: any) => removeUndefined(r));
+  }
+
   if (id) {
     await updateDoc(doc(db, "items", id), payload);
     return id;
@@ -135,11 +141,11 @@ export async function addReview(itemId: string, review: Omit<Review, "id">) {
   const item = await getItemById(itemId);
   if (!item) throw new Error("Item not found");
   
-  const newReview = {
+  const newReview = removeUndefined({
     id: Math.random().toString(36).substr(2, 9),
     ...review,
     createdAt: new Date().toISOString(),
-  };
+  } as any);
   
   const reviews = item.reviews || [];
   reviews.push(newReview);
@@ -153,10 +159,15 @@ export async function updateReview(itemId: string, reviewId: string, updates: Pa
   if (!item) throw new Error("Item not found");
   
   const reviews = (item.reviews || []).map((r) =>
-    r.id === reviewId ? { ...r, ...updates } : r,
+    r.id === reviewId ? removeUndefined({ ...r, ...updates } as any) : r,
   );
   
   await updateDoc(doc(db, "items", itemId), { reviews });
+}
+
+export async function setItemReviews(itemId: string, reviews: Omit<Review, "id">[]) {
+  const cleanReviews = reviews.map(r => removeUndefined(r as any));
+  await updateDoc(doc(db, "items", itemId), { reviews: cleanReviews });
 }
 
 export async function deleteReview(itemId: string, reviewId: string) {
@@ -172,11 +183,11 @@ export async function bulkAddReviews(itemId: string, reviews: Omit<Review, "id">
   const item = await getItemById(itemId);
   if (!item) throw new Error("Item not found");
   
-  const newReviews = reviews.map((r, idx) => ({
+  const newReviews = reviews.map((r) => removeUndefined({
     id: Math.random().toString(36).substr(2, 9),
     ...r,
     createdAt: new Date().toISOString(),
-  }));
+  } as any));
   
   const existingReviews = item.reviews || [];
   await updateDoc(doc(db, "items", itemId), { 

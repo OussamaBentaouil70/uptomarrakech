@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import "flag-icons/css/flag-icons.min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Toaster } from "@/components/ui/sonner";

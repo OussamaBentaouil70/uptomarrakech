@@ -10,6 +10,8 @@ import { categoryLabelMap, categoryPathMap } from "@/lib/category-map";
 import type { BlogPost, CategoryType, Item } from "@/lib/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { usePathname } from "next/navigation";
+import { getLocaleFromPathname, localizePath, type Locale } from "@/lib/locale";
 
 const categoryOrder: CategoryType[] = [
   "accommodation",
@@ -27,24 +29,28 @@ const testimonials = [
     name: "Sofia K.",
     role: "Paris, France",
     description: "Booked our villa and transfers through UpToMarrakech. Everything felt premium and perfectly organized.",
+    descriptionFr: "Nous avons reserve notre villa et nos transferts avec UpToMarrakech. Tout etait premium et parfaitement organise.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
   },
   {
     name: "Adam R.",
     role: "London, UK",
     description: "Great communication, amazing recommendations, and smooth reservations for activities and nightlife.",
+    descriptionFr: "Tres bonne communication, recommandations excellentes et reservations fluides pour les activites et les sorties.",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
   },
   {
     name: "Leila M.",
     role: "Casablanca, Morocco",
     description: "Professional team with real local expertise. The whole experience was elegant and stress-free.",
+    descriptionFr: "Une equipe professionnelle avec une vraie expertise locale. Toute l'experience etait elegante et sans stress.",
     avatar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80",
   },
   {
     name: "Yassine T.",
     role: "Rabat, Morocco",
     description: "Fast support and quality partners. I highly recommend for anyone who wants a polished Marrakech stay.",
+    descriptionFr: "Assistance rapide et partenaires de qualite. Je recommande vivement pour un sejour soigne a Marrakech.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
   },
 ];
@@ -69,13 +75,13 @@ const partners = [
   { name: "555", logo: "https://555marrakech.com/wp-content/uploads/2022/11/logo-555-marrakech.webp" },
   { name: "Dar Soukar", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKjNCpo3l3ceNKbxC_ShikNlae7giXNujSCw&s" },
 ];
-function CategorySlider({ title, items }: { title: string; items: Item[] }) {
+function CategorySlider({ title, items, locale }: { title: string; items: Item[]; locale: Locale }) {
   return (
     <section className="space-y-6 section-fade">
       <div className="flex items-end justify-between gap-4 border-b border-border/40 pb-4">
         <h3 className="ui-heading text-3xl font-semibold md:text-4xl text-foreground">{title}</h3>
         <Link
-          href={`/${categoryPathMap[items[0]?.categoryType] || ""}`}
+          href={localizePath(`/${categoryPathMap[items[0]?.categoryType] || ""}`, locale)}
           className="group flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
         >
           View all <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -100,7 +106,7 @@ function CategorySlider({ title, items }: { title: string; items: Item[] }) {
           {items.map((item) => (
             <SwiperSlide key={item.id}>
               <Link
-                href={`/${categoryPathMap[item.categoryType]}/${item.slug}`}
+                href={localizePath(`/${categoryPathMap[item.categoryType]}/${item.slug}`, locale)}
                 className="group/card block relative h-[320px] overflow-hidden rounded-3xl bg-secondary/30 transition-all duration-500 hover:shadow-2xl"
               >
                 <Image
@@ -125,7 +131,7 @@ function CategorySlider({ title, items }: { title: string; items: Item[] }) {
                       </p>
                     )}
                     <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest opacity-0 transition-all duration-500 group-hover/card:opacity-100 group-hover/card:translate-y-0">
-                      Discovery <ArrowRight className="h-4 w-4" />
+                      {locale === "fr" ? "Decouvrir" : "Discovery"} <ArrowRight className="h-4 w-4" />
                     </div>
                   </div>
                 </div>
@@ -139,6 +145,8 @@ function CategorySlider({ title, items }: { title: string; items: Item[] }) {
 }
 
 export function HomePage() {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
   const router = useRouter();
   const [itemsByCategory, setItemsByCategory] = useState<Record<string, Item[]>>({});
   const [latestBlogs, setLatestBlogs] = useState<BlogPost[]>([]);
@@ -226,11 +234,11 @@ export function HomePage() {
   const goToBestMatch = () => {
     if (suggestions[0]) {
       const item = suggestions[0];
-      router.push(`/${categoryPathMap[item.categoryType]}/${item.slug}`);
+      router.push(localizePath(`/${categoryPathMap[item.categoryType]}/${item.slug}`, locale));
       return;
     }
     if (matchingCategories[0]) {
-      router.push(`/${categoryPathMap[matchingCategories[0]]}`);
+      router.push(localizePath(`/${categoryPathMap[matchingCategories[0]]}`, locale));
       return;
     }
   };
@@ -253,16 +261,18 @@ export function HomePage() {
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center justify-center gap-10 px-4 text-white">
           <div className="flex flex-col items-center text-center space-y-6">
             <div className="animate-reveal inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-2 text-[10px] uppercase tracking-[0.3em] backdrop-blur-xl">
-              <Sparkles className="h-3 w-3 text-primary" /> Exclusive Marrakech 2026
+              <Sparkles className="h-3 w-3 text-primary" /> {locale === "fr" ? "Marrakech exclusif 2026" : "Exclusive Marrakech 2026"}
             </div>
 
             <h1 className="ui-heading animate-fade-up text-5xl font-semibold leading-[1.1] text-white sm:text-7xl md:text-8xl lg:text-9xl">
-              Experience <br />
+              {locale === "fr" ? "Vivez" : "Experience"} <br />
               <span className="text-primary italic font-serif">Marrakech</span>
             </h1>
 
             <p className="animate-reveal max-w-2xl text-lg font-light text-white/80 md:text-xl leading-relaxed" style={{ animationDelay: "150ms" }}>
-              Curated premium accommodations, signature activities and seamless transport in the red city.
+              {locale === "fr"
+                ? "Séjours premium, activités signature et transport fluide dans la ville rouge."
+                : "Curated premium accommodations, signature activities and seamless transport in the red city."}
             </p>
           </div>
 
@@ -273,7 +283,7 @@ export function HomePage() {
               </div>
               <input
                 className="h-14 flex-1 bg-transparent px-6 text-lg text-white placeholder:text-white/50 outline-none"
-                placeholder="Search villas, clubs or activities..."
+                placeholder={locale === "fr" ? "Rechercher villas, clubs ou activités..." : "Search villas, clubs or activities..."}
                 value={searchTerm}
                 onChange={(e) => {
                   setSearchTerm(e.target.value);
@@ -295,7 +305,7 @@ export function HomePage() {
                   setShowSuggestions(false);
                 }}
               >
-                Explore
+                {locale === "fr" ? "Découvrir" : "Explore"}
               </button>
             </div>
 
@@ -306,7 +316,7 @@ export function HomePage() {
                     key={item.id}
                     className="flex w-full items-center gap-4 rounded-2xl px-4 py-4 text-left transition-all hover:bg-white/10"
                     onClick={() => {
-                      router.push(`/${categoryPathMap[item.categoryType]}/${item.slug}`);
+                      router.push(localizePath(`/${categoryPathMap[item.categoryType]}/${item.slug}`, locale));
                       setShowSuggestions(false);
                     }}
                   >
@@ -326,7 +336,7 @@ export function HomePage() {
                     key={type}
                     className="flex w-full items-center gap-4 border-t border-white/10 px-4 py-4 text-left transition-all hover:bg-white/10"
                     onClick={() => {
-                      router.push(`/${categoryPathMap[type]}`);
+                      router.push(localizePath(`/${categoryPathMap[type]}`, locale));
                       setShowSuggestions(false);
                     }}
                   >
@@ -346,7 +356,7 @@ export function HomePage() {
           <div className="absolute bottom-10 left-0 right-0 flex justify-between px-10 items-end">
             <div className="flex gap-10">
               <div className="hidden lg:block text-left text-white/40 text-[10px] uppercase tracking-[0.2em] leading-relaxed">
-                Premium Conciergerie <br /> & Local Expertise
+                {locale === "fr" ? "Conciergerie premium" : "Premium Conciergerie"} <br /> {locale === "fr" ? "& expertise locale" : "& Local Expertise"}
               </div>
             </div>
             <div className="animate-bounce">
@@ -360,12 +370,12 @@ export function HomePage() {
         <div className="mx-auto max-w-7xl px-4">
           <div className="ui-surface animate-reveal grid gap-5 p-6 md:grid-cols-4 md:items-center" style={{ animationDelay: "280ms" }}>
             <p className="text-sm font-medium text-zinc-700 md:col-span-4 md:text-center">
-              Plan and book online with premium local support.
+              {locale === "fr" ? "Planifiez et réservez en ligne avec une assistance locale premium." : "Plan and book online with premium local support."}
             </p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><ThumbsUp className="h-4 w-4 text-emerald-700" /> Free cancellation*</p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><HandCoins className="h-4 w-4 text-emerald-700" /> Pay on site*</p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><PhoneCall className="h-4 w-4 text-emerald-700" /> Support 7 days a week</p>
-            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><Ticket className="h-4 w-4 text-emerald-700" /> Premium concierge</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><ThumbsUp className="h-4 w-4 text-emerald-700" /> {locale === "fr" ? "Annulation gratuite*" : "Free cancellation*"}</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><HandCoins className="h-4 w-4 text-emerald-700" /> {locale === "fr" ? "Paiement sur place*" : "Pay on site*"}</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><PhoneCall className="h-4 w-4 text-emerald-700" /> {locale === "fr" ? "Assistance 7j/7j" : "Support 7 days a week"}</p>
+            <p className="inline-flex items-center gap-2 text-sm text-zinc-700"><Ticket className="h-4 w-4 text-emerald-700" /> {locale === "fr" ? "Concierge premium" : "Premium concierge"}</p>
           </div>
         </div>
       </section>
@@ -381,15 +391,15 @@ export function HomePage() {
           <div className="absolute inset-0 bg-linear-to-t from-black/35 to-transparent" />
         </div>
         <div className="space-y-5">
-          <p className="ui-eyebrow">Who We Are</p>
-          <h2 className="ui-section-title">About us</h2>
+          <p className="ui-eyebrow">{locale === "fr" ? "Qui nous sommes" : "Who We Are"}</p>
+          <h2 className="ui-section-title">{locale === "fr" ? "À propos de nous" : "About us"}</h2>
           <p className="ui-prose">
-            UpToMarrakech is your premium local partner to discover the best of Marrakech:
-            accommodation, activities, beach clubs, transport and wellness. We curate elegant
-            experiences with trusted partners and personal support.
+            {locale === "fr"
+              ? "UpToMarrakech est votre partenaire local premium pour découvrir le meilleur de Marrakech : hébergement, activités, beach clubs, transport et bien-être. Nous créons des expériences élégantes avec des partenaires de confiance et un accompagnement personnalisé."
+              : "UpToMarrakech is your premium local partner to discover the best of Marrakech: accommodation, activities, beach clubs, transport and wellness. We curate elegant experiences with trusted partners and personal support."}
           </p>
-          <Link href="/contact" className="btn-luxe inline-flex items-center gap-2">
-            Contact us <ArrowRight className="h-4 w-4" />
+          <Link href={localizePath("/contact", locale)} className="btn-luxe inline-flex items-center gap-2">
+            {locale === "fr" ? "Contactez-nous" : "Contact us"} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>
@@ -400,24 +410,24 @@ export function HomePage() {
 
       <section className="reveal-on-scroll hidden md:block mx-auto max-w-7xl px-4 pb-14">
         <div className="ui-shell ui-shell-ornament">
-          <p className="ui-eyebrow mb-2">Our Process</p>
-          <h2 className="ui-section-title mb-7">A seamless journey from idea to experience</h2>
+          <p className="ui-eyebrow mb-2">{locale === "fr" ? "Notre processus" : "Our Process"}</p>
+          <h2 className="ui-section-title mb-7">{locale === "fr" ? "Un parcours fluide de l'idée à l'expérience" : "A seamless journey from idea to experience"}</h2>
           <div className="grid gap-4 md:grid-cols-3">
             {[
               {
                 n: "01",
-                title: "Discover",
-                text: "We understand your style, dates, preferences and travel priorities.",
+                title: locale === "fr" ? "Découvrir" : "Discover",
+                text: locale === "fr" ? "Nous comprenons votre style, vos dates, vos préférences et vos priorités de voyage." : "We understand your style, dates, preferences and travel priorities.",
               },
               {
                 n: "02",
-                title: "Curate",
-                text: "Our team selects premium stays, activities and logistics tailored to you.",
+                title: locale === "fr" ? "Sélectionner" : "Curate",
+                text: locale === "fr" ? "Notre équipe sélectionne des séjours premium, des activités et une logistique adaptée à vos besoins." : "Our team selects premium stays, activities and logistics tailored to you.",
               },
               {
                 n: "03",
-                title: "Enjoy",
-                text: "You experience Marrakech with smooth coordination and local support.",
+                title: locale === "fr" ? "Profiter" : "Enjoy",
+                text: locale === "fr" ? "Vous vivez Marrakech avec une coordination fluide et un accompagnement local." : "You experience Marrakech with smooth coordination and local support.",
               },
             ].map((step) => (
               <article key={step.n} className="rounded-2xl border border-border/70 bg-white/75 p-5">
@@ -456,7 +466,7 @@ export function HomePage() {
 
       <section className="reveal-on-scroll mx-auto max-w-7xl px-4 py-8 space-y-10">
         {sliders.map((slider) => (
-          <CategorySlider key={slider.type} title={slider.title} items={slider.items} />
+          <CategorySlider key={slider.type} title={slider.title} items={slider.items} locale={locale} />
         ))}
       </section>
 
@@ -478,24 +488,24 @@ export function HomePage() {
       <section className="reveal-on-scroll mx-auto max-w-7xl px-4 py-12">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <p className="ui-eyebrow mb-2">Editorial</p>
-            <h2 className="ui-heading text-3xl font-semibold">From our blog</h2>
+            <p className="ui-eyebrow mb-2">{locale === "fr" ? "Éditorial" : "Editorial"}</p>
+            <h2 className="ui-heading text-3xl font-semibold">{locale === "fr" ? "Depuis notre blog" : "From our blog"}</h2>
           </div>
-          <Link href="/blog" className="group inline-flex items-center gap-2 font-medium text-emerald-700 hover:underline">
-            View all articles <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <Link href={localizePath("/blog", locale)} className="group inline-flex items-center gap-2 font-medium text-emerald-700 hover:underline">
+            {locale === "fr" ? "Voir tous les articles" : "View all articles"} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 
         {latestBlogs.length === 0 ? (
           <div className="rounded-3xl border border-border/60 bg-card/50 px-6 py-12 text-center text-muted-foreground italic font-serif">
-            New stories are coming soon.
+            {locale === "fr" ? "De nouvelles histoires arrivent bientôt." : "New stories are coming soon."}
           </div>
         ) : (
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {latestBlogs.map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={localizePath(`/blog/${post.slug}`, locale)}
                 className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm border border-border/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
               >
                 <div className="relative h-64 overflow-hidden">
@@ -512,7 +522,7 @@ export function HomePage() {
                   <h3 className="ui-heading text-xl font-bold leading-tight group-hover:text-primary transition-colors">{post.title}</h3>
                   <p className="line-clamp-3 text-muted-foreground text-sm leading-relaxed flex-1">{post.excerpt}</p>
                   <div className="pt-4 flex items-center text-xs font-bold uppercase tracking-widest text-primary">
-                    Read Article →
+                    {locale === "fr" ? "Lire l'article" : "Read Article"} →
                   </div>
                 </div>
               </Link>
@@ -531,7 +541,7 @@ export function HomePage() {
             accommodation, activities, beach clubs, transport and wellness. We curate elegant
             experiences with trusted partners and personal support.
           </p>
-          <Link href="/contact" className="btn-luxe inline-flex items-center gap-2">
+          <Link href={localizePath("/contact", locale)} className="btn-luxe inline-flex items-center gap-2">
             Contact us <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -571,7 +581,7 @@ export function HomePage() {
 
       <section className="reveal-on-scroll bg-[linear-gradient(170deg,rgba(255,250,242,0.7),rgba(235,224,199,0.52))] py-16">
         <div className="mx-auto max-w-7xl px-4">
-          <h2 className="ui-heading mb-8 text-center text-3xl font-semibold">Testimonials</h2>
+          <h2 className="ui-heading mb-8 text-center text-3xl font-semibold">{locale === "fr" ? "Témoignages" : "Testimonials"}</h2>
           <Swiper
             modules={[Autoplay, Navigation]}
             spaceBetween={18}
@@ -596,7 +606,9 @@ export function HomePage() {
                       <p className="text-xs text-zinc-500">{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className="mt-4 text-zinc-700 leading-relaxed">{testimonial.description}</p>
+                  <p className="mt-4 text-zinc-700 leading-relaxed">
+                    {locale === "fr" ? testimonial.descriptionFr : testimonial.description}
+                  </p>
                 </article>
               </SwiperSlide>
             ))}
@@ -606,8 +618,8 @@ export function HomePage() {
 
       <section className="reveal-on-scroll mx-auto max-w-7xl px-4 py-14">
         <div className="mb-12 text-center">
-          <p className="ui-eyebrow">Trusted Partners</p>
-          <h2 className="ui-heading mt-2 text-3xl font-semibold italic font-serif">Our Partner Network</h2>
+          <p className="ui-eyebrow">{locale === "fr" ? "Partenaires de confiance" : "Trusted Partners"}</p>
+          <h2 className="ui-heading mt-2 text-3xl font-semibold italic font-serif">{locale === "fr" ? "Notre réseau de partenaires" : "Our Partner Network"}</h2>
         </div>
 
         <Swiper
@@ -646,17 +658,18 @@ export function HomePage() {
       </section>
 
       <section className="reveal-on-scroll mx-auto max-w-3xl px-4 py-16">
-        <h2 className="ui-heading mb-8 text-center text-3xl font-semibold">Contact us</h2>
+        <h2 className="ui-heading mb-8 text-center text-3xl font-semibold">{locale === "fr" ? "Contactez-nous" : "Contact us"}</h2>
         <form className="ui-surface space-y-3 p-6">
-          <input className="w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Name" />
+          <input className="w-full rounded-xl border border-border bg-white/90 p-3" placeholder={locale === "fr" ? "Nom" : "Name"} />
           <input className="w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Email" />
-          <textarea className="min-h-32 w-full rounded-xl border border-border bg-white/90 p-3" placeholder="Message" />
+          <textarea className="min-h-32 w-full rounded-xl border border-border bg-white/90 p-3" placeholder={locale === "fr" ? "Message" : "Message"} />
           <button className="btn-luxe">
-            Send message
+            {locale === "fr" ? "Envoyer le message" : "Send message"}
           </button>
         </form>
       </section>
     </main>
   );
 }
+
 

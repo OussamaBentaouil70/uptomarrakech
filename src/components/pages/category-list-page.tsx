@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { listItems, listPublishedCategories } from "@/lib/firebase/data";
 import type { Category, CategoryType, Item } from "@/lib/types";
 import { CategoryCard } from "@/components/cards/category-card";
@@ -11,6 +12,7 @@ import { AccommodationFilters } from "@/components/accommodation-filters";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { categoryLabelMap, categoryPathMap } from "@/lib/category-map";
+import { getLocaleFromPathname } from "@/lib/locale";
 
 type Props = {
   title: string;
@@ -20,38 +22,46 @@ type Props = {
   selectedRooms?: string;
 };
 
-const categoryThemeMap: Record<CategoryType, { banner: string; blurb: string }> = {
+const categoryThemeMap: Record<CategoryType, { banner: string; blurb: string; blurbFr: string }> = {
   accommodation: {
     banner: "bg-primary/5",
     blurb: "Elegant villas and stays selected for comfort, style and privacy.",
+    blurbFr: "Villas et sejours elegants selectionnes pour le confort, le style et l'intimite.",
   },
   night_club: {
     banner: "bg-primary/5",
     blurb: "Signature nightlife spots with premium atmosphere and service.",
+    blurbFr: "Adresses nocturnes signature avec atmosphere premium et service soigne.",
   },
   activity: {
     banner: "bg-primary/5",
     blurb: "High-quality experiences curated for unforgettable Marrakech moments.",
+    blurbFr: "Experiences de qualite selectionnees pour des moments inoubliables a Marrakech.",
   },
   beach_club: {
     banner: "bg-primary/5",
     blurb: "From relaxed poolsides to vibrant day vibes, discover your perfect match.",
+    blurbFr: "Entre detente au bord de la piscine et ambiance festive, trouvez l'adresse ideale.",
   },
   spa: {
     banner: "bg-primary/5",
     blurb: "Wellness destinations chosen for calm, care and refined rituals.",
+    blurbFr: "Adresses bien-etre choisies pour leur calme, leurs soins et leurs rituels raffines.",
   },
   car_rental: {
     banner: "bg-primary/5",
     blurb: "Premium vehicles and smooth booking for effortless city and road travel.",
+    blurbFr: "Vehicules premium et reservation fluide pour voyager facilement en ville et sur route.",
   },
   tourist_transport: {
     banner: "bg-primary/5",
     blurb: "Comfort-first transport options for airport, city and private tours.",
+    blurbFr: "Solutions de transport confortables pour aeroport, ville et excursions privees.",
   },
   restaurant: {
     banner: "bg-primary/5",
     blurb: "A journey through the finest flavors and most exclusive dining settings.",
+    blurbFr: "Un voyage parmi les meilleures saveurs et les tables les plus exclusives.",
   },
 };
 
@@ -199,6 +209,129 @@ const serviceDescriptionMap: Record<
   },
 };
 
+const serviceDescriptionMapFr: typeof serviceDescriptionMap = {
+  accommodation: {
+    title: "Trouvez votre villa ideale a Marrakech",
+    intro:
+      "Choisir la bonne villa est essentiel pour vivre un sejour memorable a Marrakech. Escapade romantique, vacances en famille ou voyage entre amis, nous vous aidons a trouver la propriete adaptee a vos besoins.",
+    highlights: [
+      {
+        heading: "Des villas de luxe pour chaque voyageur",
+        body: "Notre selection repond a toutes les envies : grandes villas pour les groupes, riads intimes pour les couples et maisons familiales avec les equipements necessaires. Chaque adresse est choisie pour sa qualite, son emplacement et son caractere.",
+      },
+      {
+        heading: "Pourquoi choisir une villa privee ?",
+        body: "Une villa offre un niveau d'intimite, d'espace et de personnalisation qu'un hotel ne peut pas toujours proposer. Vous profitez de votre rythme, de vos repas et de Marrakech depuis une adresse exclusive.",
+      },
+    ],
+  },
+  night_club: {
+    title: "Decouvrez la vie nocturne de Marrakech a votre facon",
+    intro:
+      "Des lounges elegants aux pistes de danse animees, Marrakech propose une ambiance pour chaque envie. Nous vous guidons vers les lieux adaptes a votre style, votre groupe et l'atmosphere recherchee.",
+    highlights: [
+      {
+        heading: "Adresses premium selectionnees",
+        body: "Notre selection privilegie l'ambiance, la qualite du service et les moments memorables, que vous cherchiez une soiree chic ou une experience festive.",
+      },
+      {
+        heading: "Des soirees plus simples a organiser",
+        body: "Avec les bonnes recommandations, vous gagnez du temps et profitez des meilleures adresses de la ville avec confort et confiance.",
+      },
+    ],
+  },
+  activity: {
+    title: "Choisissez la bonne experience a Marrakech",
+    intro:
+      "Marrakech regorge d'aventures, entre decouvertes culturelles et sorties plus intenses. L'essentiel est de choisir des activites adaptees a votre rythme, votre groupe et vos envies.",
+    highlights: [
+      {
+        heading: "Experiences selectionnees avec soin",
+        body: "Notre collection rassemble des experiences authentiques, visites privees et excursions premium choisies pour leur qualite, leur securite et leur fiabilite.",
+      },
+      {
+        heading: "Voyagez plus sereinement",
+        body: "Des options claires et des partenaires fiables vous permettent de profiter pleinement de votre programme a Marrakech.",
+      },
+    ],
+  },
+  beach_club: {
+    title: "Trouvez votre beach club ideal",
+    intro:
+      "Que vous preferiez une journee detente ou une ambiance plus festive, les beach clubs de Marrakech combinent confort, musique et soleil.",
+    highlights: [
+      {
+        heading: "Adresses de jour stylisees",
+        body: "Cabanas exclusives, piscines elegantes ou evenements festifs : nos beach clubs sont choisis pour leur atmosphere, leur service et leur qualite globale.",
+      },
+      {
+        heading: "Votre humeur, votre decor",
+        body: "Choisissez le lieu parfait pour vous detendre, celebrer et profiter d'une hospitalite premium tout au long de la journee.",
+      },
+    ],
+  },
+  spa: {
+    title: "Des experiences bien-etre adaptees a vous",
+    intro:
+      "Une journee spa a Marrakech est plus qu'un moment de detente : c'est une vraie pause entre rituels traditionnels, soins modernes et attention personnalisee.",
+    highlights: [
+      {
+        heading: "Espaces calmes et raffines",
+        body: "Nos spas selectionnes associent cadres elegants et therapeutes experts pour des soins regenerants et soignes.",
+      },
+      {
+        heading: "Repartez pleinement ressource",
+        body: "Ideales en solo, en couple ou apres une journee d'activites, ces experiences vous aident a retrouver equilibre et energie.",
+      },
+    ],
+  },
+  car_rental: {
+    title: "Louez la voiture parfaite pour Marrakech",
+    intro:
+      "Le bon vehicule rend votre sejour plus flexible et confortable, qu'il s'agisse d'une citadine, d'un modele de luxe ou d'un SUV pour vos excursions.",
+    highlights: [
+      {
+        heading: "Partenaires fiables",
+        body: "Profitez d'un service transparent, de flottes de qualite et de prises en charge fluides avec des options adaptees a votre facon de voyager.",
+      },
+      {
+        heading: "La liberte d'explorer",
+        body: "Parcourez Marrakech et ses environs a votre rythme, avec confort et simplicite.",
+      },
+    ],
+  },
+  tourist_transport: {
+    title: "Transport prive pour voyager sans stress",
+    intro:
+      "Transferts aeroport, chauffeurs prives et trajets en ville : nos solutions de transport sont pensees pour le confort, la ponctualite et la tranquillite.",
+    highlights: [
+      {
+        heading: "Professionnel et fiable",
+        body: "Une solution ideale pour les familles, voyageurs d'affaires et groupes, avec chauffeurs experimentes et vehicules bien entretenus.",
+      },
+      {
+        heading: "Une logistique fluide",
+        body: "Nous gerons les trajets et les horaires pour que vous puissiez vous concentrer sur votre sejour.",
+      },
+    ],
+  },
+  restaurant: {
+    title: "Goutez Marrakech a travers des tables d'exception",
+    intro:
+      "Des rooftops raffines a la cuisine locale authentique, Marrakech offre une scene culinaire remarquable pour chaque occasion.",
+    highlights: [
+      {
+        heading: "Selectionnes pour leur qualite",
+        body: "Chaque restaurant est choisi pour la qualite de sa cuisine, son atmosphere et son service memorable.",
+      },
+      {
+        heading: "Reservez en confiance",
+        body: "Trouvez la bonne table pour un diner romantique, une celebration ou une decouverte culinaire dans les meilleures adresses de Marrakech.",
+      },
+    ],
+  },
+};
+
 export function CategoryListPage({
   title,
   type,
@@ -206,6 +339,8 @@ export function CategoryListPage({
   selectedLocation,
   selectedRooms,
 }: Props) {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
   const [items, setItems] = useState<Item[]>([]);
   const [allPublishedItems, setAllPublishedItems] = useState<Item[]>([]);
   const [publishedCategories, setPublishedCategories] = useState<Category[]>([]);
@@ -213,7 +348,21 @@ export function CategoryListPage({
   const [page, setPage] = useState(1);
   const perPage = 9;
   const theme = categoryThemeMap[type] || categoryThemeMap.activity;
-  const serviceContent = serviceDescriptionMap[type] || serviceDescriptionMap.activity;
+  const serviceContent =
+    locale === "fr"
+      ? serviceDescriptionMapFr[type] || serviceDescriptionMapFr.activity
+      : serviceDescriptionMap[type] || serviceDescriptionMap.activity;
+  const localizedTitles: Partial<Record<CategoryType, string>> = {
+    accommodation: "Hébergement",
+    night_club: "Clubs de nuit",
+    activity: "Activités",
+    beach_club: "Beach Clubs",
+    spa: "Spa",
+    car_rental: "Location de voiture",
+    tourist_transport: "Transport touristique",
+    restaurant: "Restaurants",
+  };
+  const displayTitle = locale === "fr" ? localizedTitles[type] || title : title;
 
   useEffect(() => {
     const run = async () => {
@@ -324,13 +473,13 @@ export function CategoryListPage({
         <div className="relative px-6 py-24 text-center md:py-28">
           <div className="mx-auto max-w-3xl space-y-4">
             <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/90">
-              The Collection
+              {locale === "fr" ? "La collection" : "The Collection"}
             </span>
             <h1 className="ui-display text-5xl font-bold tracking-tight text-white md:text-6xl">
-              {title}
+              {displayTitle}
             </h1>
             <p className="font-serif text-lg italic text-white/90">
-              {theme.blurb}
+              {locale === "fr" ? theme.blurbFr : theme.blurb}
             </p>
           </div>
         </div>
@@ -358,14 +507,18 @@ export function CategoryListPage({
           <>
             {!items.length ? (
               <div className="ui-surface p-20 text-center space-y-4">
-                <p className="text-muted-foreground font-serif italic text-xl">Aucun résultat trouvé pour cette sélection.</p>
-                <Button variant="ghost" onClick={() => window.location.reload()}>Reset filters</Button>
+                <p className="text-muted-foreground font-serif italic text-xl">
+                  {locale === "fr" ? "Aucun résultat trouvé pour cette sélection." : "No results found for this selection."}
+                </p>
+                <Button variant="ghost" onClick={() => window.location.reload()}>
+                  {locale === "fr" ? "Réinitialiser les filtres" : "Reset filters"}
+                </Button>
               </div>
             ) : (
               <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {pagedItems.map((item, index) => (
                   <div key={item.id} className="animate-reveal" style={{ animationDelay: `${index * 100}ms` }}>
-                    {isAccommodation ? <AccommodationCard item={item} /> : <CategoryCard item={item} />}
+                    {isAccommodation ? <AccommodationCard item={item} locale={locale} /> : <CategoryCard item={item} locale={locale} />}
                   </div>
                 ))}
               </div>
@@ -384,7 +537,7 @@ export function CategoryListPage({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              Previous
+              {locale === "fr" ? "Précédent" : "Previous"}
             </Button>
             
             <div className="flex items-center gap-2">
@@ -419,7 +572,7 @@ export function CategoryListPage({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              Next
+              {locale === "fr" ? "Suivant" : "Next"}
             </Button>
           </div>
         )}
@@ -431,7 +584,7 @@ export function CategoryListPage({
                 <div className="space-y-6 p-8 md:p-10 lg:p-12">
                   <div className="space-y-3">
                     <span className="text-[10px] font-bold uppercase tracking-[0.32em] text-primary">
-                      Why Choose This Service
+                      {locale === "fr" ? "Pourquoi choisir ce service" : "Why Choose This Service"}
                     </span>
                     <h2 className="ui-heading text-3xl font-semibold leading-tight sm:text-4xl">
                       {serviceContent.title}
@@ -471,10 +624,10 @@ export function CategoryListPage({
               <div className="space-y-6">
                 <div className="space-y-2">
                   <span className="text-[10px] font-bold uppercase tracking-[0.32em] text-primary">
-                    Additional Services
+                    {locale === "fr" ? "Services complementaires" : "Additional Services"}
                   </span>
                   <h3 className="ui-heading text-2xl font-semibold sm:text-3xl">
-                    Explore More Experiences In Marrakech
+                    {locale === "fr" ? "Explorez d'autres experiences a Marrakech" : "Explore More Experiences In Marrakech"}
                   </h3>
                 </div>
 
@@ -482,7 +635,7 @@ export function CategoryListPage({
                   {additionalServices.map((service) => (
                     <Link
                       key={service.id}
-                      href={`/${categoryPathMap[service.type]}`}
+                      href={locale === "fr" ? `/fr/${categoryPathMap[service.type]}` : `/${categoryPathMap[service.type]}`}
                       className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card/40"
                     >
                       <div className="relative h-52 w-full">
@@ -501,10 +654,12 @@ export function CategoryListPage({
 
                       <div className="absolute inset-x-0 bottom-0 p-5 text-white">
                         <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/75">
-                          Additional Service
+                          {locale === "fr" ? "Service complementaire" : "Additional Service"}
                         </p>
                         <h4 className="mt-1 text-xl font-semibold leading-tight">
-                          {service.name || categoryLabelMap[service.type]}
+                          {locale === "fr"
+                            ? localizedTitles[service.type] || service.name || categoryLabelMap[service.type]
+                            : service.name || categoryLabelMap[service.type]}
                         </h4>
                       </div>
                     </Link>

@@ -3,10 +3,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { listBlogs } from "@/lib/firebase/data";
 import type { BlogPost } from "@/lib/types";
+import { getLocaleFromPathname, localizePath } from "@/lib/locale";
 
 export default function BlogPage() {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -35,14 +39,14 @@ export default function BlogPage() {
         </div>
       ) : blogs.length === 0 ? (
         <div className="py-20 text-center">
-          <p className="text-muted-foreground italic font-serif text-xl">D'autres histoires arrivent bientôt...</p>
+          <p className="text-muted-foreground italic font-serif text-xl">D&apos;autres histoires arrivent bientôt...</p>
         </div>
       ) : (
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogs.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={localizePath(`/blog/${post.slug}`, locale)}
               className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm border border-border/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
             >
               <div className="relative h-64 overflow-hidden">

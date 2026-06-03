@@ -6,6 +6,7 @@ export const categoryTypeSchema = z.enum(CATEGORY_TYPES);
 export const categorySchema = z.object({
   slug: z.string().min(2),
   name: z.string().min(2),
+  nameFr: z.string().optional().or(z.literal("")),
   type: categoryTypeSchema,
   heroImage: z.string().url().optional().or(z.literal("")),
   sortOrder: z.coerce.number().int().min(0),
@@ -16,6 +17,7 @@ export const reviewSchema = z.object({
   name: z.string().min(2),
   rating: z.coerce.number().min(1).max(5),
   comment: z.string().min(2),
+  commentFr: z.string().optional().or(z.literal("")),
   date: z.string(),
 });
 
@@ -23,11 +25,15 @@ export const itemSchema = z.object({
   categoryType: categoryTypeSchema,
   slug: z.string().min(2),
   title: z.string().min(2),
+  titleFr: z.string().optional().or(z.literal("")),
   excerpt: z.string().min(10),
+  excerptFr: z.string().optional().or(z.literal("")),
   description: z.string().min(10),
+  descriptionFr: z.string().optional().or(z.literal("")),
   coverImage: z.string().url(),
   gallery: z.array(z.string().url()).default([]),
   location: z.string().optional().or(z.literal("")),
+  locationFr: z.string().optional().or(z.literal("")),
   locationUrl: z.string().url().optional().or(z.literal("")),
   price: z.coerce.number().min(0),
   priceUnit: z.enum(["night", "day", "person", "package"]),
@@ -64,9 +70,12 @@ export type CategoryInput = z.infer<typeof categorySchema>;
 export type ItemInput = z.infer<typeof itemSchema>;
 export const blogSchema = z.object({
   title: z.string().min(1, "Title is required"),
+  titleFr: z.string().optional().or(z.literal("")),
   slug: z.string().min(1, "Slug is required"),
   content: z.string().min(1, "Content is required"),
+  contentFr: z.string().optional().or(z.literal("")),
   excerpt: z.string().min(1, "Excerpt is required"),
+  excerptFr: z.string().optional().or(z.literal("")),
   coverImage: z.string().min(1, "Cover image is required"),
   gallery: z.array(z.string()).default([]),
   date: z.string().min(1, "Date is required"),

@@ -35,6 +35,7 @@ export default function CategoriesPage() {
     try {
       const payload = {
         name: editingCat.name,
+        nameFr: editingCat.nameFr || "",
         slug: editingCat.slug,
         type: editingCat.type || "activity",
         heroImage: editingCat.heroImage || "",
@@ -74,12 +75,20 @@ export default function CategoriesPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-sm font-medium">Display Name</label>
+                <label className="text-sm font-medium">Display Name (EN)</label>
                 <Input 
                   value={editingCat.name || ""} 
                   onChange={(e) => setEditingCat({...editingCat, name: e.target.value})}
                   placeholder="e.g. Exotic Night Clubs"
                   required
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Display Name (FR)</label>
+                <Input 
+                  value={editingCat.nameFr || ""} 
+                  onChange={(e) => setEditingCat({...editingCat, nameFr: e.target.value})}
+                  placeholder="e.g. Clubs de Nuit Exotiques"
                 />
               </div>
               <div className="space-y-2">
@@ -159,6 +168,7 @@ export default function CategoriesPage() {
                   <h3 className="font-semibold truncate">{cat.name}</h3>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-primary/60">{cat.type}</span>
                 </div>
+                {cat.nameFr && <p className="text-[10px] text-muted-foreground italic truncate">FR: {cat.nameFr}</p>}
                 <p className="text-xs text-muted-foreground truncate italic">/{cat.slug}</p>
               </div>
               <div className="flex items-center gap-1 shrink-0">

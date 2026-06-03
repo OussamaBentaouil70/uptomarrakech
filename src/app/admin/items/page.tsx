@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { listItems, upsertItem, deleteItem } from "@/lib/firebase/data";
 import type { CategoryType, Item, PriceUnit } from "@/lib/types";
 import { CATEGORY_TYPES } from "@/lib/types";
+import type { Review } from "@/lib/types";
 import { categoryLabelMap } from "@/lib/category-map";
 import { ImageUpload } from "@/components/admin/image-upload";
 import { toast } from "sonner";
@@ -21,16 +22,20 @@ type ItemForm = {
   categoryType: CategoryType;
   slug: string;
   title: string;
+  titleFr: string;
   excerpt: string;
+  excerptFr: string;
   description: string;
+  descriptionFr: string;
   coverImage: string;
   gallery: string[];
   location: string;
+  locationFr: string;
   locationUrl: string;
   price: number;
   priceUnit: PriceUnit;
   carte: string;
-  reviews: any[];
+  reviews: Review[];
   rooms: number;
   people: number;
   published: boolean;
@@ -41,11 +46,15 @@ const baseItem: ItemForm = {
   categoryType: "activity",
   slug: "",
   title: "",
+  titleFr: "",
   excerpt: "",
+  excerptFr: "",
   description: "",
+  descriptionFr: "",
   coverImage: "",
   gallery: [],
   location: "",
+  locationFr: "",
   locationUrl: "",
   price: 0,
   priceUnit: "day",
@@ -63,14 +72,8 @@ function ItemsContent() {
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
   const [editingItem, setEditingItem] = useState<ItemForm | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const refresh = async () => {
-    if (!isMounted) return;
     setLoading(true);
     const filters = typeFilter ? { categoryType: typeFilter } : {};
     const data = await listItems(filters);
@@ -79,10 +82,8 @@ function ItemsContent() {
   };
 
   useEffect(() => {
-    if (isMounted) {
-      void refresh();
-    }
-  }, [typeFilter, isMounted]);
+    void refresh();
+  }, [typeFilter]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,11 +94,15 @@ function ItemsContent() {
         categoryType: editingItem.categoryType,
         slug: editingItem.slug,
         title: editingItem.title,
+        titleFr: editingItem.titleFr,
         excerpt: editingItem.excerpt,
+        excerptFr: editingItem.excerptFr,
         description: editingItem.description,
+        descriptionFr: editingItem.descriptionFr,
         coverImage: editingItem.coverImage,
         gallery: editingItem.gallery,
         location: editingItem.location,
+        locationFr: editingItem.locationFr,
         locationUrl:
           editingItem.categoryType === "night_club" ||
           editingItem.categoryType === "restaurant" ||
@@ -167,11 +172,32 @@ function ItemsContent() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Left Column: Form Fields */}
-              <div className="lg:col-span-2 space-y-8">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+              {/* Left Column: English Content */}
+              <div className="xl:col-span-1 space-y-8">
                 <section className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Title</label>
+                    <Input
+                      className="text-lg font-medium rounded-xl border-border/60 bg-white/50"
+                      value={editingItem.title}
+                      onChange={(e) => setEditingItem({ ...editingItem, title: e.target.value })}
+                      placeholder="The Name of the Venue"
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Location / Neighborhood</label>
+                    <Input
+                      className="rounded-xl border-border/60 bg-white/50"
+                      value={editingItem.location}
+                      onChange={(e) => setEditingItem({ ...editingItem, location: e.target.value })}
+                      placeholder="e.g. Palmeraie, Marrakech"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Category Type</label>
                       <Select
@@ -188,38 +214,6 @@ function ItemsContent() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Location / Neighborhood</label>
-                      <Input
-                        className="rounded-xl border-border/60 bg-white/50"
-                        value={editingItem.location}
-                        onChange={(e) => setEditingItem({ ...editingItem, location: e.target.value })}
-                        placeholder="e.g. Palmeraie, Marrakech"
-                      />
-                    </div>
-
-                    <div className="md:col-span-2 space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Title</label>
-                      <Input
-                        className="text-lg font-medium rounded-xl border-border/60 bg-white/50"
-                        value={editingItem.title}
-                        onChange={(e) => setEditingItem({ ...editingItem, title: e.target.value })}
-                        placeholder="The Name of the Venue"
-                        required
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">URL Slug</label>
-                      <Input
-                        className="rounded-xl border-border/60 bg-white/50 font-mono text-sm"
-                        value={editingItem.slug}
-                        onChange={(e) => setEditingItem({ ...editingItem, slug: e.target.value })}
-                        placeholder="venue-name"
-                        required
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Price (€)</label>
                         <Input
@@ -246,6 +240,17 @@ function ItemsContent() {
                       </div>
                     </div>
 
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">URL Slug</label>
+                      <Input
+                        className="rounded-xl border-border/60 bg-white/50 font-mono text-sm"
+                        value={editingItem.slug}
+                        onChange={(e) => setEditingItem({ ...editingItem, slug: e.target.value })}
+                        placeholder="venue-name"
+                        required
+                      />
+                    </div>
+
                     {isAccommodation && (
                       <>
                         <div className="space-y-2">
@@ -269,7 +274,7 @@ function ItemsContent() {
                       </>
                     )}
 
-                    <div className="md:col-span-2 space-y-2">
+                    <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Internal Menu / Carte URL</label>
                       <Input
                         className="rounded-xl border-border/60 bg-white/50"
@@ -280,7 +285,7 @@ function ItemsContent() {
                     </div>
 
                     {supportsLocationLink && (
-                      <div className="md:col-span-2 space-y-2">
+                      <div className="space-y-2">
                         <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Location URL (Google Maps)</label>
                         <Input
                           className="rounded-xl border-border/60 bg-white/50"
@@ -314,8 +319,60 @@ function ItemsContent() {
                 </section>
               </div>
 
+              {/* Right Column: French Translation */}
+              <div className="xl:col-span-1 space-y-8">
+                <section className="space-y-6 rounded-3xl border border-border/40 bg-white/55 p-5">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-primary">French Translation</p>
+                      <p className="text-sm text-muted-foreground">Fill these fields for the /fr version.</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Title (FR)</label>
+                    <Input
+                      className="text-lg font-medium rounded-xl border-border/60 bg-white/50"
+                      value={editingItem.titleFr}
+                      onChange={(e) => setEditingItem({ ...editingItem, titleFr: e.target.value })}
+                      placeholder="Nom traduit"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Location / Neighborhood (FR)</label>
+                    <Input
+                      className="rounded-xl border-border/60 bg-white/50"
+                      value={editingItem.locationFr}
+                      onChange={(e) => setEditingItem({ ...editingItem, locationFr: e.target.value })}
+                      placeholder="Quartier traduit"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Editorial Excerpt (FR)</label>
+                    <Textarea
+                      className="rounded-2xl border-border/60 bg-white/50 resize-none"
+                      value={editingItem.excerptFr}
+                      onChange={(e) => setEditingItem({ ...editingItem, excerptFr: e.target.value })}
+                      placeholder="Intro traduite..."
+                      rows={2}
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Professional Description (FR)</label>
+                    <RichTextEditor
+                      content={editingItem.descriptionFr}
+                      onChange={(content) => setEditingItem({ ...editingItem, descriptionFr: content })}
+                      placeholder="Décrivez l'expérience en français..."
+                    />
+                  </div>
+                </section>
+              </div>
+
               {/* Right Column: Media & Visibility */}
-              <div className="space-y-8">
+              <div className="xl:col-span-1 space-y-8">
                 <div className="ui-surface p-6 border-primary/10">
                   <h3 className="text-xs font-bold uppercase tracking-widest text-primary mb-6">Visual Identity</h3>
                   
@@ -413,8 +470,18 @@ function ItemsContent() {
                   <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-1">
                     {categoryLabelMap[item.categoryType]}
                   </p>
-                  <h3 className="font-semibold text-lg line-clamp-1">{item.title}</h3>
-                  <p className="text-xs text-muted-foreground line-clamp-1 mt-1">{item.location}</p>
+                  <div className="grid gap-3 xl:grid-cols-2">
+                    <div className="space-y-1 rounded-2xl border border-border/30 bg-white/50 p-3">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">EN</p>
+                      <h3 className="font-semibold text-lg line-clamp-1">{item.title}</h3>
+                      <p className="text-xs text-muted-foreground line-clamp-1 mt-1">{item.location}</p>
+                    </div>
+                    <div className="space-y-1 rounded-2xl border border-border/30 bg-white/50 p-3">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">FR</p>
+                      <h3 className="font-semibold text-lg line-clamp-1">{item.titleFr || "—"}</h3>
+                      <p className="text-xs text-muted-foreground line-clamp-1 mt-1">{item.locationFr || "—"}</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="mt-4 pt-4 border-t border-border/40 flex items-center justify-end gap-2">
                   <Link href={`/admin/items/${item.id}/reviews`}>
@@ -435,11 +502,15 @@ function ItemsContent() {
                       categoryType: item.categoryType,
                       slug: item.slug,
                       title: item.title,
+                      titleFr: item.titleFr || "",
                       excerpt: item.excerpt,
+                      excerptFr: item.excerptFr || "",
                       description: item.description,
+                      descriptionFr: item.descriptionFr || "",
                       coverImage: item.coverImage,
                       gallery: item.gallery,
                       location: item.location || "",
+                      locationFr: item.locationFr || "",
                       locationUrl: item.locationUrl || "",
                       price: item.price,
                       priceUnit: item.priceUnit,

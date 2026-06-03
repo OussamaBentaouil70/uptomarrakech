@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { getLocaleFromPathname } from "@/lib/locale";
 
 export default function ThankYouPage() {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const isFr = locale === "fr";
+
   return (
     <main className="mx-auto max-w-5xl px-4 py-10 sm:py-14">
       <section className="ui-shell ui-shell-ornament overflow-hidden rounded-[2rem] border border-border/60 bg-[linear-gradient(150deg,rgba(255,255,255,0.9),rgba(248,238,221,0.88))] shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
@@ -16,15 +24,17 @@ export default function ThankYouPage() {
               priority
             />
 
-            <p className="ui-eyebrow mt-8">Message received</p>
-            <h1 className="ui-section-title mt-3 max-w-xl">Thank you for your request</h1>
+            <p className="ui-eyebrow mt-8">{isFr ? "Message recu" : "Message received"}</p>
+            <h1 className="ui-section-title mt-3 max-w-xl">{isFr ? "Merci pour votre demande" : "Thank you for your request"}</h1>
             <p className="ui-prose mt-4 max-w-xl text-base sm:text-lg">
-              We have received your form and our team will contact you as soon as possible.
+              {isFr
+                ? "Nous avons bien recu votre formulaire et notre equipe vous contactera des que possible."
+                : "We have received your form and our team will contact you as soon as possible."}
             </p>
 
             <div className="mt-8">
-              <Link href="/" className="btn-luxe">
-                Return to home page
+              <Link href={isFr ? "/fr" : "/"} className="btn-luxe">
+                {isFr ? "Retour a l'accueil" : "Return to home page"}
               </Link>
             </div>
           </div>

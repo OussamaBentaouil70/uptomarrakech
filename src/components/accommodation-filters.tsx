@@ -1,7 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { getLocaleFromPathname, localizePath } from "@/lib/locale";
 
 type Props = {
   locations: string[];
@@ -17,6 +18,8 @@ export function AccommodationFilters({
   selectedRooms,
 }: Props) {
   const router = useRouter();
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
   const maxRooms = Math.max(1, ...roomOptions);
   const selectedRoomsNumber = Number(selectedRooms || 0);
 
@@ -24,7 +27,8 @@ export function AccommodationFilters({
     const next = new URLSearchParams(window.location.search);
     if (!value || value === "all") next.delete(key);
     else next.set(key, value);
-    router.push(`/accommodation?${next.toString()}`);
+    const query = next.toString();
+    router.push(`${localizePath("/accommodation", locale)}${query ? `?${query}` : ""}`);
   };
 
   return (

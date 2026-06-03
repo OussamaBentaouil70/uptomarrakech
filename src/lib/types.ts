@@ -19,6 +19,7 @@ export type Category = {
   id: string;
   slug: string;
   name: string;
+  nameFr?: string;
   type: CategoryType;
   heroImage?: string;
   sortOrder: number;
@@ -32,6 +33,7 @@ export type Review = {
   authorImage?: string;
   rating: number;
   comment: string;
+  commentFr?: string;
   date?: string;
   createdAt?: string;
 };
@@ -41,11 +43,15 @@ export type Item = {
   categoryType: CategoryType;
   slug: string;
   title: string;
+  titleFr?: string;
   excerpt: string;
+  excerptFr?: string;
   description: string;
+  descriptionFr?: string;
   coverImage: string;
   gallery: string[];
   location?: string;
+  locationFr?: string;
   locationUrl?: string;
   price: number;
   priceUnit: PriceUnit;
@@ -84,8 +90,11 @@ export type BlogPost = {
   id: string;
   slug: string;
   title: string;
+  titleFr?: string;
   content: string;
+  contentFr?: string;
   excerpt: string;
+  excerptFr?: string;
   coverImage: string;
   gallery: string[];
   date: string;

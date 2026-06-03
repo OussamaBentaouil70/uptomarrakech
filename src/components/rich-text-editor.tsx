@@ -74,6 +74,12 @@ export function RichTextEditor({
     },
   }, [isMounted]);
 
+  useEffect(() => {
+    if (editor && content !== editor.getHTML()) {
+      editor.commands.setContent(content);
+    }
+  }, [content, editor]);
+
   if (!isMounted || !editor) {
     return (
       <div className="min-h-60 rounded-2xl border border-border/60 bg-white/50 p-4 text-muted-foreground animate-pulse">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { usePathname } from "next/navigation";
 import { getItemBySlug, listItems } from "@/lib/firebase/data";
 import type { CategoryType, Item } from "@/lib/types";
 import { InquiryForm } from "@/components/inquiry-form";
@@ -19,20 +20,33 @@ type Props = {
   slug: string;
 };
 
-import { Mail, Phone, MapPin, Utensils, Star, Quote, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Phone, MapPin, Utensils, Quote, ArrowRight } from "lucide-react";
 import { sanitizeHTML } from "@/lib/sanitize";
+import { getLocaleFromPathname, localizePath } from "@/lib/locale";
 
 export function ItemDetailsPage({ categoryType, slug }: Props) {
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
   const [item, setItem] = useState<Item | null>(null);
   const [suggestions, setSuggestions] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const descriptionSource = item?.description ?? "";
   const safeDescriptionHtml = useMemo(() => {
-    if (!item?.description || !item.description.includes("<")) return "";
-    const cleaned = sanitizeHTML(item.description).trim();
-    return cleaned || item.description;
-  }, [item?.description]);
+    if (!descriptionSource || !descriptionSource.includes("<")) return "";
+    const cleaned = sanitizeHTML(descriptionSource).trim();
+    return cleaned || descriptionSource;
+  }, [descriptionSource]);
+
+  const title = locale === "fr" && item?.titleFr ? item.titleFr : item?.title ?? "";
+  const description = locale === "fr" && item?.descriptionFr ? item.descriptionFr : item?.description ?? "";
+  const location = locale === "fr" && item?.locationFr ? item.locationFr : item?.location ?? "";
+  const priceUnitLabel: Record<string, string> = {
+    night: locale === "fr" ? "nuit" : "night",
+    day: locale === "fr" ? "jour" : "day",
+    person: locale === "fr" ? "personne" : "person",
+    package: locale === "fr" ? "forfait" : "package",
+  };
 
   useEffect(() => {
     let active = true;
@@ -68,7 +82,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
   }, [categoryType, slug]);
 
   if (!loading && !item) {
-    return <main className="mx-auto max-w-7xl p-8 text-center py-20 font-serif italic text-2xl">L'article que vous recherchez est introuvable.</main>;
+    return <main className="mx-auto max-w-7xl p-8 text-center py-20 font-serif italic text-2xl">L&apos;article que vous recherchez est introuvable.</main>;
   }
 
   if (loading || !item) return (
@@ -83,7 +97,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
       <section className="relative h-[60vh] w-full overflow-hidden">
         <img
           src={item.coverImage}
-          alt={item.title}
+          alt={title}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-linear-to-t from-background via-background/20 to-transparent" />
@@ -93,11 +107,11 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
               The Collection • {categoryType.replace('_', ' ')}
             </span>
             <h1 className="ui-display text-5xl md:text-7xl font-bold tracking-tight animate-reveal animation-delay-200">
-              {item.title}
+              {title}
             </h1>
-            {item.location && (
+            {location && (
               <p className="flex items-center justify-center gap-2 text-muted-foreground animate-reveal animation-delay-300">
-                <MapPin className="h-4 w-4" /> {item.location}
+                <MapPin className="h-4 w-4" /> {location}
               </p>
             )}
           </div>
@@ -108,21 +122,21 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
         <div className="grid lg:grid-cols-3 gap-16">
           {/* Main Content */}
           <div className="lg:col-span-2 min-w-0 space-y-16">
-            <GallerySlider coverImage={item.coverImage} gallery={item.gallery} alt={item.title} />
+            <GallerySlider coverImage={item.coverImage} gallery={item.gallery} alt={title} />
             <div className="space-y-8">
-              <h2 className="ui-heading text-3xl font-semibold border-l-4 border-primary pl-6">About this experience</h2>
+              <h2 className="ui-heading text-3xl font-semibold border-l-4 border-primary pl-6">{locale === "fr" ? "À propos de cette expérience" : "About this experience"}</h2>
               <div className="prose prose-zinc max-w-none prose-lg leading-relaxed text-muted-foreground min-w-0 wrap-anywhere **:max-w-full [&_img]:h-auto [&_img]:max-w-full [&_table]:block [&_table]:max-w-full [&_table]:overflow-x-auto">
-                {item.description.includes('<') ? (
+                {description.includes('<') ? (
                   // Render as HTML if it contains HTML tags
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: safeDescriptionHtml,
+                      __html: locale === "fr" && item?.descriptionFr ? item.descriptionFr : safeDescriptionHtml,
                     }}
                     className="space-y-4"
                   />
                 ) : (
                   // Render as plain text with line breaks
-                  item.description.split('\n').map((p, i) => (
+                  description.split('\n').map((p, i) => (
                     <p key={i}>{p}</p>
                   ))
                 )}
@@ -137,41 +151,41 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
             {/* Mobile Reservation Info - shown only on mobile */}
             <div className="lg:hidden ui-surface space-y-6 p-8 border-primary/20 bg-card/60 backdrop-blur-xl">
               <div className="space-y-1">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Reservation</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{locale === "fr" ? "Réservation" : "Reservation"}</p>
                 {item.price > 0 ? (
                   <p className="ui-heading text-4xl font-bold">
-                    {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {item.priceUnit}</span>
+                    {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {priceUnitLabel[item.priceUnit]}</span>
                   </p>
                 ) : (
-                  <p className="ui-heading text-2xl font-bold">Price on request</p>
+                  <p className="ui-heading text-2xl font-bold">{locale === "fr" ? "Prix sur demande" : "Price on request"}</p>
                 )}
               </div>
 
               <div className="space-y-4 pt-6 border-t border-border/30">
                 {item.accommodation && (
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Capacity</span>
-                    <span className="font-semibold">{item.accommodation.rooms} Rooms • {item.accommodation.people} Guests</span>
+                    <span className="text-muted-foreground">{locale === "fr" ? "Capacité" : "Capacity"}</span>
+                    <span className="font-semibold">{item.accommodation.rooms} {locale === "fr" ? "Chambres" : "Rooms"} • {item.accommodation.people} {locale === "fr" ? "Invités" : "Guests"}</span>
                   </div>
                 )}
                 {item.location && (
                   <div className="flex items-start justify-between gap-4 text-sm">
-                    <span className="text-muted-foreground">Area</span>
+                    <span className="text-muted-foreground">{locale === "fr" ? "Zone" : "Area"}</span>
                     <span className="max-w-[60%] break-words text-right text-xs leading-snug font-semibold sm:text-sm">
-                      {item.location}
+                      {location}
                     </span>
                   </div>
                 )}
                 {item.locationUrl && (
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Location</span>
+                    <span className="text-muted-foreground">{locale === "fr" ? "Localisation" : "Location"}</span>
                     <a
                       href={item.locationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-semibold text-primary hover:underline"
                     >
-                      Open map
+                      {locale === "fr" ? "Ouvrir la carte" : "Open map"}
                     </a>
                   </div>
                 )}
@@ -188,7 +202,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                   <div className="h-8 w-8 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
                     <FontAwesomeIcon icon={faWhatsapp} className="h-4 w-4" />
                   </div>
-                  WhatsApp Concierge
+                  {locale === "fr" ? "Concierge WhatsApp" : "WhatsApp Concierge"}
                 </a>
               </div>
             </div>
@@ -197,9 +211,11 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
               <div className="ui-surface p-10 bg-primary/5 border-primary/10 space-y-6 text-center">
                 <Utensils className="h-10 w-10 text-primary mx-auto" />
                 <div className="space-y-2">
-                  <h3 className="ui-heading text-2xl font-semibold tracking-tight">Gastronomic Journey</h3>
+                  <h3 className="ui-heading text-2xl font-semibold tracking-tight">{locale === "fr" ? "Voyage gastronomique" : "Gastronomic Journey"}</h3>
                   <p className="text-muted-foreground max-w-md mx-auto">
-                    Discover the art of living through our exclusive culinary selection.
+                    {locale === "fr"
+                      ? "Découvrez l'art de vivre à travers notre sélection culinaire exclusive."
+                      : "Discover the art of living through our exclusive culinary selection."}
                   </p>
                 </div>
                 <a
@@ -208,17 +224,18 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3 text-sm font-bold uppercase tracking-widest text-primary-foreground transition-all hover:scale-105 hover:shadow-xl"
                 >
-                  View the Menu
+                  {locale === "fr" ? "Voir le menu" : "View the Menu"}
                 </a>
               </div>
             )}
 
             {item.reviews && item.reviews.length > 0 && (
               <div className="max-w-full space-y-8">
-                <h2 className="ui-heading text-3xl font-semibold">Guest Impressions</h2>
+                <h2 className="ui-heading text-3xl font-semibold">{locale === "fr" ? "Impressions des clients" : "Guest Impressions"}</h2>
                 <div className="grid max-w-full gap-4 sm:gap-6">
                   {item.reviews.map((review, i) => {
                     const authorName = review.authorName || review.name || "Guest";
+                    const reviewComment = locale === "fr" ? (review.commentFr || review.comment) : review.comment;
                     return (
                       <div key={i} className="ui-surface min-w-0 w-full max-w-full border-border/40 bg-card/40 p-4 space-y-4 backdrop-blur-sm sm:p-6 lg:p-8">
                         <div className="flex min-w-0 items-start gap-4">
@@ -248,7 +265,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
                         <div className="relative pl-1">
                           <Quote className="pointer-events-none absolute left-0 top-0 h-7 w-7 text-primary/10" />
                           <p className="text-muted-foreground italic font-serif text-base leading-relaxed wrap-anywhere sm:text-lg">
-                            "{review.comment}"
+                            &quot;{reviewComment}&quot;
                           </p>
                         </div>
                       </div>
@@ -351,7 +368,7 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
             {suggestions.map((suggestion) => (
               <SwiperSlide key={suggestion.id}>
                 <Link
-                  href={`/${categoryPathMap[suggestion.categoryType]}/${suggestion.slug}`}
+                  href={localizePath(`/${categoryPathMap[suggestion.categoryType]}/${suggestion.slug}`, locale)}
                   className="group/card block relative h-80 overflow-hidden rounded-3xl bg-secondary/30 transition-all duration-500 hover:shadow-2xl"
                 >
                   <img

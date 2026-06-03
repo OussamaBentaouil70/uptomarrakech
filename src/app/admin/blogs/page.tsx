@@ -10,6 +10,7 @@ import { ImageUpload } from "@/components/admin/image-upload";
 import { toast } from "sonner";
 import { Plus, Trash2, Edit2, X, Newspaper, Calendar, Eye } from "lucide-react";
 import Link from "next/link";
+import { RichTextEditor } from "@/components/rich-text-editor";
 
 export default function AdminBlogsPage() {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
@@ -34,9 +35,12 @@ export default function AdminBlogsPage() {
     try {
       const payload = {
         title: editingBlog.title,
+        titleFr: editingBlog.titleFr || "",
         slug: editingBlog.slug,
         content: editingBlog.content || "",
+        contentFr: editingBlog.contentFr || "",
         excerpt: editingBlog.excerpt || "",
+        excerptFr: editingBlog.excerptFr || "",
         coverImage: editingBlog.coverImage || "",
         gallery: editingBlog.gallery || [],
         date: editingBlog.date || new Date().toISOString().split('T')[0],
@@ -74,19 +78,81 @@ export default function AdminBlogsPage() {
           </div>
 
           <form onSubmit={handleSubmit} className="grid grid-cols-1 xl:grid-cols-3 gap-12">
-            <div className="xl:col-span-2 space-y-8">
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-primary">Article Title</label>
-                <Input 
-                  value={editingBlog.title || ""} 
-                  onChange={(e) => setEditingBlog({...editingBlog, title: e.target.value})}
-                  className="text-2xl font-serif bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 h-auto placeholder:opacity-40"
-                  placeholder="The soul of the Medina..."
-                  required
-                />
+            <div className="xl:col-span-2 space-y-10">
+              {/* English Version */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="bg-primary/10 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">English</span>
+                </div>
+                
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Article Title</label>
+                  <Input 
+                    value={editingBlog.title || ""} 
+                    onChange={(e) => setEditingBlog({...editingBlog, title: e.target.value})}
+                    className="text-2xl font-serif bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 h-auto placeholder:opacity-40"
+                    placeholder="The soul of the Medina..."
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Short Excerpt</label>
+                  <Textarea 
+                    value={editingBlog.excerpt || ""} 
+                    onChange={(e) => setEditingBlog({...editingBlog, excerpt: e.target.value})}
+                    placeholder="A brief introduction to catch the reader's eye..."
+                    rows={3}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Content</label>
+                  <RichTextEditor
+                    content={editingBlog.content || ""}
+                    onChange={(content) => setEditingBlog({...editingBlog, content})}
+                    placeholder="Tell your story..."
+                  />
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* French Version */}
+              <div className="space-y-6 p-6 rounded-3xl bg-primary/5 border border-primary/10 shadow-sm">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="bg-primary/20 text-primary text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-widest">French Translation</span>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Titre de l'article</label>
+                  <Input 
+                    value={editingBlog.titleFr || ""} 
+                    onChange={(e) => setEditingBlog({...editingBlog, titleFr: e.target.value})}
+                    className="text-2xl font-serif bg-transparent border-none focus-visible:ring-0 focus-visible:ring-offset-0 px-0 h-auto placeholder:opacity-40"
+                    placeholder="L'âme de la Médina..."
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Résumé court</label>
+                  <Textarea 
+                    value={editingBlog.excerptFr || ""} 
+                    onChange={(e) => setEditingBlog({...editingBlog, excerptFr: e.target.value})}
+                    placeholder="Une brève introduction pour attirer l'œil du lecteur..."
+                    rows={3}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Contenu</label>
+                  <RichTextEditor
+                    content={editingBlog.contentFr || ""}
+                    onChange={(content) => setEditingBlog({...editingBlog, contentFr: content})}
+                    placeholder="Racontez votre histoire en français..."
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-border/40">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase tracking-widest text-primary">URL Slug</label>
                   <Input 
@@ -104,27 +170,6 @@ export default function AdminBlogsPage() {
                     onChange={(e) => setEditingBlog({...editingBlog, date: e.target.value})}
                   />
                 </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-primary">Short Excerpt</label>
-                <Textarea 
-                  value={editingBlog.excerpt || ""} 
-                  onChange={(e) => setEditingBlog({...editingBlog, excerpt: e.target.value})}
-                  placeholder="A brief introduction to catch the reader's eye..."
-                  rows={3}
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-primary">Content</label>
-                <Textarea 
-                  value={editingBlog.content || ""} 
-                  onChange={(e) => setEditingBlog({...editingBlog, content: e.target.value})}
-                  placeholder="Tell your story..."
-                  className="min-h-[400px] font-serif text-lg leading-relaxed pt-4"
-                  required
-                />
               </div>
             </div>
 
@@ -222,8 +267,17 @@ export default function AdminBlogsPage() {
                   )}
                 </div>
                 <div className="p-6 flex-1 space-y-3">
-                  <h3 className="ui-heading text-xl font-bold line-clamp-2">{blog.title}</h3>
-                  <p className="text-xs text-muted-foreground line-clamp-3 leading-relaxed">{blog.excerpt}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-bold text-primary">EN</span>
+                    <h3 className="ui-heading text-xl font-bold line-clamp-1">{blog.title}</h3>
+                  </div>
+                  <div className="flex items-center gap-2 opacity-60">
+                    <span className="text-[10px] font-bold text-primary">FR</span>
+                    <h3 className="ui-heading text-xl font-bold line-clamp-1">{blog.titleFr || "—"}</h3>
+                  </div>
+                  <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed mt-2 italic">
+                    {blog.excerpt}
+                  </p>
                 </div>
                 <div className="p-4 bg-muted/10 border-t border-border/30 flex items-center justify-between">
                   <Button variant="ghost" size="sm">
