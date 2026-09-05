@@ -162,29 +162,29 @@ export function SiteHeader() {
                   ),
                 )}
                </nav>
-               <div className="mt-6 px-5">
+               <div className="mt-6 px-5 pb-2">
+                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+                   {locale === "fr" ? "Langue" : "Language"}
+                 </p>
                  <DropdownMenu>
                    <DropdownMenuTrigger
-                     className={cn(
-                       "inline-flex items-center gap-2 rounded-full border px-3 py-2 text-sm font-medium transition-colors duration-300 outline-none",
-                       useTransparentHeader
-                         ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
-                         : "border-border/70 bg-white text-zinc-800 shadow-sm hover:bg-zinc-50",
-                     )}
+                     className="flex w-full items-center justify-between gap-2 rounded-xl border border-border/70 bg-white px-4 py-3 text-sm font-medium text-zinc-800 shadow-sm outline-none hover:bg-zinc-50"
                    >
-                     <span className={cn("fi h-4 w-4 rounded-sm", locale === "fr" ? "fi-fr" : "fi-gb")}></span>
-                     <span className="hidden xl:inline">{locale === "fr" ? "FR" : "EN"}</span>
-                     <ChevronDown className="h-3 w-3 opacity-60" />
+                     <span className="flex items-center gap-3">
+                       <span className={cn("fi h-4 w-4 rounded-sm", locale === "fr" ? "fi-fr" : "fi-gb")}></span>
+                       <span>{locale === "fr" ? "Français" : "English"}</span>
+                     </span>
+                     <ChevronDown className="h-4 w-4 opacity-60" />
                    </DropdownMenuTrigger>
-                   <DropdownMenuContent align="end" className="w-36 rounded-2xl p-2 bg-white/95 backdrop-blur-md shadow-2xl border-border/40">
+                   <DropdownMenuContent align="start" className="w-[calc(86vw-2.5rem)] max-w-sm rounded-2xl p-2 bg-white/95 backdrop-blur-md shadow-2xl border-border/40">
                      <DropdownMenuItem className="p-0 rounded-xl overflow-hidden">
-                       <Link href={hrefFor(pathname, "en")} onClick={() => saveLocale("en")} className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 hover:bg-black hover:text-white">
+                       <Link href={hrefFor(pathname, "en")} onClick={() => saveLocale("en")} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-zinc-700 hover:bg-black hover:text-white">
                          <span className="fi fi-gb h-4 w-4 rounded-sm" />
                          English
                        </Link>
                      </DropdownMenuItem>
                      <DropdownMenuItem className="p-0 rounded-xl overflow-hidden">
-                       <Link href={hrefFor(pathname, "fr")} onClick={() => saveLocale("fr")} className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 hover:bg-black hover:text-white">
+                       <Link href={hrefFor(pathname, "fr")} onClick={() => saveLocale("fr")} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-zinc-700 hover:bg-black hover:text-white">
                          <span className="fi fi-fr h-4 w-4 rounded-sm" />
                          Français
                        </Link>
