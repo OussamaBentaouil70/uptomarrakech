@@ -12,6 +12,8 @@ type MailFormPayload = {
   number_of_persons?: number;
   item_slug?: string;
   category_type?: string;
+  flight_type?: string;
+  stay_location?: string;
   message: string;
 };
 
@@ -51,6 +53,8 @@ function buildAdminHtml(payload: MailFormPayload, logoUrl: string) {
   const preferredInfo = `${cleanText(payload.preferred_date || "")} ${cleanText(payload.preferred_time || "")}`.trim();
   const itemInfo = `${cleanText(payload.item_slug || "")} ${cleanText(payload.category_type || "")}`.trim();
   const numberPersons = payload.number_of_persons ? `<div class='label'>Number of Persons</div><div class='value'>${payload.number_of_persons}</div>` : "";
+  const flightType = payload.flight_type ? `<div class='label'>Flight Type</div><div class='value'>${escapeHtml(payload.flight_type)}</div>` : "";
+  const stayLocation = payload.stay_location ? `<div class='label'>Stay Location</div><div class='value'>${escapeHtml(payload.stay_location)}</div>` : "";
 
   return `<!DOCTYPE html>
 <html>
@@ -77,6 +81,10 @@ function buildAdminHtml(payload: MailFormPayload, logoUrl: string) {
       ${preferredInfo ? `<div class='label'>Preferred Date / Time</div><div class='value'>${escapeHtml(preferredInfo)}</div>` : ""}
 
       ${numberPersons}
+
+      ${flightType}
+
+      ${stayLocation}
 
       ${itemInfo ? `<div class='label'>Item Slug / Category</div><div class='value'>${escapeHtml(itemInfo)}</div>` : ""}
 
@@ -170,11 +178,13 @@ export async function POST(request: Request) {
     number_of_persons: typeof body?.number_of_persons === "number" ? body.number_of_persons : undefined,
     item_slug: cleanText(body?.item_slug || ""),
     category_type: cleanText(body?.category_type || ""),
+    flight_type: cleanText(body?.flight_type || ""),
+    stay_location: cleanText(body?.stay_location || ""),
     message: cleanText(body?.message || ""),
   };
 
-  if (!payload.contact_name || !payload.contact_email || !payload.message) {
-    return NextResponse.json({ success: false, message: "Name, valid email and message are required" }, { status: 422 });
+  if (!payload.contact_name || !payload.contact_email) {
+    return NextResponse.json({ success: false, message: "Name and valid email are required" }, { status: 422 });
   }
 
   try {

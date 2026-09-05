@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { getItemBySlug, listItems } from "@/lib/firebase/data";
 import type { CategoryType, Item } from "@/lib/types";
 import { InquiryForm } from "@/components/inquiry-form";
+import { HotAirBalloonForm } from "@/components/hot-air-balloon-form";
 import { GallerySlider } from "@/components/gallery-slider";
 import { StarRating } from "@/components/ui/star-rating";
 import { ReviewAvatar } from "@/components/review-avatar";
@@ -37,6 +38,11 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
     const cleaned = sanitizeHTML(descriptionSource).trim();
     return cleaned || descriptionSource;
   }, [descriptionSource]);
+
+  const isHotAirBalloon =
+    /hot-air-balloon|montgolfiere-marrakech/i.test(item?.slug ?? "") ||
+    /hot\s*air\s*balloon|montgolfi/i.test(item?.title ?? "") ||
+    /hot\s*air\s*balloon|montgolfi/i.test(item?.titleFr ?? "");
 
   const title = locale === "fr" && item?.titleFr ? item.titleFr : item?.title ?? "";
   const description = locale === "fr" && item?.descriptionFr ? item.descriptionFr : item?.description ?? "";
@@ -145,23 +151,29 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
 
             {/* Mobile Reservation Form - shown only on mobile */}
             <div className="lg:hidden ui-surface p-6 shadow-2xl border-primary/15 bg-linear-to-b from-white to-card">
-              <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+              {isHotAirBalloon ? (
+                <HotAirBalloonForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+              ) : (
+                <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+              )}
             </div>
 
             {/* Mobile Reservation Info - shown only on mobile */}
             <div className="lg:hidden ui-surface space-y-6 p-8 border-primary/20 bg-card/60 backdrop-blur-xl">
-              <div className="space-y-1">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{locale === "fr" ? "Réservation" : "Reservation"}</p>
-                {item.price > 0 ? (
-                  <p className="ui-heading text-4xl font-bold">
-                    {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {priceUnitLabel[item.priceUnit]}</span>
-                  </p>
-                ) : (
-                  <p className="ui-heading text-2xl font-bold">{locale === "fr" ? "Prix sur demande" : "Price on request"}</p>
-                )}
-              </div>
+              {!isHotAirBalloon && (
+                <div className="space-y-1">
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">{locale === "fr" ? "Réservation" : "Reservation"}</p>
+                  {item.price > 0 ? (
+                    <p className="ui-heading text-4xl font-bold">
+                      {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {priceUnitLabel[item.priceUnit]}</span>
+                    </p>
+                  ) : (
+                    <p className="ui-heading text-2xl font-bold">{locale === "fr" ? "Prix sur demande" : "Price on request"}</p>
+                  )}
+                </div>
+              )}
 
-              <div className="space-y-4 pt-6 border-t border-border/30">
+              <div className={`space-y-4 ${isHotAirBalloon ? "" : "pt-6 border-t border-border/30"}`}>
                 {item.accommodation && (
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">{locale === "fr" ? "Capacité" : "Capacity"}</span>
@@ -280,22 +292,28 @@ export function ItemDetailsPage({ categoryType, slug }: Props) {
           <aside className="hidden lg:block space-y-8">
             <div className="sticky top-28 space-y-8">
               <div className="ui-surface p-6 shadow-2xl border-primary/15 bg-linear-to-b from-white to-card sm:p-8">
-                <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+                {isHotAirBalloon ? (
+                  <HotAirBalloonForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+                ) : (
+                  <InquiryForm itemId={item.id} itemSlug={item.slug} categoryType={item.categoryType} />
+                )}
               </div>
 
               <div className="ui-surface space-y-6 p-8 border-primary/20 bg-card/60 backdrop-blur-xl">
-                <div className="space-y-1">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Reservation</p>
-                  {item.price > 0 ? (
-                    <p className="ui-heading text-4xl font-bold">
-                      {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {item.priceUnit}</span>
-                    </p>
-                  ) : (
-                    <p className="ui-heading text-2xl font-bold">Price on request</p>
-                  )}
-                </div>
+                {!isHotAirBalloon && (
+                  <div className="space-y-1">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Reservation</p>
+                    {item.price > 0 ? (
+                      <p className="ui-heading text-4xl font-bold">
+                        {item.price}€<span className="text-sm font-normal text-muted-foreground ml-2">/ {item.priceUnit}</span>
+                      </p>
+                    ) : (
+                      <p className="ui-heading text-2xl font-bold">Price on request</p>
+                    )}
+                  </div>
+                )}
 
-                <div className="space-y-4 pt-6 border-t border-border/30">
+                <div className={`space-y-4 ${isHotAirBalloon ? "" : "pt-6 border-t border-border/30"}`}>
                   {item.accommodation && (
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-muted-foreground">Capacity</span>

@@ -15,6 +15,7 @@ import type { Category, CategoryType, Inquiry, Item, BlogPost, Review } from "@/
 import type {
   CategoryInput,
   InquiryInput,
+  HotAirBalloonInquiryInput,
   ItemInput,
   BlogInput,
 } from "@/lib/validation/schemas";
@@ -201,6 +202,19 @@ export async function createInquiry(input: InquiryInput) {
   const fullName = `${input.firstName} ${input.lastName}`.trim();
   const created = await addDoc(inquiriesCol, {
     ...input,
+    name: fullName,
+    status: "new",
+    createdAt: serverTimestamp(),
+  });
+  return created.id;
+}
+
+export async function createHotAirBalloonInquiry(input: HotAirBalloonInquiryInput) {
+  const fullName = `${input.firstName} ${input.lastName}`.trim();
+  const created = await addDoc(inquiriesCol, {
+    ...input,
+    persons: input.passengers,
+    message: input.message || "",
     name: fullName,
     status: "new",
     createdAt: serverTimestamp(),

@@ -9,6 +9,8 @@ export type MailFormPayload = {
   number_of_persons?: number;
   item_slug?: string;
   category_type?: string;
+  flight_type?: string;
+  stay_location?: string;
   message: string;
 };
 

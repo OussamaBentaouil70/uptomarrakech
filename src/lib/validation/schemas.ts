@@ -66,6 +66,25 @@ export const inquirySchema = z.object({
   endDate: z.string().optional(),
 });
 
+export const hotAirBalloonFlightTypes = ["balloon", "private", "royal"] as const;
+
+export const hotAirBalloonInquirySchema = z.object({
+  itemId: z.string().min(1),
+  itemSlug: z.string().min(1),
+  categoryType: categoryTypeSchema,
+  firstName: z.string().min(2),
+  lastName: z.string().min(2),
+  email: z.string().email(),
+  phone: z.string().min(6),
+  date: z.string().min(1),
+  flightType: z.enum(hotAirBalloonFlightTypes),
+  passengers: z.number().int().min(1).max(10),
+  stayLocation: z.string().optional().or(z.literal("")),
+  message: z.string().optional().or(z.literal("")),
+});
+
+export type HotAirBalloonInquiryInput = z.infer<typeof hotAirBalloonInquirySchema>;
+
 export type CategoryInput = z.infer<typeof categorySchema>;
 export type ItemInput = z.infer<typeof itemSchema>;
 export const blogSchema = z.object({
