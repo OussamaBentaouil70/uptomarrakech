@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     siteName: "MyMarrakechTrip",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "MyMarrakechTrip",
+    description: "Activities, accommodation, transport and premium experiences in Marrakech.",
+  },
 };
 
 export default function RootLayout({
