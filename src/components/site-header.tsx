@@ -178,13 +178,13 @@ export function SiteHeader() {
                    </DropdownMenuTrigger>
                    <DropdownMenuContent align="start" className="w-[calc(86vw-2.5rem)] max-w-sm rounded-2xl p-2 bg-white/95 backdrop-blur-md shadow-2xl border-border/40">
                      <DropdownMenuItem className="p-0 rounded-xl overflow-hidden">
-                       <Link href={hrefFor(pathname, "en")} onClick={() => saveLocale("en")} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-zinc-700 hover:bg-black hover:text-white">
+                       <Link href={hrefFor(pathname, "en")} onClick={() => saveLocale("en")} prefetch={false} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-zinc-700 hover:bg-black hover:text-white">
                          <span className="fi fi-gb h-4 w-4 rounded-sm" />
                          English
                        </Link>
                      </DropdownMenuItem>
                      <DropdownMenuItem className="p-0 rounded-xl overflow-hidden">
-                       <Link href={hrefFor(pathname, "fr")} onClick={() => saveLocale("fr")} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-zinc-700 hover:bg-black hover:text-white">
+                       <Link href={hrefFor(pathname, "fr")} onClick={() => saveLocale("fr")} prefetch={false} className="flex w-full items-center gap-3 px-4 py-3 text-sm text-zinc-700 hover:bg-black hover:text-white">
                          <span className="fi fi-fr h-4 w-4 rounded-sm" />
                          Français
                        </Link>
@@ -278,13 +278,13 @@ export function SiteHeader() {
                  </DropdownMenuTrigger>
                  <DropdownMenuContent align="end" className="w-36 rounded-2xl p-2 bg-white/95 backdrop-blur-md shadow-2xl border-border/40">
                    <DropdownMenuItem className="p-0 rounded-xl overflow-hidden">
-                     <Link href={hrefFor(pathname, "en")} onClick={() => saveLocale("en")} className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 hover:bg-black hover:text-white">
+                     <Link href={hrefFor(pathname, "en")} onClick={() => saveLocale("en")} prefetch={false} className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 hover:bg-black hover:text-white">
                        <span className="fi fi-gb h-4 w-4 rounded-sm" />
                        English
                      </Link>
                    </DropdownMenuItem>
                    <DropdownMenuItem className="p-0 rounded-xl overflow-hidden">
-                     <Link href={hrefFor(pathname, "fr")} onClick={() => saveLocale("fr")} className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 hover:bg-black hover:text-white">
+                     <Link href={hrefFor(pathname, "fr")} onClick={() => saveLocale("fr")} prefetch={false} className="flex w-full items-center gap-3 px-4 py-2.5 text-sm text-zinc-700 hover:bg-black hover:text-white">
                        <span className="fi fi-fr h-4 w-4 rounded-sm" />
                        Français
                      </Link>
