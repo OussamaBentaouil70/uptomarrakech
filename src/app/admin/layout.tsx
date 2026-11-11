@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { AdminGuard } from "@/components/admin/admin-guard";
 import { AdminSidebar } from "@/components/admin/admin-sidebar";
+import { RebuildIndicator } from "@/components/admin/rebuild-indicator";
 import { SiteBreadcrumbs } from "@/components/site-breadcrumbs";
 
 export default function AdminLayout({
@@ -25,6 +26,7 @@ export default function AdminLayout({
           <SiteBreadcrumbs />
           {children}
         </main>
+        <RebuildIndicator />
       </div>
     </AdminGuard>
   );

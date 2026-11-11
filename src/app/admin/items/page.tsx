@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { RichTextEditor } from "@/components/rich-text-editor";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { listItems, upsertItem, deleteItem } from "@/lib/firebase/data";
+import { scheduleSiteRebuild } from "@/lib/site-rebuild";
 import type { CategoryType, Item, PriceUnit } from "@/lib/types";
 import { CATEGORY_TYPES } from "@/lib/types";
 import type { Review } from "@/lib/types";
@@ -121,6 +122,7 @@ function ItemsContent() {
       };
 
       await upsertItem(editingItem.id, payload as any);
+      scheduleSiteRebuild();
       toast.success(editingItem.id ? "Item updated" : "Item created");
       setEditingItem(null);
       void refresh();
@@ -530,6 +532,7 @@ function ItemsContent() {
                     onClick={async () => {
                       if (confirm("Delete this item?")) {
                         await deleteItem(item.id);
+                        scheduleSiteRebuild();
                         toast.success("Item deleted");
                         void refresh();
                       }

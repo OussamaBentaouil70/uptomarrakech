@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { listBlogs, upsertBlog, deleteBlog } from "@/lib/firebase/data";
+import { scheduleSiteRebuild } from "@/lib/site-rebuild";
 import type { BlogPost } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -48,6 +49,7 @@ export default function AdminBlogsPage() {
       };
 
       await upsertBlog(editingBlog.id || null, payload);
+      scheduleSiteRebuild();
       toast.success(editingBlog.id ? "Blog post updated" : "Blog post created");
       setEditingBlog(null);
       void refresh();
@@ -296,6 +298,7 @@ export default function AdminBlogsPage() {
                       onClick={async () => {
                         if (confirm("Delete this article permanently?")) {
                           await deleteBlog(blog.id);
+                          scheduleSiteRebuild();
                           toast.success("Article deleted");
                           void refresh();
                         }
