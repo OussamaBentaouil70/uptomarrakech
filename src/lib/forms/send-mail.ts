@@ -1,10 +1,20 @@
 import nodemailer from "nodemailer";
-import { prepareEmails, readMailConfig, type MailEnv, type MailResult } from "./email-templates";
+import {
+  prepareEmails,
+  readMailConfig,
+  type MailConfig,
+  type MailEnv,
+  type MailResult,
+  type PreparedEmail,
+} from "./email-templates";
 
 /**
- * Full send_email.php flow with Nodemailer: read config, validate payload,
+ * Full send_email.php flow: read config, validate payload,
  * send the admin notification, then the client thank-you email.
- * Works in Node.js (next dev) and on Cloudflare Workers/Pages (nodejs_compat).
+ *
+ * - BREVO_API_KEY set -> Brevo HTTPS API. Required on Cloudflare Pages, because
+ *   Cloudflare's servers can't reach SMTP servers (Gmail/Hostinger/Brevo SMTP all fail there).
+ * - otherwise        -> Nodemailer over SMTP (fine for local `npm run dev`).
  */
 export async function handleMailRequest(rawBody: string, env: MailEnv): Promise<MailResult> {
   const config = readMailConfig(env);
@@ -20,6 +30,45 @@ export async function handleMailRequest(rawBody: string, env: MailEnv): Promise<
   const emails = prepareEmails(data, config);
   if (!Array.isArray(emails)) return emails;
 
+  try {
+    if (config.provider === "brevo") {
+      for (const email of emails) await sendWithBrevo(config, email);
+    } else {
+      await sendWithSmtp(config, emails);
+    }
+    return { status: 200, body: { success: true, message: "Emails sent successfully" } };
+  } catch (error) {
+    const info = error instanceof Error ? error.message : String(error);
+    console.error("Mailer Error:", info);
+    return { status: 500, body: { success: false, message: `Mailer Error: ${info}` } };
+  }
+}
+
+/** https://developers.brevo.com/reference/sendtransacemail */
+async function sendWithBrevo(config: MailConfig, email: PreparedEmail): Promise<void> {
+  const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      "api-key": config.brevoApiKey,
+      "content-type": "application/json",
+      accept: "application/json",
+    },
+    body: JSON.stringify({
+      sender: { name: config.fromName, email: config.fromEmail },
+      to: [{ email: email.to.address, ...(email.to.name ? { name: email.to.name } : {}) }],
+      ...(email.replyTo ? { replyTo: { email: email.replyTo.address, name: email.replyTo.name } } : {}),
+      subject: email.subject,
+      htmlContent: email.html,
+    }),
+  });
+
+  if (!res.ok) {
+    const body = (await res.json().catch(() => ({}))) as { code?: string; message?: string };
+    throw new Error(`Brevo ${res.status}${body.code ? ` ${body.code}` : ""}: ${body.message || res.statusText}`);
+  }
+}
+
+async function sendWithSmtp(config: MailConfig, emails: PreparedEmail[]): Promise<void> {
   const transporter = nodemailer.createTransport({
     host: config.host,
     port: config.port,
@@ -42,11 +91,6 @@ export async function handleMailRequest(rawBody: string, env: MailEnv): Promise<
         encoding: "utf-8",
       });
     }
-    return { status: 200, body: { success: true, message: "Emails sent successfully" } };
-  } catch (error) {
-    const info = error instanceof Error ? error.message : String(error);
-    console.error("Nodemailer Error:", info);
-    return { status: 500, body: { success: false, message: `Mailer Error: ${info}` } };
   } finally {
     transporter.close();
   }

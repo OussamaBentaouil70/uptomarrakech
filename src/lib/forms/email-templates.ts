@@ -8,6 +8,8 @@
  */
 
 export type MailEnv = {
+  /** When set, emails are sent with the Brevo HTTPS API (required on Cloudflare). Otherwise SMTP/Nodemailer. */
+  BREVO_API_KEY?: string;
   SMTP_HOST?: string;
   SMTP_PORT?: string;
   SMTP_SECURE?: string;
@@ -22,6 +24,8 @@ export type MailEnv = {
 };
 
 export type MailConfig = {
+  provider: "brevo" | "smtp";
+  brevoApiKey: string;
   host: string;
   port: number;
   /** true = implicit TLS (PHPMailer ENCRYPTION_SMTPS, port 465); false = STARTTLS (port 587) */
@@ -82,18 +86,23 @@ export function corsHeaders(env: MailEnv): Record<string, string> {
 }
 
 export function readMailConfig(env: MailEnv): MailConfig | MailResult {
+  const brevoApiKey = envValue(env, "BREVO_API_KEY", "").trim();
+  const provider = brevoApiKey ? "brevo" : "smtp";
   const user = envValue(env, "SMTP_USER", "");
   const pass = envValue(env, "SMTP_PASS", "");
   const adminEmail = envValue(env, "ADMIN_EMAIL", user);
   const fromEmail = envValue(env, "FROM_EMAIL", user);
 
-  if (user === "" || pass === "" || adminEmail === "" || fromEmail === "") {
+  const missingCredentials = provider === "smtp" && (user === "" || pass === "");
+  if (missingCredentials || adminEmail === "" || fromEmail === "") {
     return { status: 500, body: { success: false, message: "Server mail configuration is incomplete" } };
   }
 
   const secureMode = envValue(env, "SMTP_SECURE", "ssl").toLowerCase();
 
   return {
+    provider,
+    brevoApiKey,
     host: envValue(env, "SMTP_HOST", "smtp.gmail.com"),
     port: Number.parseInt(envValue(env, "SMTP_PORT", "465"), 10) || 465,
     // PHP: 'tls' => STARTTLS, anything else => SMTPS (implicit TLS)
